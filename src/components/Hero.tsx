@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Briefcase, TrendingUp } from "lucide-react";
+import { ArrowDown, Briefcase, TrendingUp, Presentation } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -29,6 +31,14 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
+            onClick={() => navigate("/presentation")}
+          >
+            <Presentation className="w-5 h-5 mr-2" />
+            View Presentation
+          </Button>
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
             onClick={() => scrollToSection("portfolio")}
           >
             <TrendingUp className="w-5 h-5 mr-2" />
