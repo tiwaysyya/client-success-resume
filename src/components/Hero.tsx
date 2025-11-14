@@ -1,63 +1,57 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Briefcase, TrendingUp, Presentation } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
-  const navigate = useNavigate();
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-background via-background to-secondary/30">
-      <div className="container max-w-6xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-4">
-          <Briefcase className="w-4 h-4 text-accent" />
-          <span className="text-sm font-medium text-accent">Client Relations Professional</span>
-        </div>
-        
-        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent leading-tight">
-          Strategic Financial
+    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+      <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight tracking-tight">
+          What most people see as silos,
           <br />
-          Partnership Excellence
+          <span className="text-muted-foreground">I see as a system.</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Transforming complex financial landscapes into actionable insights and long-term client relationships. 
-          Specializing in investor relations, risk management, and strategic financial analysis.
-        </p>
+        <div className="max-w-2xl mx-auto space-y-4">
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Full-pipeline experience across science, product, IP and markets.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            Systems thinking. Fast learning. Tailored problem solving.
+          </p>
+        </div>
         
-        <div className="flex flex-wrap gap-4 justify-center pt-4">
+        <div className="flex flex-wrap gap-4 justify-center pt-8">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
-            onClick={() => navigate("/presentation")}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            onClick={() => scrollToSection("how-i-think")}
           >
-            <Presentation className="w-5 h-5 mr-2" />
-            View Presentation
+            See How I Think
           </Button>
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
-            onClick={() => scrollToSection("portfolio")}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            onClick={() => scrollToSection("case-studies")}
           >
-            <TrendingUp className="w-5 h-5 mr-2" />
-            View Portfolio
+            Case Studies
           </Button>
           <Button 
             size="lg" 
             variant="outline"
-            className="border-2 border-primary/20 hover:bg-primary/5"
-            onClick={() => scrollToSection("contact")}
+            className="border-2"
           >
-            Get in Touch
+            Download CV
           </Button>
         </div>
 
         <div className="pt-12 animate-bounce">
           <button
-            onClick={() => scrollToSection("about")}
-            className="text-muted-foreground hover:text-primary transition-colors"
+            onClick={() => scrollToSection("pillars")}
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowDown className="w-6 h-6 mx-auto" />
           </button>
