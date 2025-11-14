@@ -1,5 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Users, Target } from "lucide-react";
+import pipelineMap from "@/assets/system-map-pipeline.jpg";
+import vennMap from "@/assets/system-map-venn.jpg";
+import radarMap from "@/assets/system-map-radar.jpg";
 
 const SystemMaps = () => {
   const pipeline = [
@@ -31,51 +34,44 @@ const SystemMaps = () => {
         </div>
 
         {/* Pipeline Map */}
-        <Card className="p-8 md:p-12 border-border bg-card">
+        <Card className="p-8 md:p-12 border-border bg-card overflow-hidden">
           <h3 className="text-2xl font-bold mb-8 text-center text-foreground">
             Science → Product → IP → Market → Capital
           </h3>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="mb-8">
+            <img 
+              src={pipelineMap} 
+              alt="Life science pipeline system map showing the flow from lab to capital" 
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
             {pipeline.map((item, index) => (
-              <div key={index} className="flex items-center gap-4 w-full md:w-auto">
-                <div className="text-center flex-1">
-                  <div className="bg-primary text-primary-foreground rounded-lg p-4 mb-2">
-                    <p className="font-bold text-lg">{item.node}</p>
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">{item.description}</p>
-                </div>
-                {index < pipeline.length - 1 && (
-                  <ArrowRight className="hidden md:block w-6 h-6 text-muted-foreground flex-shrink-0" />
-                )}
+              <div key={index}>
+                <p className="font-bold text-foreground mb-1">{item.node}</p>
+                <p className="text-xs text-muted-foreground italic">{item.description}</p>
               </div>
             ))}
           </div>
         </Card>
 
         {/* Stakeholder Alignment */}
-        <Card className="p-8 md:p-12 border-border bg-card">
+        <Card className="p-8 md:p-12 border-border bg-card overflow-hidden">
           <div className="flex items-center gap-3 mb-8 justify-center">
             <Users className="w-8 h-8 text-primary" />
             <h3 className="text-2xl font-bold text-foreground">
-              Stakeholder Alignment Map
+              Incentive Alignment Map
             </h3>
           </div>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
             I bridge different worlds and translate between stakeholder languages
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {stakeholders.map((stakeholder, index) => (
-              <div key={index} className="relative">
-                <div className="bg-secondary border-2 border-primary rounded-lg px-6 py-3">
-                  <p className="font-semibold text-foreground">{stakeholder}</p>
-                </div>
-                {index < stakeholders.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="w-4 h-4 text-primary" />
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="mb-8">
+            <img 
+              src={vennMap} 
+              alt="Venn diagram showing the overlap of Science, Product, IP, Market, and Capital incentives" 
+              className="w-full max-w-2xl h-auto mx-auto rounded-lg"
+            />
           </div>
           <div className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-6 py-3">
@@ -86,22 +82,32 @@ const SystemMaps = () => {
         </Card>
 
         {/* Opportunity Map */}
-        <Card className="p-8 md:p-12 border-border bg-card">
+        <Card className="p-8 md:p-12 border-border bg-card overflow-hidden">
           <h3 className="text-2xl font-bold mb-8 text-center text-foreground">
-            Opportunity Identification
+            Opportunity Assessment Framework
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground mb-2">Map the System</p>
-              <p className="text-sm text-muted-foreground">Identify all moving parts and dependencies</p>
+          <div className="mb-8">
+            <img 
+              src={radarMap} 
+              alt="Radar chart showing five evaluation axes: Technical, Commercial, Regulatory, Competitive, and Financial" 
+              className="w-full max-w-2xl h-auto mx-auto rounded-lg"
+            />
+          </div>
+          <div className="grid md:grid-cols-5 gap-4 text-center">
+            <div className="p-4 bg-secondary rounded-lg">
+              <p className="font-bold text-foreground text-sm">Technical</p>
             </div>
-            <div className="text-center p-6 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground mb-2">Find Leverage Points</p>
-              <p className="text-sm text-muted-foreground">Where small changes create large impact</p>
+            <div className="p-4 bg-secondary rounded-lg">
+              <p className="font-bold text-foreground text-sm">Commercial</p>
             </div>
-            <div className="text-center p-6 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground mb-2">Create Value</p>
-              <p className="text-sm text-muted-foreground">Build differentiated solutions</p>
+            <div className="p-4 bg-secondary rounded-lg">
+              <p className="font-bold text-foreground text-sm">Regulatory</p>
+            </div>
+            <div className="p-4 bg-secondary rounded-lg">
+              <p className="font-bold text-foreground text-sm">Competitive</p>
+            </div>
+            <div className="p-4 bg-secondary rounded-lg">
+              <p className="font-bold text-foreground text-sm">Financial</p>
             </div>
           </div>
         </Card>
