@@ -15,16 +15,22 @@ const Contact = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              asChild
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Email Me
+              <a href="mailto:tiwaysyya@gmail.com">
+                <Mail className="w-5 h-5 mr-2" />
+                Email Me
+              </a>
             </Button>
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              asChild
             >
-              <Linkedin className="w-5 h-5 mr-2" />
-              LinkedIn
+              <a href="https://www.linkedin.com/in/tiwaysyya-s-5440b1287" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5 mr-2" />
+                LinkedIn
+              </a>
             </Button>
             <Button 
               size="lg" 
