@@ -7,22 +7,17 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-background to-champagne">
       <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight tracking-tight">
-          What most people see as silos,
+        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
+          Seeing the whole system
           <br />
-          <span className="text-muted-foreground">I see as a system.</span>
+          changes everything.
         </h1>
         
-        <div className="max-w-2xl mx-auto space-y-4">
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Full-pipeline experience across science, product, IP and markets.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Systems thinking. Fast learning. Tailored problem solving.
-          </p>
-        </div>
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          Systems thinking. Fast learning. Tailored problem solving.
+        </p>
         
         <div className="flex flex-wrap gap-4 justify-center pt-8">
           <Button 

@@ -17,40 +17,35 @@ const HowIThink = () => {
     { step: "5", title: "Build a tailored solution", description: "no templates, only what fits this exact problem." }
   ];
 
-  const essays = [
+  const insights = [
     {
       title: "The real reason biotech ideas stall.",
-      hook: "Science progresses. Alignment does not.",
-      content: "Most biotech failures aren't scientific—they're structural. A brilliant discovery can advance through preclinical stages, pass regulatory milestones, and still fail because the commercial, legal, and financial stakeholders never aligned on the same risk model. Science moves linearly. Systems don't. The companies that succeed build alignment as deliberately as they build data packages."
+      hook: "Science progresses. Alignment does not."
     },
     {
       title: "Why IP is a commercial argument disguised as a document.",
-      hook: "Patents shape power.",
-      content: "A patent isn't just legal protection—it's a positioning tool. The best IP strategies don't just defend technology; they define market structure, influence partnership terms, and shape investor confidence. Strong patents clarify where value lives and who controls access. Weak ones create uncertainty and open the door for competitors. IP isn't paperwork. It's strategic leverage."
+      hook: "Patents shape power."
     },
     {
       title: "How to tell if a scientific idea actually has legs.",
-      hook: "Look for incentive alignment before data.",
-      content: "Great science is necessary but not sufficient. The question isn't just 'Does this work?'—it's 'Who benefits, and are those incentives durable?' If regulators, payers, clinicians, and patients don't see aligned value, even validated science will struggle to commercialise. The best opportunities have natural pull across the system, not just strong push from the lab."
+      hook: "Look for incentive alignment before data."
     },
     {
       title: "The metric that quietly decides biotech success.",
-      hook: "Time-to-proof.",
-      content: "In biotech, capital is patient until it isn't. The companies that thrive aren't always the ones with the best science—they're the ones that reach proof-of-concept before capital runs out or strategic priorities shift. Time-to-proof determines whether you control your own narrative or become a distressed asset. Speed to clarity matters more than perfection."
+      hook: "Time-to-proof."
     },
     {
       title: "What markets see that scientists don't.",
-      hook: "Risk is narrative first, data second.",
-      content: "Scientists think in evidence. Markets think in confidence. A compelling dataset can still fail to attract investment if the risk narrative isn't clear, defensible, and differentiated. The best biotech stories don't just present data—they frame uncertainty, contextualise risk against alternatives, and build conviction. Markets buy clarity, not complexity."
+      hook: "Risk is narrative first, data second."
     }
   ];
 
   return (
-    <section id="how-i-think" className="py-24 px-4 bg-secondary/30">
+    <section id="how-i-think" className="py-24 px-4">
       <div className="container max-w-6xl mx-auto space-y-20">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            The principles behind how I solve problems.
+            How I solve problems.
           </h2>
         </div>
 
@@ -61,10 +56,9 @@ const HowIThink = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {languages.map((lang, index) => (
-              <Card key={index} className="p-6 text-center border-border bg-card">
+              <Card key={index} className="p-6 text-center border-cocoa/30 bg-card hover:shadow-lg transition-all">
                 <p className="text-lg font-bold text-foreground mb-2">{lang.domain}</p>
-                <p className="text-sm text-muted-foreground">speaks in</p>
-                <p className="text-xl font-semibold text-primary mt-2">{lang.speaks}</p>
+                <p className="text-sm text-muted-foreground">speaks {lang.speaks}</p>
               </Card>
             ))}
           </div>
@@ -73,22 +67,18 @@ const HowIThink = () => {
           </p>
         </div>
 
-        <Separator className="bg-border" />
-
-        {/* Decision Framework */}
+        {/* Framework */}
         <div className="space-y-8">
           <h3 className="text-3xl font-bold text-center text-foreground">
             My Decision Framework
           </h3>
           <div className="space-y-4 max-w-3xl mx-auto">
-            {framework.map((item) => (
-              <Card key={item.step} className="p-6 hover:shadow-lg transition-all border-border bg-card">
+            {framework.map((item, index) => (
+              <Card key={index} className="p-6 border-cocoa/30 bg-card hover:shadow-lg transition-all">
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
-                    {item.step}
-                  </div>
+                  <span className="text-2xl font-bold text-primary flex-shrink-0">{item.step}</span>
                   <div>
-                    <h4 className="text-xl font-bold text-foreground mb-1">{item.title}</h4>
+                    <h4 className="text-lg font-bold text-foreground mb-1">{item.title}</h4>
                     <p className="text-muted-foreground">{item.description}</p>
                   </div>
                 </div>
@@ -97,19 +87,16 @@ const HowIThink = () => {
           </div>
         </div>
 
-        <Separator className="bg-border" />
-
-        {/* Micro Essays */}
+        {/* Insights */}
         <div className="space-y-8">
-          <h3 className="text-3xl font-bold text-center text-foreground mb-12">
-            Thought Leadership
+          <h3 className="text-3xl font-bold text-center text-foreground">
+            Strategic Insights
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {essays.map((essay, index) => (
-              <Card key={index} className="p-8 hover:shadow-lg transition-all border-border bg-card">
-                <h4 className="text-xl font-bold text-foreground mb-2">{essay.title}</h4>
-                <p className="text-primary font-semibold mb-4 italic">{essay.hook}</p>
-                <p className="text-muted-foreground leading-relaxed">{essay.content}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {insights.map((insight, index) => (
+              <Card key={index} className="p-6 border-cocoa/30 bg-card hover:shadow-lg transition-all">
+                <h4 className="text-lg font-bold text-foreground mb-2">{insight.title}</h4>
+                <p className="text-sm text-muted-foreground italic">{insight.hook}</p>
               </Card>
             ))}
           </div>

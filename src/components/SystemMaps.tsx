@@ -1,8 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Target } from "lucide-react";
-import pipelineMap from "@/assets/system-map-pipeline.jpg";
-import vennMap from "@/assets/system-map-venn.jpg";
-import radarMap from "@/assets/system-map-radar.jpg";
+import { Network, Target, TrendingUp } from "lucide-react";
 
 const SystemMaps = () => {
   const pipeline = [
@@ -22,7 +19,7 @@ const SystemMaps = () => {
   ];
 
   return (
-    <section id="system-maps" className="py-24 px-4">
+    <section id="system-maps" className="py-24 px-4 bg-secondary/20">
       <div className="container max-w-6xl mx-auto space-y-20">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -34,81 +31,63 @@ const SystemMaps = () => {
         </div>
 
         {/* Pipeline Map */}
-        <Card className="p-8 md:p-12 border-border bg-card overflow-hidden">
-          <h3 className="text-2xl font-bold mb-8 text-center text-foreground">
-            Science → Product → IP → Market → Capital
-          </h3>
-          <div className="mb-8">
-            <img 
-              src={pipelineMap} 
-              alt="Life science pipeline system map showing the flow from lab to capital" 
-              className="w-full h-auto rounded-lg"
-            />
+        <Card className="p-8 border-cocoa/30 bg-card hover:shadow-lg transition-all">
+          <div className="flex items-center gap-3 mb-6">
+            <Network className="w-8 h-8 text-primary" />
+            <h3 className="text-2xl font-bold text-foreground">The Pipeline Map</h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+          <p className="text-muted-foreground mb-6">
+            Value flows from science to capital.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {pipeline.map((item, index) => (
-              <div key={index}>
-                <p className="font-bold text-foreground mb-1">{item.node}</p>
+              <div key={index} className="p-4 border border-cocoa/30 rounded text-center">
+                <p className="font-bold text-foreground mb-2">{item.node}</p>
                 <p className="text-xs text-muted-foreground italic">{item.description}</p>
               </div>
             ))}
           </div>
         </Card>
 
-        {/* Stakeholder Alignment */}
-        <Card className="p-8 md:p-12 border-border bg-card overflow-hidden">
-          <div className="flex items-center gap-3 mb-8 justify-center">
-            <Users className="w-8 h-8 text-primary" />
-            <h3 className="text-2xl font-bold text-foreground">
-              Incentive Alignment Map
-            </h3>
+        {/* Incentive Alignment Map */}
+        <Card className="p-8 border-cocoa/30 bg-card hover:shadow-lg transition-all">
+          <div className="flex items-center gap-3 mb-6">
+            <Target className="w-8 h-8 text-primary" />
+            <h3 className="text-2xl font-bold text-foreground">Incentive Alignment Map</h3>
           </div>
-          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I bridge different worlds and translate between stakeholder languages
+          <p className="text-muted-foreground mb-6">
+            Where stakeholder interests overlap—and where they diverge.
           </p>
-          <div className="mb-8">
-            <img 
-              src={vennMap} 
-              alt="Venn diagram showing the overlap of Science, Product, IP, Market, and Capital incentives" 
-              className="w-full max-w-2xl h-auto mx-auto rounded-lg"
-            />
-          </div>
-          <div className="mt-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-6 py-3">
-              <Target className="w-5 h-5" />
-              <p className="font-bold">Strategic Translator</p>
-            </div>
+          <div className="bg-accent/30 p-6 rounded-lg border border-cocoa/30">
+            <p className="text-sm text-foreground font-semibold mb-2">The Strategic Translator:</p>
+            <p className="text-sm text-muted-foreground">
+              Operates in the overlap zone, translating between domains and building alignment.
+            </p>
           </div>
         </Card>
 
-        {/* Opportunity Map */}
-        <Card className="p-8 md:p-12 border-border bg-card overflow-hidden">
-          <h3 className="text-2xl font-bold mb-8 text-center text-foreground">
-            Opportunity Assessment Framework
-          </h3>
-          <div className="mb-8">
-            <img 
-              src={radarMap} 
-              alt="Radar chart showing five evaluation axes: Technical, Commercial, Regulatory, Competitive, and Financial" 
-              className="w-full max-w-2xl h-auto mx-auto rounded-lg"
-            />
+        {/* Opportunity Assessment Framework */}
+        <Card className="p-8 border-cocoa/30 bg-card hover:shadow-lg transition-all">
+          <div className="flex items-center gap-3 mb-6">
+            <TrendingUp className="w-8 h-8 text-primary" />
+            <h3 className="text-2xl font-bold text-foreground">Opportunity Assessment</h3>
           </div>
-          <div className="grid md:grid-cols-5 gap-4 text-center">
-            <div className="p-4 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground text-sm">Technical</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground text-sm">Commercial</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground text-sm">Regulatory</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground text-sm">Competitive</p>
-            </div>
-            <div className="p-4 bg-secondary rounded-lg">
-              <p className="font-bold text-foreground text-sm">Financial</p>
-            </div>
+          <p className="text-muted-foreground mb-6">
+            A five-axis view of biotech value potential.
+          </p>
+          <div className="grid md:grid-cols-5 gap-4">
+            {["Technical", "Commercial", "Regulatory", "Competitive", "Financial"].map((axis, index) => (
+              <div key={index} className="p-4 border border-cocoa/30 rounded text-center">
+                <h4 className="font-bold text-foreground mb-2">{axis}</h4>
+                <p className="text-xs text-muted-foreground">
+                  {axis === "Technical" && "Scientific feasibility"}
+                  {axis === "Commercial" && "Market need & fit"}
+                  {axis === "Regulatory" && "Pathway clarity"}
+                  {axis === "Competitive" && "Differentiation"}
+                  {axis === "Financial" && "Return potential"}
+                </p>
+              </div>
+            ))}
           </div>
         </Card>
       </div>
