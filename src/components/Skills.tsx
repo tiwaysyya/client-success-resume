@@ -4,47 +4,47 @@ import { Badge } from "@/components/ui/badge";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Financial Analysis",
+      category: "ESG & Sustainability Analysis",
       skills: [
-        "Financial Modeling",
-        "Valuation Analysis",
-        "DCF Analysis",
-        "Scenario Planning",
-        "Portfolio Analytics",
-        "Market Research"
+        "ESG Risk Assessment",
+        "Transition Analysis",
+        "Climate Scenario Modelling",
+        "Stewardship Research",
+        "Regulatory Impact Analysis",
+        "Materiality Mapping"
       ]
     },
     {
-      category: "Risk Management",
+      category: "Investment Research",
       skills: [
-        "Risk Assessment",
-        "Stress Testing",
-        "VaR Analysis",
-        "Compliance",
-        "Due Diligence",
-        "Regulatory Framework"
+        "Equity Analysis",
+        "Financial Modelling",
+        "DCF Valuation",
+        "Peer Benchmarking",
+        "Sector Research",
+        "Stock Pitching"
       ]
     },
     {
-      category: "Client Relations",
+      category: "Scientific & Policy Synthesis",
       skills: [
-        "Relationship Management",
-        "Stakeholder Communication",
-        "Presentation Skills",
-        "Negotiation",
-        "Advisory Services",
-        "Client Reporting"
+        "Biotechnology Research",
+        "Evidence Integrity",
+        "Patent Analysis",
+        "Policy Evaluation",
+        "Regulatory Diligence",
+        "Risk-Benefit Assessment"
       ]
     },
     {
-      category: "Technical Skills",
+      category: "Technical & Data Tools",
       skills: [
-        "Excel & VBA",
         "Bloomberg Terminal",
-        "SQL",
-        "Tableau",
-        "Python",
-        "PowerPoint"
+        "ESG Datasets",
+        "Excel Modelling",
+        "Financial Analysis",
+        "Data Synthesis",
+        "Presentation Design"
       ]
     }
   ];

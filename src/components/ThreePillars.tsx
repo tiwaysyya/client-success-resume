@@ -6,17 +6,17 @@ const ThreePillars = () => {
     {
       icon: Network,
       title: "Systems Thinking",
-      description: "Connecting science, product, IP and markets into one coherent view."
+      description: "Connecting sustainability risks, regulatory headwinds and market dynamics into investment insights."
     },
     {
       icon: Zap,
-      title: "Rapid Learning",
-      description: "Onboards into unfamiliar domains fast and makes sense of messy information."
+      title: "Evidence Integrity",
+      description: "Scientific foundation meets policy analysis. Evaluating transition pathways with rigour."
     },
     {
       icon: Target,
-      title: "Tailored Problem Solving",
-      description: "No templates. Unique problems need unique solutions."
+      title: "ESG Integration",
+      description: "Embedding material sustainability factors into equity research and stewardship workflows."
     }
   ];
 

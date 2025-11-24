@@ -2,13 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "40%", label: "Stakeholder confidence increase" },
-    { value: "30%", label: "Faster claim turnaround" },
+    { value: "45%", label: "Newsletter audience growth" },
+    { value: "30%", label: "Faster patent turnaround" },
     { value: "15%", label: "Fewer examiner objections" },
     { value: "50+", label: "Stakeholder interviews" },
-    { value: "Multi-M", label: "RM investment influence" },
-    { value: "30%", label: "Profitability projection" },
-    { value: "1st Place", label: "Pitch competition" }
+    { value: ">RM 5B", label: "Market cap analysed" },
+    { value: "5+", label: "Equity research reports" },
+    { value: "1st Place", label: "Climate pitch competition" },
+    { value: "1,500+", label: "ESG analysis readers" }
   ];
 
   return (
