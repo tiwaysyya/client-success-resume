@@ -10,13 +10,13 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-background to-champagne">
       <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
         <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-          Seeing the whole system
+          ESG-focused analyst.
           <br />
-          changes everything.
+          Sustainability risks to investment insights.
         </h1>
         
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Systems thinking. Fast learning. Tailored problem solving.
+          Evaluating transition risks. Synthesising science, policy and markets. Stewardship-aligned research.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center pt-8">

@@ -5,50 +5,50 @@ const CaseStudies = () => {
   const cases = [
     {
       icon: TrendingUp,
-      title: "Equity Research",
-      situation: "Needed to evaluate biotech investment opportunities across complex scientific and commercial landscapes",
-      action: "Applied systems thinking to map scientific validity, competitive positioning, regulatory pathways, and market dynamics",
-      insight: "Identified key inflection points and risk-reward asymmetries that others had overlooked",
+      title: "Healthcare ESG Analysis",
+      situation: "Regional hospital operator needed evaluation across utilisation, margin and sustainability risks for multi-million RM investment decision",
+      action: "Built financial and ESG models integrating emissions intensity, demographic pressures and supply chain labour standards with traditional DCF analysis",
+      insight: "Healthcare ESG risks are material—demographic shifts and supply chain ethics directly impact long-term margins and regulatory exposure",
       impact: [
-        "Influenced multi-million RM investment discussions",
-        "Boosted stakeholder confidence by 40%",
-        "Clarified regulatory risk and timeline assumptions"
+        "Informed investment decisions on >RM 5B market cap portfolio",
+        "Identified material sustainability risks others missed",
+        "Briefed senior analysts on valuation shifts"
       ]
     },
     {
       icon: Shield,
-      title: "IP Strategy",
-      situation: "Patent portfolio needed stronger protection and faster prosecution",
-      action: "Redesigned claim structures using strategic commercial lens, streamlined attorney workflows with systematic process improvements",
-      insight: "IP isn't just protection—it's a tool for market positioning and partnership leverage",
+      title: "Construction Sector Pitch",
+      situation: "Sunway Construction opportunity amid data centre expansion and sustainable infrastructure demand",
+      action: "Linked forecasted order book growth to rising sustainable infrastructure spending, modelled emissions intensity scenarios and regulatory tailwinds",
+      insight: "Transition to sustainable infrastructure creates structural demand—not just ESG compliance, but revenue driver",
       impact: [
-        "Accelerated attorney workflows by 30%",
-        "Reduced examiner objections by 15%",
-        "Strengthened claim scope and enforceability"
+        "Stock elevated to top-priority status internally",
+        "Demonstrated ESG integration drives alpha",
+        "Positioned construction as transition beneficiary"
       ]
     },
     {
       icon: Rocket,
-      title: "Startup Commercial Roadmap",
-      situation: "Early-stage biotech needed clear go-to-market strategy and pricing model",
-      action: "Conducted 50+ stakeholder interviews across clinicians, payers, and key opinion leaders to map the commercial ecosystem",
-      insight: "Success required alignment across scientific validation, reimbursement pathways, and clinical workflow integration",
+      title: "Climate Startup Strategy",
+      situation: "CO2LLECT needed commercial validation for climate-positive carbon removal business case",
+      action: "Conducted 50+ stakeholder interviews across farmers, supply chain and regulators to assess behavioural barriers and policy misalignments",
+      insight: "Climate solutions fail without understanding behavioural economics and regulatory-market gaps—not just technical feasibility",
       impact: [
-        "Pitch won first place in competition",
-        "Pricing model projected 30% profitability",
-        "Validated product-market fit assumptions"
+        "Won 1st place pitch competition",
+        "Secured VC and Imperial Enterprise Lab interest",
+        "Pricing model projected 30% profitability"
       ]
     },
     {
       icon: Microscope,
-      title: "Research & Development",
-      situation: "Complex genetic mutation data needed synthesis and strategic direction",
-      action: "Analyzed immunotherapy mechanisms and genetic pathways, translating findings into actionable experimental design",
-      insight: "Connected molecular mechanisms to therapeutic opportunities that shaped R&D priorities",
+      title: "Biotech Patent Diligence",
+      situation: "Patent filings needed faster prosecution with stronger novelty assessment for commercial viability",
+      action: "Conducted prior art analysis on biotech claims, collaborated with legal and scientific specialists to strengthen regulatory alignment",
+      insight: "Patent strength determines long-term defensibility—novelty risks directly impact investment thesis and exit multiples",
       impact: [
-        "Informed follow-up experiments on genetic mutations",
-        "Advanced immunotherapy development strategy",
-        "Bridged bench science with commercial potential"
+        "30% faster attorney turnaround",
+        "15% fewer examiner objections",
+        "Improved regulatory and commercial alignment"
       ]
     }
   ];
