@@ -1,42 +1,41 @@
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 
 const HowIThink = () => {
   const languages = [
-    { domain: "Science", speaks: "mechanisms" },
-    { domain: "Product", speaks: "feasibility" },
-    { domain: "IP", speaks: "protection" },
-    { domain: "Markets", speaks: "risk" }
+    { domain: "Data", speaks: "insights" },
+    { domain: "Product", speaks: "impact" },
+    { domain: "Operations", speaks: "efficiency" },
+    { domain: "Strategy", speaks: "growth" }
   ];
 
   const framework = [
     { step: "1", title: "Map the system", description: "incentives, constraints, dependencies." },
     { step: "2", title: "Find the leverage point", description: "where one change shifts everything." },
     { step: "3", title: "Pressure-test assumptions", description: "what breaks the model?" },
-    { step: "4", title: "Identify growth or differentiation opportunities", description: "where value can be created." },
-    { step: "5", title: "Build a tailored solution", description: "no templates, only what fits this exact problem." }
+    { step: "4", title: "Build the solution", description: "simple, scalable, fast to deploy." },
+    { step: "5", title: "Measure and iterate", description: "track outcomes, optimise continuously." }
   ];
 
   const insights = [
     {
-      title: "The real reason biotech ideas stall.",
-      hook: "Science progresses. Alignment does not."
+      title: "Why most processes stall.",
+      hook: "Complexity compounds. Simplicity scales."
     },
     {
-      title: "Why IP is a commercial argument disguised as a document.",
-      hook: "Patents shape power."
+      title: "The hidden cost of 'good enough'.",
+      hook: "Small inefficiencies multiply at scale."
     },
     {
-      title: "How to tell if a scientific idea actually has legs.",
-      hook: "Look for incentive alignment before data."
+      title: "How to move fast without breaking things.",
+      hook: "Own the problem end-to-end."
     },
     {
-      title: "The metric that quietly decides biotech success.",
-      hook: "Time-to-proof."
+      title: "The metric that quietly decides success.",
+      hook: "Time-to-value."
     },
     {
-      title: "What markets see that scientists don't.",
-      hook: "Risk is narrative first, data second."
+      title: "What data sees that intuition misses.",
+      hook: "Patterns hide in volume."
     }
   ];
 
@@ -52,7 +51,7 @@ const HowIThink = () => {
         {/* Four Languages */}
         <div className="space-y-8">
           <h3 className="text-3xl font-bold text-center text-foreground">
-            The Four Languages of Biotech
+            The Four Languages of Impact
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {languages.map((lang, index) => (

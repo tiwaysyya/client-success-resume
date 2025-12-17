@@ -3,20 +3,20 @@ const MyStory = () => {
     <section id="my-story" className="py-24 px-4">
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
-          From biotech research to ESG investment analysis.
+          From biotech complexity to strategic clarity.
         </h2>
         
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Started in biotechnology research at Imperial. Moved into equity analysis, patent strategy and climate ventures.
+            Imperial Biotechnology graduate. Built analytical rigour through equity research, startup strategy and patent diligence.
           </p>
           
           <p>
-            Now I evaluate sustainability risks, model regulatory headwinds and synthesise scientific, policy and market evidence into actionable investment insights.
+            Now I turn chaotic complexity into simple, scalable solutions—optimising products, processes and customer experiences through data-driven analysis.
           </p>
           
           <p>
-            I work best where scientific complexity meets investment judgement and stewardship-aligned research.
+            I thrive in lightning-fast environments where ownership, curiosity and speed drive results.
           </p>
         </div>
       </div>
