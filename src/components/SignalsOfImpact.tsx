@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "45%", label: "Newsletter audience growth" },
-    { value: "30%", label: "Faster patent turnaround" },
-    { value: "15%", label: "Fewer examiner objections" },
+    { value: "45%", label: "Engagement growth" },
+    { value: "50%", label: "Membership growth" },
     { value: "50+", label: "Stakeholder interviews" },
-    { value: ">RM 5B", label: "Market cap analysed" },
-    { value: "5+", label: "Equity research reports" },
-    { value: "1st Place", label: "Climate pitch competition" },
-    { value: "1,500+", label: "ESG analysis readers" }
+    { value: "1st", label: "Place pitch competition" },
+    { value: "1,500+", label: "Newsletter readers" },
+    { value: "100%", label: "On-time delivery" },
+    { value: "RM 15B+", label: "Assets analysed" },
+    { value: "5+", label: "Research reports delivered" }
   ];
 
   return (
@@ -20,7 +20,7 @@ const SignalsOfImpact = () => {
             Signals of Impact
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Numbers tell the story of value created.
+            Numbers tell the story of outcomes delivered.
           </p>
         </div>
 

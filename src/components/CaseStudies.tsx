@@ -1,38 +1,38 @@
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Shield, Rocket, Microscope } from "lucide-react";
+import { TrendingUp, Users, Rocket, BarChart3 } from "lucide-react";
 
 const CaseStudies = () => {
   const cases = [
     {
-      icon: TrendingUp,
-      title: "Healthcare ESG Analysis",
-      situation: "Regional hospital operator needed evaluation across utilisation, margin and sustainability risks for multi-million RM investment decision",
-      action: "Built financial and ESG models integrating emissions intensity, demographic pressures and supply chain labour standards with traditional DCF analysis",
-      insight: "Healthcare ESG risks are material—demographic shifts and supply chain ethics directly impact long-term margins and regulatory exposure",
+      icon: BarChart3,
+      title: "Accelerating Equity Research",
+      situation: "Equity desk needed faster Q2 review cycle across RM15B+ Pharma and Construction portfolio",
+      action: "Leveraged Bloomberg to rapidly synthesise dense financial disclosures and regulatory updates into high-impact metrics for portfolio decisions",
+      insight: "Speed without sacrificing depth—the right systems turn information overload into actionable intelligence",
       impact: [
-        "Informed investment decisions on >RM 5B market cap portfolio",
-        "Identified material sustainability risks others missed",
-        "Briefed senior analysts on valuation shifts"
+        "Drove strategic coverage decisions on >RM 5B assets",
+        "Influenced model portfolio allocation through stock pitch",
+        "Delivered 5+ research reports with positive analyst feedback"
       ]
     },
     {
-      icon: Shield,
-      title: "Construction Sector Pitch",
-      situation: "Sunway Construction opportunity amid data centre expansion and sustainable infrastructure demand",
-      action: "Linked forecasted order book growth to rising sustainable infrastructure spending, modelled emissions intensity scenarios and regulatory tailwinds",
-      insight: "Transition to sustainable infrastructure creates structural demand—not just ESG compliance, but revenue driver",
+      icon: Users,
+      title: "Editorial Operations Scale-Up",
+      situation: "Investment newsletter needed engagement growth while maintaining weekly publication cadence under pressure",
+      action: "Analysed readership data to iterate on headlines and formats. Streamlined editorial workflows. Trained 10-analyst team on structured research frameworks",
+      insight: "Content-market fit is testable—data reveals what compels action, not intuition",
       impact: [
-        "Stock elevated to top-priority status internally",
-        "Demonstrated ESG integration drives alpha",
-        "Positioned construction as transition beneficiary"
+        "45% engagement growth to 1,500+ readers",
+        "100% on-time publication record",
+        "Elevated quality across 30+ weekly publications"
       ]
     },
     {
       icon: Rocket,
-      title: "Climate Startup Strategy",
-      situation: "CO2LLECT needed commercial validation for climate-positive carbon removal business case",
-      action: "Conducted 50+ stakeholder interviews across farmers, supply chain and regulators to assess behavioural barriers and policy misalignments",
-      insight: "Climate solutions fail without understanding behavioural economics and regulatory-market gaps—not just technical feasibility",
+      title: "Climate Startup Go-to-Market",
+      situation: "CO2LLECT needed commercial validation and market entry strategy for climate-positive carbon removal",
+      action: "Led 50+ stakeholder interviews across farmers, operators and regulators. Built pricing model and go-to-market plan from unit economics and competitive benchmarking",
+      insight: "Market entry barriers hide in behavioural economics and regulatory gaps—not just technical feasibility",
       impact: [
         "Won 1st place pitch competition",
         "Secured VC and Imperial Enterprise Lab interest",
@@ -40,15 +40,15 @@ const CaseStudies = () => {
       ]
     },
     {
-      icon: Microscope,
-      title: "Biotech Patent Diligence",
-      situation: "Patent filings needed faster prosecution with stronger novelty assessment for commercial viability",
-      action: "Conducted prior art analysis on biotech claims, collaborated with legal and scientific specialists to strengthen regulatory alignment",
-      insight: "Patent strength determines long-term defensibility—novelty risks directly impact investment thesis and exit multiples",
+      icon: TrendingUp,
+      title: "Membership Growth Strategy",
+      situation: "GenCorporate needed rapid membership expansion and high-profile speaker acquisition",
+      action: "Used outreach engagement data to adjust strategy week-by-week. Cold-outreached and coordinated logistics for career panels with Tier 1 firm professionals",
+      insight: "Rapid experimentation beats perfect planning—test, learn, iterate",
       impact: [
-        "30% faster attorney turnaround",
-        "15% fewer examiner objections",
-        "Improved regulatory and commercial alignment"
+        "50% membership growth through experimentation",
+        "Secured speakers from McKinsey, PwC, EY, Goldman Sachs",
+        "150+ participants at flagship events"
       ]
     }
   ];
@@ -61,7 +61,7 @@ const CaseStudies = () => {
             Case Studies
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real problems. Tailored solutions. Measurable impact.
+            Real problems. Fast execution. Measurable impact.
           </p>
         </div>
 

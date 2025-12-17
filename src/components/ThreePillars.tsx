@@ -1,22 +1,22 @@
-import { Network, Zap, Target } from "lucide-react";
+import { Rocket, BarChart3, Cog } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const ThreePillars = () => {
   const pillars = [
     {
-      icon: Network,
-      title: "Systems Thinking",
-      description: "Connecting sustainability risks, regulatory headwinds and market dynamics into investment insights."
+      icon: Rocket,
+      title: "Problem-Solving at Scale",
+      description: "Tackling complex challenges with speed, precision and creativity. Designing systems that unlock efficiency."
     },
     {
-      icon: Zap,
-      title: "Evidence Integrity",
-      description: "Scientific foundation meets policy analysis. Evaluating transition pathways with rigour."
+      icon: BarChart3,
+      title: "Data-Driven Analysis",
+      description: "Translating raw data into high-impact insights. Turning numbers into strategic action."
     },
     {
-      icon: Target,
-      title: "ESG Integration",
-      description: "Embedding material sustainability factors into equity research and stewardship workflows."
+      icon: Cog,
+      title: "Operational Excellence",
+      description: "Optimising products, processes and experiences. Powering global growth through relentless improvement."
     }
   ];
 
@@ -24,7 +24,7 @@ const ThreePillars = () => {
     <section id="pillars" className="py-24 px-4 bg-secondary/30">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
-          The Three Pillars of My Lens
+          What I Bring to the Table
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">

@@ -3,34 +3,43 @@ import { Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      role: "ESG Sector Head",
-      company: "Imperial Investment Society",
-      period: "Oct 2024 - Jun 2025",
-      achievements: [
-        "Led ESG coverage producing sustainability, policy and sector analysis for 1,500+ readers",
-        "Campaigned for integration of ESG considerations across all research verticals",
-        "Grew newsletter audience 45% leading 10-person team with 100% on-time publication"
-      ]
-    },
-    {
       role: "Equity Analyst (Buy Side) Intern",
       company: "RHB Asset Management",
       period: "Jul 2024 - Aug 2024",
       achievements: [
-        "Prepared daily/weekly sector notes using Bloomberg and ESG datasets across 10+ healthcare and construction names",
-        "Built financial and ESG models for hospital operator and construction contractor (>RM 5B market cap)",
-        "Supported 5+ equity research reports with DCF modelling, peer benchmarking and ESG factor mapping",
-        "Pitched Sunway Construction linking order book growth to data centre expansion and sustainable infrastructure demand"
+        "Accelerated Q2 review by synthesising dense financial disclosures and regulatory updates into high-impact metrics using Bloomberg",
+        "Drove strategic coverage decisions for RM15B+ Pharma and Construction assets through primary operational analysis",
+        "Influenced portfolio allocation with high-impact stock pitch identifying data centre investment growth opportunities",
+        "Delivered 5+ internal research reports with positive feedback on clarity of peer comparative analysis"
       ]
     },
     {
       role: "Product & Market Strategy Lead",
       company: "CO2LLECT (Climate Startup)",
-      period: "Oct 2023 - Jun 2024",
+      period: "Oct 2024 - Jun 2025",
       achievements: [
-        "Won 1st place pitch competition, secured VC interest for climate-positive business case",
-        "Conducted 50+ interviews with farmers, logisticians and regulators to assess adoption barriers",
-        "Designed pricing model and ESG positioning strategy guiding product development priorities"
+        "Won 1st place pitch competition presenting commercially grounded business case to VCs and Imperial Enterprise Lab",
+        "Led discovery through 50+ cold stakeholder interviews translating primary insights into actionable strategy",
+        "Built pricing model and go-to-market plan from unit economics, segmentation and competitive benchmarking"
+      ]
+    },
+    {
+      role: "Investment Editorial Head",
+      company: "Imperial Investment Society",
+      period: "Oct 2024 - Jun 2025",
+      achievements: [
+        "Grew engagement 45% to 1,500+ readers by iterating on data-driven content optimisation",
+        "Elevated quality of 30+ publications by training 10-analyst team on structured research frameworks",
+        "Maintained 100% on-time record by streamlining workflows and cross-functional coordination"
+      ]
+    },
+    {
+      role: "Strategy & Branding Director",
+      company: "GenCorporate",
+      period: "Oct 2023 - Oct 2024",
+      achievements: [
+        "Grew membership 50% through rapid experimentation using engagement data to adjust strategy weekly",
+        "Secured Tier 1 firm professionals (McKinsey, PwC, EY, Goldman Sachs) for 150+ participant events"
       ]
     },
     {
@@ -38,9 +47,9 @@ const Experience = () => {
       company: "KASS International",
       period: "Aug 2023 - Sep 2023",
       achievements: [
-        "Conducted prior art diligence on biotech patents, driving 30% faster attorney turnaround",
-        "Strengthened claim drafting precision, reducing examiner objections 15%",
-        "Authored 10+ explainer articles improving stakeholder understanding of regulatory constraints"
+        "Mitigated novelty risks across 10+ biotech patents by analysing comparable filings into focused assessments",
+        "Improved regulatory alignment by coordinating with attorneys and specialists to tighten claim language",
+        "Optimised B2B communication by authoring 10+ explainer articles clarifying complex procedures"
       ]
     }
   ];

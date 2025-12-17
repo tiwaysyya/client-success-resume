@@ -3,32 +3,32 @@ import { CheckCircle2 } from "lucide-react";
 
 const HowToUseMe = () => {
   const capabilities = [
-    "Strategic problem solving",
-    "Commercial analysis",
-    "Scientific evaluation",
-    "Market and competitor synthesis",
-    "IP and technology positioning",
-    "Due diligence and risk mapping",
-    "Rapid onboarding into new domains",
-    "Translating complexity into decisions"
+    "Data-driven analysis and insight translation",
+    "Process optimisation and workflow design",
+    "Product and feature research",
+    "Strategic problem-solving at scale",
+    "Cross-functional coordination",
+    "Rapid stakeholder discovery",
+    "Market synthesis and competitive intelligence",
+    "Building tools that automate complexity"
   ];
 
   const roles = [
-    "Strategy consulting",
-    "Equity research",
-    "Product and innovation",
-    "Medtech/biotech commercial strategy",
-    "IP and technology strategy",
-    "Early-stage ventures"
+    "Strategy & Operations",
+    "Product Operations",
+    "Business Operations",
+    "Growth & Analytics",
+    "Fintech & Tech scale-ups",
+    "Consulting"
   ];
 
   const expectations = [
     "Fast learning",
-    "Tailored solutions",
-    "Systems thinking",
+    "Ownership mindset",
+    "Data-first thinking",
     "Creative problem solving",
-    "Precision in ambiguity",
-    "High-quality synthesis"
+    "Speed under pressure",
+    "High-quality delivery"
   ];
 
   return (
