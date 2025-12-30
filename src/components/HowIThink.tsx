@@ -27,7 +27,7 @@ const HowIThink = () => {
     },
     {
       principle: "Build, don't just plan",
-      description: "Tools, dashboards, automations—I make things that work."
+      description: "Tools, dashboards, automations. I make things that work."
     }
   ];
 

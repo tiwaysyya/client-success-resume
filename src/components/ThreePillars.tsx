@@ -5,13 +5,13 @@ const ThreePillars = () => {
   const pillars = [
     {
       icon: Zap,
-      title: "Bias to Action",
-      description: "Ship first, iterate fast. I don't wait for permission—I find problems and fix them."
+      title: "Scrappy Execution",
+      description: "Ship first, iterate fast. I don't wait for permission. I find problems and fix them."
     },
     {
       icon: Layers,
       title: "Cross-Functional Versatility",
-      description: "Product, growth, ops, strategy—I pick up whatever the team needs and run with it."
+      description: "Product, growth, ops, strategy. I pick up whatever the team needs and run with it."
     },
     {
       icon: UserCheck,

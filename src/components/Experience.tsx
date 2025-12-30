@@ -7,7 +7,7 @@ const Experience = () => {
       company: "CO2LLECT (Climate Startup)",
       period: "Oct 2024 - Jun 2025",
       achievements: [
-        "Won 1st place pitch competition—presented commercially grounded business case to VCs and Imperial Enterprise Lab",
+        "Won 1st place pitch competition. Presented commercially grounded business case to VCs and Imperial Enterprise Lab",
         "Led discovery from scratch: 50+ cold stakeholder interviews translated into actionable go-to-market strategy",
         "Built pricing model and market entry plan from unit economics, segmentation and competitive analysis"
       ]
@@ -62,7 +62,7 @@ const Experience = () => {
             Experience
           </h2>
           <p className="text-muted-foreground text-lg">
-            BSc Biotechnology (Hons), Imperial College London • Upper Second Class Honours
+            BSc Biotechnology (Hons), Imperial College London. Upper Second Class Honours
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4"></div>
         </div>

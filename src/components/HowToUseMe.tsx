@@ -3,12 +3,12 @@ import { CheckCircle2 } from "lucide-react";
 
 const HowToUseMe = () => {
   const thrive = [
-    "Ambiguity—give me a problem, not a process",
-    "Ownership—let me run with it end-to-end",
-    "Speed—fast feedback loops and rapid iteration",
-    "Impact—work that actually moves the needle",
-    "Cross-functional chaos—I'll figure out where I'm needed",
-    "Building from scratch—0→1 is where I'm happiest"
+    "Ambiguity: give me a problem, not a process",
+    "Ownership: let me run with it end-to-end",
+    "Speed: fast feedback loops and rapid iteration",
+    "Impact: work that actually moves the needle",
+    "Cross-functional chaos: I'll figure out where I'm needed",
+    "Building from scratch: 0 to 1 is where I'm happiest"
   ];
 
   const roles = [
