@@ -6,17 +6,17 @@ const ThreePillars = () => {
     {
       icon: Zap,
       title: "Scrappy Execution",
-      description: "Ship first, iterate fast. I don't wait for permission. I find problems and fix them."
+      description: "I move fast and get things done. When I see a gap, I step up and fill it while keeping the team aligned."
     },
     {
       icon: Layers,
       title: "Cross-Functional Versatility",
-      description: "Product, growth, ops, strategy. I pick up whatever the team needs and run with it."
+      description: "Product, growth, ops, strategy. I bridge the gaps between teams and pick up whatever needs doing."
     },
     {
       icon: UserCheck,
       title: "Founder-Level Ownership",
-      description: "I treat every problem like it's my company. End-to-end accountability, no hand-offs."
+      description: "I take full accountability for my work while staying plugged into the bigger picture and team priorities."
     }
   ];
 
