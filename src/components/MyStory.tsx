@@ -12,11 +12,11 @@ const MyStory = () => {
           </p>
           
           <p>
-            I've led societies, trained teams of 10+, grown communities 50%, won pitch competitions, and built tools to solve my own problems. I take initiative, but I know the best outcomes come from collaboration.
+            I've led societies, trained teams of 10+, grown communities 50%, won pitch competitions, and built tools to solve my own problems. I take initiative, and I know how to bring others along.
           </p>
           
           <p>
-            I thrive when given ownership and a team to work with. Give me a seat at the table and I'll figure out the rest, together.
+            I thrive when given ownership and room to figure things out. Give me a seat at the table and I'll make things happen.
           </p>
         </div>
       </div>

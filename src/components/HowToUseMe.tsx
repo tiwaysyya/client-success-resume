@@ -4,10 +4,10 @@ import { CheckCircle2 } from "lucide-react";
 const HowToUseMe = () => {
   const thrive = [
     "Ambiguity: give me a problem, not a process",
-    "Ownership: let me run with it while staying aligned",
+    "Ownership: let me run with it end-to-end",
     "Speed: fast feedback loops and rapid iteration",
-    "Collaboration: I work best with a team around me",
-    "Cross-functional work: bridging gaps between teams",
+    "Impact: work that actually moves the needle",
+    "Cross-functional work: bridging gaps between functions",
     "Building from scratch: 0 to 1 is where I'm happiest"
   ];
 
@@ -24,7 +24,7 @@ const HowToUseMe = () => {
     "I'll figure it out",
     "I ship, then iterate",
     "I ask questions early",
-    "I keep the team in the loop",
+    "I stay aligned",
     "I move fast",
     "I build things that work"
   ];
