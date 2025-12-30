@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "45%", label: "Engagement growth" },
-    { value: "50%", label: "Membership growth" },
-    { value: "50+", label: "Stakeholder interviews" },
+    { value: "2", label: "Tools built from scratch" },
+    { value: "50+", label: "Cold outreach conversations" },
+    { value: "45%", label: "Engagement growth shipped" },
+    { value: "50%", label: "Community growth delivered" },
     { value: "1st", label: "Place pitch competition" },
-    { value: "1,500+", label: "Newsletter readers" },
-    { value: "100%", label: "On-time delivery" },
-    { value: "RM 15B+", label: "Assets analysed" },
-    { value: "5+", label: "Research reports delivered" }
+    { value: "1,500+", label: "Newsletter readers reached" },
+    { value: "100%", label: "On-time delivery rate" },
+    { value: "4", label: "Leadership roles held" }
   ];
 
   return (
@@ -17,10 +17,10 @@ const SignalsOfImpact = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Signals of Impact
+            Proof of Proactivity
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Numbers tell the story of outcomes delivered.
+            Numbers from things I built, led, and shipped.
           </p>
         </div>
 

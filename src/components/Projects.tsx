@@ -1,29 +1,31 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Code2 } from "lucide-react";
+import { LayoutDashboard, Timer, Lightbulb } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       icon: LayoutDashboard,
-      title: "Biotech Market Landscape Analysis Tool",
-      description: "Strategy dashboard that ranks 8 therapeutic areas by feasibility, attractiveness and clinical risk, enabling rapid diligence-style assessments.",
+      title: "Biotech Market Analysis Dashboard",
+      description: "Saw a gap in how therapeutic areas were evaluated. Built a tool that ranks 8 markets by feasibility, attractiveness, and clinical risk.",
+      story: "No one asked me to build this. I wanted faster diligence-style assessments, so I made one.",
       features: [
-        "Stakeholder-specific views for different user personas",
-        "Dynamic filters to surface high-value opportunities",
-        "Diligence-ready insights in minutes, not days"
+        "Stakeholder-specific views for different users",
+        "Dynamic filters to surface opportunities",
+        "Diligence-ready insights in minutes"
       ],
       tech: ["Python", "SQL", "Data Visualisation"]
     },
     {
       icon: Timer,
-      title: "Lab Workflow & Timing Tool",
-      description: "Operational tool that resolves task slippage and human error in wet lab environments by parsing protocols and automating experimental execution.",
+      title: "Lab Workflow Timer",
+      description: "Wet lab protocols are time-critical and error-prone. Built a tool that parses protocols and automates timing.",
+      story: "Got frustrated with missed steps in experiments. Built the solution myself.",
       features: [
-        "Protocol parsing and automated timer management",
+        "Protocol parsing and automated timers",
         "Time-critical step highlighting",
-        "Parallel experimental execution support"
+        "Parallel experiment support"
       ],
-      tech: ["Python", "Process Automation"]
+      tech: ["JavaScript", "HTML/CSS", "Process Automation"]
     }
   ];
 
@@ -32,10 +34,10 @@ const Projects = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Projects
+            Things I've Built
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tools I've built to solve real operational problems.
+            Side projects. No one asked me to. I just saw problems and built solutions.
           </p>
         </div>
 
@@ -49,11 +51,16 @@ const Projects = () => {
                 <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
               </div>
 
-              <p className="text-muted-foreground mb-6">{project.description}</p>
+              <p className="text-muted-foreground mb-4">{project.description}</p>
+              
+              <div className="flex items-start gap-2 mb-6 p-3 bg-secondary/50 rounded-lg">
+                <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-foreground italic">{project.story}</p>
+              </div>
 
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm font-semibold text-primary mb-2">KEY FEATURES</p>
+                  <p className="text-sm font-semibold text-primary mb-2">WHAT IT DOES</p>
                   <ul className="space-y-1">
                     {project.features.map((feature, idx) => (
                       <li key={idx} className="text-foreground text-sm flex items-start gap-2">
@@ -68,9 +75,8 @@ const Projects = () => {
                   {project.tech.map((tech, idx) => (
                     <span 
                       key={idx} 
-                      className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary text-sm text-foreground"
+                      className="px-3 py-1 rounded-full bg-secondary text-sm text-foreground"
                     >
-                      <Code2 className="w-3 h-3" />
                       {tech}
                     </span>
                   ))}

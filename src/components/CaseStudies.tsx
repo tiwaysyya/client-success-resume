@@ -1,53 +1,53 @@
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Users, Rocket, BarChart3 } from "lucide-react";
+import { TrendingUp, Users, Rocket, Zap } from "lucide-react";
 
 const CaseStudies = () => {
   const cases = [
     {
-      icon: BarChart3,
-      title: "Accelerating Equity Research",
-      situation: "Equity desk needed faster Q2 review cycle across RM15B+ Pharma and Construction portfolio",
-      action: "Leveraged Bloomberg to rapidly synthesise dense financial disclosures and regulatory updates into high-impact metrics for portfolio decisions",
-      insight: "Speed without sacrificing depth—the right systems turn information overload into actionable intelligence",
+      icon: Zap,
+      title: "Shipped Research at Speed",
+      situation: "Equity desk needed Q2 reviews completed fast across a massive portfolio",
+      action: "Built rapid synthesis workflows using Bloomberg. Turned dense financial data into actionable insights in days, not weeks",
+      insight: "Speed is a feature. The right systems turn information overload into decisions",
       impact: [
-        "Drove strategic coverage decisions on >RM 5B assets",
-        "Influenced model portfolio allocation through stock pitch",
-        "Delivered 5+ research reports with positive analyst feedback"
+        "Covered RM 5B+ in assets",
+        "5+ reports shipped with positive feedback",
+        "Directly influenced portfolio allocation"
       ]
     },
     {
       icon: Users,
-      title: "Editorial Operations Scale-Up",
-      situation: "Investment newsletter needed engagement growth while maintaining weekly publication cadence under pressure",
-      action: "Analysed readership data to iterate on headlines and formats. Streamlined editorial workflows. Trained 10-analyst team on structured research frameworks",
-      insight: "Content-market fit is testable—data reveals what compels action, not intuition",
+      title: "Built a Content Engine from Scratch",
+      situation: "Investment newsletter needed growth while maintaining weekly cadence",
+      action: "Analysed engagement data, iterated on formats, trained a 10-person team on research frameworks. Built the machine, then ran it",
+      insight: "Content-market fit is testable. Data shows what works—intuition doesn't",
       impact: [
-        "45% engagement growth to 1,500+ readers",
+        "45% engagement growth → 1,500+ readers",
         "100% on-time publication record",
-        "Elevated quality across 30+ weekly publications"
+        "30+ publications elevated in quality"
       ]
     },
     {
       icon: Rocket,
-      title: "Climate Startup Go-to-Market",
-      situation: "CO2LLECT needed commercial validation and market entry strategy for climate-positive carbon removal",
-      action: "Led 50+ stakeholder interviews across farmers, operators and regulators. Built pricing model and go-to-market plan from unit economics and competitive benchmarking",
-      insight: "Market entry barriers hide in behavioural economics and regulatory gaps—not just technical feasibility",
+      title: "0→1 Market Entry",
+      situation: "Climate startup needed commercial validation and go-to-market strategy",
+      action: "Led 50+ stakeholder interviews from scratch. Built pricing model from unit economics. Pitched to VCs and won",
+      insight: "Market barriers hide in behaviour and regulation, not just tech",
       impact: [
         "Won 1st place pitch competition",
-        "Secured VC and Imperial Enterprise Lab interest",
-        "Pricing model projected 30% profitability"
+        "VC and Imperial Enterprise Lab interest secured",
+        "30% profitability projected in pricing model"
       ]
     },
     {
       icon: TrendingUp,
-      title: "Membership Growth Strategy",
-      situation: "GenCorporate needed rapid membership expansion and high-profile speaker acquisition",
-      action: "Used outreach engagement data to adjust strategy week-by-week. Cold-outreached and coordinated logistics for career panels with Tier 1 firm professionals",
-      insight: "Rapid experimentation beats perfect planning—test, learn, iterate",
+      title: "Growth Hacked a Community",
+      situation: "Professional society needed rapid membership expansion and speaker acquisition",
+      action: "Ran weekly experiments using engagement data. Cold-outreached to Tier 1 firms. Shipped events that people actually came to",
+      insight: "Rapid experimentation beats perfect planning every time",
       impact: [
-        "50% membership growth through experimentation",
-        "Secured speakers from McKinsey, PwC, EY, Goldman Sachs",
+        "50% membership growth",
+        "Speakers from McKinsey, PwC, EY, Goldman Sachs",
         "150+ participants at flagship events"
       ]
     }
@@ -58,10 +58,10 @@ const CaseStudies = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Case Studies
+            What I've Shipped
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real problems. Fast execution. Measurable impact.
+            Real problems. Fast execution. Measurable outcomes.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const CaseStudies = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm font-semibold text-primary mb-1">ACTION</p>
+                  <p className="text-sm font-semibold text-primary mb-1">WHAT I DID</p>
                   <p className="text-muted-foreground text-sm">{caseStudy.action}</p>
                 </div>
 
@@ -92,7 +92,7 @@ const CaseStudies = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm font-semibold text-primary mb-2">IMPACT</p>
+                  <p className="text-sm font-semibold text-primary mb-2">RESULTS</p>
                   <ul className="space-y-1">
                     {caseStudy.impact.map((item, idx) => (
                       <li key={idx} className="text-foreground text-sm flex items-start gap-2">
