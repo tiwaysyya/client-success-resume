@@ -11,23 +11,23 @@ const HowIThink = () => {
   const defaults = [
     {
       principle: "Bias to action",
-      description: "Ship something today. Perfect it tomorrow."
+      description: "Start with action. Improve with data."
     },
     {
-      principle: "Own end-to-end",
-      description: "No hand-offs. I see problems through to resolution."
+      principle: "Own my lane",
+      description: "I take full responsibility while staying aligned with the team."
     },
     {
       principle: "Learn in public",
-      description: "Ask questions, share context, iterate openly."
+      description: "Ask questions early, share context, iterate openly with others."
     },
     {
       principle: "Data over intuition",
       description: "Test assumptions. Let results guide decisions."
     },
     {
-      principle: "Build, don't just plan",
-      description: "Tools, dashboards, automations. I make things that work."
+      principle: "Build with the team",
+      description: "I bring ideas, but the best solutions come from collaboration."
     }
   ];
 
