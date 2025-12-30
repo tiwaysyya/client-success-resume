@@ -15,19 +15,19 @@ const HowIThink = () => {
     },
     {
       principle: "Own my lane",
-      description: "I take full responsibility while staying aligned with the team."
+      description: "I take full responsibility while staying aligned with priorities."
     },
     {
       principle: "Learn in public",
-      description: "Ask questions early, share context, iterate openly with others."
+      description: "Ask questions early, share context, iterate openly."
     },
     {
       principle: "Data over intuition",
       description: "Test assumptions. Let results guide decisions."
     },
     {
-      principle: "Build with the team",
-      description: "I bring ideas, but the best solutions come from collaboration."
+      principle: "Build things that work",
+      description: "Tools, dashboards, automations. I make ideas real."
     }
   ];
 
