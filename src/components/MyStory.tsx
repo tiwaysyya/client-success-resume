@@ -8,7 +8,7 @@ const MyStory = () => {
         
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Imperial Biotechnology graduate. But I've never been content just studying—I build things, lead teams, and chase problems worth solving.
+            Imperial Biotechnology graduate. But I've never been content just studying. I build things, lead teams, and chase problems worth solving.
           </p>
           
           <p>
