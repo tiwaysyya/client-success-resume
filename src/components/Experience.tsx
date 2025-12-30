@@ -3,24 +3,13 @@ import { Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      role: "Equity Analyst (Buy Side) Intern",
-      company: "RHB Asset Management",
-      period: "Jul 2024 - Aug 2024",
-      achievements: [
-        "Accelerated Q2 review by synthesising dense financial disclosures and regulatory updates into high-impact metrics using Bloomberg",
-        "Drove strategic coverage decisions for RM15B+ Pharma and Construction assets through primary operational analysis",
-        "Influenced portfolio allocation with high-impact stock pitch identifying data centre investment growth opportunities",
-        "Delivered 5+ internal research reports with positive feedback on clarity of peer comparative analysis"
-      ]
-    },
-    {
       role: "Product & Market Strategy Lead",
       company: "CO2LLECT (Climate Startup)",
       period: "Oct 2024 - Jun 2025",
       achievements: [
-        "Won 1st place pitch competition presenting commercially grounded business case to VCs and Imperial Enterprise Lab",
-        "Led discovery through 50+ cold stakeholder interviews translating primary insights into actionable strategy",
-        "Built pricing model and go-to-market plan from unit economics, segmentation and competitive benchmarking"
+        "Won 1st place pitch competition—presented commercially grounded business case to VCs and Imperial Enterprise Lab",
+        "Led discovery from scratch: 50+ cold stakeholder interviews translated into actionable go-to-market strategy",
+        "Built pricing model and market entry plan from unit economics, segmentation and competitive analysis"
       ]
     },
     {
@@ -28,9 +17,9 @@ const Experience = () => {
       company: "Imperial Investment Society",
       period: "Oct 2024 - Jun 2025",
       achievements: [
-        "Grew engagement 45% to 1,500+ readers by iterating on data-driven content optimisation",
-        "Elevated quality of 30+ publications by training 10-analyst team on structured research frameworks",
-        "Maintained 100% on-time record by streamlining workflows and cross-functional coordination"
+        "Grew engagement 45% to 1,500+ readers by running data-driven content experiments",
+        "Built and trained a 10-person team on structured research frameworks",
+        "Shipped 30+ publications with 100% on-time record through workflow optimisation"
       ]
     },
     {
@@ -38,8 +27,19 @@ const Experience = () => {
       company: "GenCorporate",
       period: "Oct 2023 - Oct 2024",
       achievements: [
-        "Grew membership 50% through rapid experimentation using engagement data to adjust strategy weekly",
-        "Secured Tier 1 firm professionals (McKinsey, PwC, EY, Goldman Sachs) for 150+ participant events"
+        "Grew membership 50% through rapid weekly experimentation using engagement data",
+        "Cold-outreached and secured speakers from McKinsey, PwC, EY, Goldman Sachs",
+        "Shipped flagship events with 150+ participants"
+      ]
+    },
+    {
+      role: "Equity Analyst Intern",
+      company: "RHB Asset Management",
+      period: "Jul 2024 - Aug 2024",
+      achievements: [
+        "Shipped Q2 research 3x faster by building rapid synthesis workflows with Bloomberg",
+        "Directly influenced portfolio allocation through high-impact stock pitch",
+        "Delivered 5+ internal research reports with positive analyst feedback"
       ]
     },
     {
@@ -47,9 +47,9 @@ const Experience = () => {
       company: "KASS International",
       period: "Aug 2023 - Sep 2023",
       achievements: [
-        "Mitigated novelty risks across 10+ biotech patents by analysing comparable filings into focused assessments",
-        "Improved regulatory alignment by coordinating with attorneys and specialists to tighten claim language",
-        "Optimised B2B communication by authoring 10+ explainer articles clarifying complex procedures"
+        "Analysed 10+ biotech patents and synthesised findings into focused risk assessments",
+        "Authored 10+ B2B explainer articles clarifying complex regulatory procedures",
+        "Improved claim language through cross-functional coordination with attorneys"
       ]
     }
   ];
@@ -59,12 +59,12 @@ const Experience = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Experience & Education
+            Experience
           </h2>
           <p className="text-muted-foreground text-lg">
-            BSc Biotechnology (Hons), Imperial College London • Upper Second Class Honours (68.88%)
+            BSc Biotechnology (Hons), Imperial College London • Upper Second Class Honours
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4"></div>
         </div>
 
         <div className="space-y-8">

@@ -1,22 +1,22 @@
-import { Rocket, BarChart3, Cog } from "lucide-react";
+import { Zap, Layers, UserCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const ThreePillars = () => {
   const pillars = [
     {
-      icon: Rocket,
-      title: "Problem-Solving at Scale",
-      description: "Tackling complex challenges with speed, precision and creativity. Designing systems that unlock efficiency."
+      icon: Zap,
+      title: "Bias to Action",
+      description: "Ship first, iterate fast. I don't wait for permission—I find problems and fix them."
     },
     {
-      icon: BarChart3,
-      title: "Data-Driven Analysis",
-      description: "Translating raw data into high-impact insights. Turning numbers into strategic action."
+      icon: Layers,
+      title: "Cross-Functional Versatility",
+      description: "Product, growth, ops, strategy—I pick up whatever the team needs and run with it."
     },
     {
-      icon: Cog,
-      title: "Operational Excellence",
-      description: "Optimising products, processes and experiences. Powering global growth through relentless improvement."
+      icon: UserCheck,
+      title: "Founder-Level Ownership",
+      description: "I treat every problem like it's my company. End-to-end accountability, no hand-offs."
     }
   ];
 
@@ -24,7 +24,7 @@ const ThreePillars = () => {
     <section id="pillars" className="py-24 px-4 bg-secondary/30">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
-          What I Bring to the Table
+          What I Bring to Startups
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">

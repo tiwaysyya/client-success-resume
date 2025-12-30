@@ -2,33 +2,31 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 
 const HowToUseMe = () => {
-  const capabilities = [
-    "Data-driven analysis and insight translation",
-    "Process optimisation and workflow design",
-    "Product and feature research",
-    "Strategic problem-solving at scale",
-    "Cross-functional coordination",
-    "Rapid stakeholder discovery",
-    "Market synthesis and competitive intelligence",
-    "Building tools that automate complexity"
+  const thrive = [
+    "Ambiguity—give me a problem, not a process",
+    "Ownership—let me run with it end-to-end",
+    "Speed—fast feedback loops and rapid iteration",
+    "Impact—work that actually moves the needle",
+    "Cross-functional chaos—I'll figure out where I'm needed",
+    "Building from scratch—0→1 is where I'm happiest"
   ];
 
   const roles = [
-    "Strategy & Operations",
-    "Product Operations",
-    "Business Operations",
-    "Growth & Analytics",
-    "Fintech & Tech scale-ups",
-    "Consulting"
+    "Founder's Associate",
+    "Chief of Staff",
+    "Operations Associate",
+    "Growth Associate",
+    "Commercial Associate",
+    "Business Operations"
   ];
 
   const expectations = [
-    "Fast learning",
-    "Ownership mindset",
-    "Data-first thinking",
-    "Creative problem solving",
-    "Speed under pressure",
-    "High-quality delivery"
+    "I'll figure it out",
+    "I ship, then iterate",
+    "I ask questions early",
+    "I own problems end-to-end",
+    "I move fast",
+    "I build things that work"
   ];
 
   return (
@@ -36,19 +34,19 @@ const HowToUseMe = () => {
       <div className="container max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Where I create the most value.
+            What I'm Looking For
           </h2>
         </div>
 
         <div className="space-y-12">
-          {/* Capabilities */}
+          {/* Where I Thrive */}
           <Card className="p-8 border-border bg-card">
-            <h3 className="text-2xl font-bold mb-6 text-foreground">You can use me for:</h3>
+            <h3 className="text-2xl font-bold mb-6 text-foreground">I thrive in environments with:</h3>
             <div className="grid md:grid-cols-2 gap-4">
-              {capabilities.map((capability, index) => (
+              {thrive.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <p className="text-foreground">{capability}</p>
+                  <p className="text-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -56,7 +54,7 @@ const HowToUseMe = () => {
 
           {/* Best Suited Roles */}
           <Card className="p-8 border-border bg-card">
-            <h3 className="text-2xl font-bold mb-6 text-foreground">Best suited for roles in:</h3>
+            <h3 className="text-2xl font-bold mb-6 text-foreground">Roles I'm targeting:</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {roles.map((role, index) => (
                 <div key={index} className="flex items-start gap-3">

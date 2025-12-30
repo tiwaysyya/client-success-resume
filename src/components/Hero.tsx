@@ -10,29 +10,31 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-background to-champagne">
       <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
         <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-          Turning chaos into clarity.
+          I build things.
           <br />
-          Data into decisions.
+          I fix problems.
+          <br />
+          I move fast.
         </h1>
         
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Problem-solving at scale. Data-driven analysis. Operational excellence in lightning-fast environments.
+          Generalist. Builder. Problem-solver. Ready to own whatever needs doing.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center pt-8">
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            onClick={() => scrollToSection("how-i-think")}
+            onClick={() => scrollToSection("projects")}
           >
-            See How I Think
+            See My Projects
           </Button>
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
             onClick={() => scrollToSection("case-studies")}
           >
-            Case Studies
+            What I've Done
           </Button>
           <Button 
             size="lg" 
