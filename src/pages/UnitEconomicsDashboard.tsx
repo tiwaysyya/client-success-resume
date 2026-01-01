@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, TrendingUp, TrendingDown, AlertTriangle, DollarSign, Users, Clock, Zap, Bell, Download, RefreshCw } from "lucide-react";
+import { ArrowLeft, TrendingUp, TrendingDown, AlertTriangle, DollarSign, Users, Clock, Zap, Bell, Download, RefreshCw, Plus, Trash2, Edit2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -8,11 +8,32 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { LineChart, Line, BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Cell, ReferenceLine } from "recharts";
 import { toast } from "sonner";
 
-// Simulated data
-const monthlyMetrics = [
+interface MonthlyMetric {
+  month: string;
+  cac: number;
+  ltv: number;
+  ratio: number;
+  payback: number;
+  mrr: number;
+  customers: number;
+}
+
+interface ChannelData {
+  channel: string;
+  cac: number;
+  ltv: number;
+  ratio: number;
+  spend: number;
+  customers: number;
+  payback: number;
+}
+
+// Default sample data
+const defaultMonthlyMetrics: MonthlyMetric[] = [
   { month: "Jul", cac: 120, ltv: 380, ratio: 3.17, payback: 4.2, mrr: 45000, customers: 125 },
   { month: "Aug", cac: 135, ltv: 395, ratio: 2.93, payback: 4.8, mrr: 52000, customers: 142 },
   { month: "Sep", cac: 142, ltv: 410, ratio: 2.89, payback: 5.1, mrr: 61000, customers: 168 },
@@ -21,19 +42,19 @@ const monthlyMetrics = [
   { month: "Dec", cac: 195, ltv: 445, ratio: 2.28, payback: 6.8, mrr: 98000, customers: 267 },
 ];
 
-const cohortData = [
-  { cohort: "Q1 2024", month0: 100, month1: 85, month2: 78, month3: 72, month4: 68, month5: 65, ltv: 420 },
-  { cohort: "Q2 2024", month0: 100, month1: 82, month2: 74, month3: 68, month4: 63, month5: 60, ltv: 385 },
-  { cohort: "Q3 2024", month0: 100, month1: 80, month2: 71, month3: 64, month4: 59, month5: null, ltv: 350 },
-  { cohort: "Q4 2024", month0: 100, month1: 78, month2: 69, month3: null, month4: null, month5: null, ltv: 310 },
-];
-
-const channelBreakdown = [
+const defaultChannelBreakdown: ChannelData[] = [
   { channel: "Google Ads", cac: 145, ltv: 420, ratio: 2.90, spend: 28500, customers: 196, payback: 5.2 },
   { channel: "LinkedIn Ads", cac: 225, ltv: 580, ratio: 2.58, spend: 18000, customers: 80, payback: 6.8 },
   { channel: "Meta Ads", cac: 95, ltv: 310, ratio: 3.26, spend: 12350, customers: 130, payback: 4.1 },
   { channel: "Organic", cac: 35, ltv: 450, ratio: 12.86, spend: 4200, customers: 120, payback: 1.4 },
   { channel: "Referrals", cac: 50, ltv: 520, ratio: 10.40, spend: 3500, customers: 70, payback: 1.8 },
+];
+
+const cohortData = [
+  { cohort: "Q1 2024", month0: 100, month1: 85, month2: 78, month3: 72, month4: 68, month5: 65, ltv: 420 },
+  { cohort: "Q2 2024", month0: 100, month1: 82, month2: 74, month3: 68, month4: 63, month5: 60, ltv: 385 },
+  { cohort: "Q3 2024", month0: 100, month1: 80, month2: 71, month3: 64, month4: 59, month5: null, ltv: 350 },
+  { cohort: "Q4 2024", month0: 100, month1: 78, month2: 69, month3: null, month4: null, month5: null, ltv: 310 },
 ];
 
 const alerts = [
@@ -56,6 +77,13 @@ const UnitEconomicsDashboard = () => {
   const [selectedPeriod, setSelectedPeriod] = useState("6m");
   const [alertsEnabled, setAlertsEnabled] = useState(true);
   const [paybackThreshold, setPaybackThreshold] = useState("6");
+  const [monthlyMetrics, setMonthlyMetrics] = useState<MonthlyMetric[]>(defaultMonthlyMetrics);
+  const [channelBreakdown, setChannelBreakdown] = useState<ChannelData[]>(defaultChannelBreakdown);
+  const [isUsingCustomData, setIsUsingCustomData] = useState(false);
+  
+  // Form states for adding new entries
+  const [newMetric, setNewMetric] = useState<Partial<MonthlyMetric>>({ month: "", cac: 0, ltv: 0, mrr: 0, customers: 0 });
+  const [newChannel, setNewChannel] = useState<Partial<ChannelData>>({ channel: "", cac: 0, ltv: 0, spend: 0, customers: 0 });
 
   const currentMetrics = monthlyMetrics[monthlyMetrics.length - 1];
   const previousMetrics = monthlyMetrics[monthlyMetrics.length - 2];
@@ -130,6 +158,73 @@ RECOMMENDATIONS
       description: "Current payback: 6.8 months | Threshold: 6.0 months",
       duration: 5000,
     });
+  };
+
+  const calculateDerivedMetrics = (cac: number, ltv: number, mrr: number): { ratio: number; payback: number } => {
+    const ratio = cac > 0 ? Number((ltv / cac).toFixed(2)) : 0;
+    const avgMonthlyRevenue = mrr > 0 ? mrr / 100 : ltv / 12; // Estimate monthly revenue per customer
+    const payback = avgMonthlyRevenue > 0 ? Number((cac / avgMonthlyRevenue).toFixed(1)) : 0;
+    return { ratio, payback };
+  };
+
+  const addMonthlyMetric = () => {
+    if (!newMetric.month || !newMetric.cac || !newMetric.ltv) {
+      toast.error("Please fill in month, CAC, and LTV");
+      return;
+    }
+    const { ratio, payback } = calculateDerivedMetrics(newMetric.cac!, newMetric.ltv!, newMetric.mrr || 0);
+    const metric: MonthlyMetric = {
+      month: newMetric.month!,
+      cac: newMetric.cac!,
+      ltv: newMetric.ltv!,
+      ratio,
+      payback,
+      mrr: newMetric.mrr || 0,
+      customers: newMetric.customers || 0,
+    };
+    setMonthlyMetrics([...monthlyMetrics, metric]);
+    setNewMetric({ month: "", cac: 0, ltv: 0, mrr: 0, customers: 0 });
+    setIsUsingCustomData(true);
+    toast.success("Monthly data added");
+  };
+
+  const addChannel = () => {
+    if (!newChannel.channel || !newChannel.cac || !newChannel.ltv) {
+      toast.error("Please fill in channel name, CAC, and LTV");
+      return;
+    }
+    const ratio = newChannel.cac! > 0 ? Number((newChannel.ltv! / newChannel.cac!).toFixed(2)) : 0;
+    const payback = newChannel.ltv! > 0 ? Number((newChannel.cac! / (newChannel.ltv! / 12)).toFixed(1)) : 0;
+    const channel: ChannelData = {
+      channel: newChannel.channel!,
+      cac: newChannel.cac!,
+      ltv: newChannel.ltv!,
+      ratio,
+      spend: newChannel.spend || 0,
+      customers: newChannel.customers || 0,
+      payback,
+    };
+    setChannelBreakdown([...channelBreakdown, channel]);
+    setNewChannel({ channel: "", cac: 0, ltv: 0, spend: 0, customers: 0 });
+    setIsUsingCustomData(true);
+    toast.success("Channel data added");
+  };
+
+  const deleteMetric = (month: string) => {
+    setMonthlyMetrics(monthlyMetrics.filter(m => m.month !== month));
+    toast.success("Entry deleted");
+  };
+
+  const deleteChannel = (channelName: string) => {
+    setChannelBreakdown(channelBreakdown.filter(c => c.channel !== channelName));
+    toast.success("Channel deleted");
+  };
+
+  const resetToSampleData = () => {
+    setMonthlyMetrics(defaultMonthlyMetrics);
+    setChannelBreakdown(defaultChannelBreakdown);
+    setIsUsingCustomData(false);
+    toast.info("Reset to sample data");
   };
 
   return (
@@ -249,6 +344,7 @@ RECOMMENDATIONS
         <Tabs defaultValue="trends" className="space-y-6">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <TabsList className="bg-card/50">
+              <TabsTrigger value="input">Data Input</TabsTrigger>
               <TabsTrigger value="trends">Trends</TabsTrigger>
               <TabsTrigger value="cohorts">Cohort Analysis</TabsTrigger>
               <TabsTrigger value="channels">Channel Breakdown</TabsTrigger>
@@ -266,6 +362,213 @@ RECOMMENDATIONS
               </SelectContent>
             </Select>
           </div>
+
+          {/* Data Input Tab */}
+          <TabsContent value="input" className="space-y-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-lg font-semibold">Enter Your Data</h2>
+                <p className="text-sm text-muted-foreground">
+                  {isUsingCustomData ? "Using your custom data" : "Currently showing sample data"}
+                </p>
+              </div>
+              {isUsingCustomData && (
+                <Button variant="outline" size="sm" onClick={resetToSampleData}>
+                  <RefreshCw size={16} className="mr-2" />
+                  Reset to Sample Data
+                </Button>
+              )}
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              {/* Monthly Metrics Input */}
+              <Card className="bg-card border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <TrendingUp size={20} className="text-primary" />
+                    Monthly Metrics
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <Label htmlFor="month" className="text-sm">Month</Label>
+                      <Input
+                        id="month"
+                        placeholder="e.g. Jan"
+                        value={newMetric.month || ""}
+                        onChange={(e) => setNewMetric({ ...newMetric, month: e.target.value })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="cac" className="text-sm">CAC ($)</Label>
+                      <Input
+                        id="cac"
+                        type="number"
+                        placeholder="150"
+                        value={newMetric.cac || ""}
+                        onChange={(e) => setNewMetric({ ...newMetric, cac: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="ltv" className="text-sm">LTV ($)</Label>
+                      <Input
+                        id="ltv"
+                        type="number"
+                        placeholder="450"
+                        value={newMetric.ltv || ""}
+                        onChange={(e) => setNewMetric({ ...newMetric, ltv: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="mrr" className="text-sm">MRR ($)</Label>
+                      <Input
+                        id="mrr"
+                        type="number"
+                        placeholder="50000"
+                        value={newMetric.mrr || ""}
+                        onChange={(e) => setNewMetric({ ...newMetric, mrr: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="customers" className="text-sm">Customers</Label>
+                      <Input
+                        id="customers"
+                        type="number"
+                        placeholder="100"
+                        value={newMetric.customers || ""}
+                        onChange={(e) => setNewMetric({ ...newMetric, customers: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div className="flex items-end">
+                      <Button onClick={addMonthlyMetric} className="w-full">
+                        <Plus size={16} className="mr-2" />
+                        Add
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-border/40 pt-4 max-h-60 overflow-y-auto">
+                    <p className="text-sm text-muted-foreground mb-2">Current entries ({monthlyMetrics.length})</p>
+                    <div className="space-y-2">
+                      {monthlyMetrics.map((m) => (
+                        <div key={m.month} className="flex items-center justify-between p-2 bg-muted/30 rounded-md text-sm">
+                          <span className="font-medium">{m.month}</span>
+                          <span>CAC: ${m.cac}</span>
+                          <span>LTV: ${m.ltv}</span>
+                          <span className="text-muted-foreground">{m.ratio}x</span>
+                          <Button variant="ghost" size="sm" onClick={() => deleteMetric(m.month)}>
+                            <Trash2 size={14} className="text-destructive" />
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Channel Data Input */}
+              <Card className="bg-card border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <Users size={20} className="text-primary" />
+                    Channel Performance
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <Label htmlFor="channel" className="text-sm">Channel Name</Label>
+                      <Input
+                        id="channel"
+                        placeholder="e.g. Google Ads"
+                        value={newChannel.channel || ""}
+                        onChange={(e) => setNewChannel({ ...newChannel, channel: e.target.value })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="channelCac" className="text-sm">CAC ($)</Label>
+                      <Input
+                        id="channelCac"
+                        type="number"
+                        placeholder="120"
+                        value={newChannel.cac || ""}
+                        onChange={(e) => setNewChannel({ ...newChannel, cac: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="channelLtv" className="text-sm">LTV ($)</Label>
+                      <Input
+                        id="channelLtv"
+                        type="number"
+                        placeholder="400"
+                        value={newChannel.ltv || ""}
+                        onChange={(e) => setNewChannel({ ...newChannel, ltv: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="spend" className="text-sm">Spend ($)</Label>
+                      <Input
+                        id="spend"
+                        type="number"
+                        placeholder="10000"
+                        value={newChannel.spend || ""}
+                        onChange={(e) => setNewChannel({ ...newChannel, spend: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="channelCustomers" className="text-sm">Customers</Label>
+                      <Input
+                        id="channelCustomers"
+                        type="number"
+                        placeholder="50"
+                        value={newChannel.customers || ""}
+                        onChange={(e) => setNewChannel({ ...newChannel, customers: Number(e.target.value) })}
+                      />
+                    </div>
+                    <div className="flex items-end">
+                      <Button onClick={addChannel} className="w-full">
+                        <Plus size={16} className="mr-2" />
+                        Add
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-border/40 pt-4 max-h-60 overflow-y-auto">
+                    <p className="text-sm text-muted-foreground mb-2">Current channels ({channelBreakdown.length})</p>
+                    <div className="space-y-2">
+                      {channelBreakdown.map((c) => (
+                        <div key={c.channel} className="flex items-center justify-between p-2 bg-muted/30 rounded-md text-sm">
+                          <span className="font-medium truncate max-w-24">{c.channel}</span>
+                          <span>CAC: ${c.cac}</span>
+                          <span>LTV: ${c.ltv}</span>
+                          <span className="text-muted-foreground">{c.ratio}x</span>
+                          <Button variant="ghost" size="sm" onClick={() => deleteChannel(c.channel)}>
+                            <Trash2 size={14} className="text-destructive" />
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Quick Tips */}
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="p-4">
+                <h3 className="font-medium mb-2 flex items-center gap-2">
+                  <Zap size={16} className="text-primary" />
+                  Quick Tips
+                </h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• <strong>LTV/CAC Ratio:</strong> Aim for 3x or higher for healthy unit economics</li>
+                  <li>• <strong>Payback Period:</strong> Keep it under 12 months, ideally under 6 months</li>
+                  <li>• <strong>MRR:</strong> Enter your total Monthly Recurring Revenue to calculate payback</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
           {/* Trends Tab */}
           <TabsContent value="trends" className="space-y-6">
