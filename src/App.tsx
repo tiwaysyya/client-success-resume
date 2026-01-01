@@ -8,6 +8,7 @@ import Presentation from "./pages/Presentation";
 import FoundersIntelligence from "./pages/FoundersIntelligence";
 import SocialProofScraper from "./pages/SocialProofScraper";
 import UserResearchDashboard from "./pages/UserResearchDashboard";
+import BiotechMarketDashboard from "./pages/BiotechMarketDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/intel" element={<FoundersIntelligence />} />
           <Route path="/social-proof" element={<SocialProofScraper />} />
           <Route path="/user-research" element={<UserResearchDashboard />} />
+          <Route path="/biotech-market" element={<BiotechMarketDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
