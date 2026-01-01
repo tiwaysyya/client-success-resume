@@ -72,10 +72,10 @@
 
   .dark {
     /* Dark mode - electric, bold, startup - slightly lifted */
-    --background: 225 20% 14%;
+    --background: 225 18% 18%;
     --foreground: 0 0% 95%;
 
-    --card: 225 20% 18%;
+    --card: 225 18% 22%;
     --card-foreground: 0 0% 95%;
 
     --popover: 225 25% 12%;
