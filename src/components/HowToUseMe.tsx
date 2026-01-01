@@ -74,7 +74,7 @@ const HowToUseMe = () => {
                   key={index} 
                   className="bg-secondary rounded-lg p-4 text-center"
                 >
-                  <p className="font-semibold text-foreground">{expectation}</p>
+                  <p className="font-semibold text-secondary-foreground">{expectation}</p>
                 </div>
               ))}
             </div>
