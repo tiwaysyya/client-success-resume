@@ -27,7 +27,9 @@ const Projects = () => {
         "Dynamic filters to surface opportunities",
         "Diligence-ready insights in minutes"
       ],
-      tech: ["Python", "SQL", "Data Visualisation"]
+      tech: ["Python", "SQL", "Data Visualisation"],
+      link: "https://tiwaysyya.github.io/biotech-market-dashboard/",
+      external: true
     },
     {
       icon: Timer,
