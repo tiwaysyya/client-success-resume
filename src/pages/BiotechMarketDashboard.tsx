@@ -201,15 +201,15 @@ const BiotechMarketDashboard = () => {
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 85) return "text-emerald-400";
-    if (score >= 70) return "text-amber-400";
-    return "text-rose-400";
+    if (score >= 85) return "text-emerald-700 dark:text-emerald-400";
+    if (score >= 70) return "text-amber-700 dark:text-amber-500";
+    return "text-rose-700 dark:text-rose-400";
   };
 
   const getComplexityColor = (complexity: string) => {
-    if (complexity === "Low") return "bg-emerald-500/20 text-emerald-400 border-emerald-500/30";
-    if (complexity === "Medium") return "bg-amber-500/20 text-amber-400 border-amber-500/30";
-    return "bg-rose-500/20 text-rose-400 border-rose-500/30";
+    if (complexity === "Low") return "bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-700/50";
+    if (complexity === "Medium") return "bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-700/50";
+    return "bg-rose-100 text-rose-800 border-rose-200 dark:bg-rose-900/30 dark:text-rose-400 dark:border-rose-700/50";
   };
 
   const exportToPDF = () => {
@@ -255,26 +255,30 @@ ${a.name}
 
   const comparedAreas = therapeuticAreas.filter((a) => compareSelection.includes(a.id));
 
+  // Chart colors using the warm palette
+  const chartStrokeColor = "hsl(25 43% 68%)"; // muted-clay
+  const chartFillColor = "hsl(25 43% 68%)";
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-slate-800/50 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="text-slate-400 hover:text-white">
+              <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="text-muted-foreground hover:text-foreground">
                 <ArrowLeft className="h-5 w-5" />
               </Button>
               <div>
-                <h1 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Beaker className="h-5 w-5 text-cyan-400" />
+                <h1 className="text-xl font-bold text-foreground flex items-center gap-2">
+                  <Beaker className="h-5 w-5 text-primary" />
                   Biotech Market Analysis
                 </h1>
-                <p className="text-sm text-slate-400">Therapeutic Area Intelligence</p>
+                <p className="text-sm text-muted-foreground">Therapeutic Area Intelligence</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 text-xs text-slate-500 bg-slate-800/50 px-3 py-1.5 rounded-full">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 px-3 py-1.5 rounded-full">
                 <RefreshCw className="h-3 w-3" />
                 Last updated: {lastUpdated}
               </div>
@@ -285,11 +289,11 @@ ${a.name}
                   setCompareMode(!compareMode);
                   setCompareSelection([]);
                 }}
-                className={compareMode ? "bg-cyan-600 hover:bg-cyan-700" : "border-slate-700 text-slate-300"}
+                className={compareMode ? "bg-primary hover:bg-primary/90" : ""}
               >
                 {compareMode ? "Exit Compare" : "Compare Mode"}
               </Button>
-              <Button variant="outline" size="sm" onClick={exportToPDF} className="border-slate-700 text-slate-300 hover:text-white">
+              <Button variant="outline" size="sm" onClick={exportToPDF}>
                 <Download className="h-4 w-4 mr-2" />
                 Export Report
               </Button>
@@ -301,28 +305,28 @@ ${a.name}
       <main className="container mx-auto px-6 py-8">
         {/* Summary Stats */}
         <div className="grid grid-cols-4 gap-4 mb-8">
-          <Card className="bg-slate-800/50 border-slate-700/50">
+          <Card className="bg-card border-border">
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-white">${therapeuticAreas.reduce((sum, a) => sum + a.tam, 0).toFixed(0)}B</div>
-              <div className="text-sm text-slate-400">Combined TAM</div>
+              <div className="text-2xl font-bold text-foreground">${therapeuticAreas.reduce((sum, a) => sum + a.tam, 0).toFixed(0)}B</div>
+              <div className="text-sm text-muted-foreground">Combined TAM</div>
             </CardContent>
           </Card>
-          <Card className="bg-slate-800/50 border-slate-700/50">
+          <Card className="bg-card border-border">
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-emerald-400">{(therapeuticAreas.reduce((sum, a) => sum + a.cagr, 0) / therapeuticAreas.length).toFixed(1)}%</div>
-              <div className="text-sm text-slate-400">Avg. CAGR</div>
+              <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">{(therapeuticAreas.reduce((sum, a) => sum + a.cagr, 0) / therapeuticAreas.length).toFixed(1)}%</div>
+              <div className="text-sm text-muted-foreground">Avg. CAGR</div>
             </CardContent>
           </Card>
-          <Card className="bg-slate-800/50 border-slate-700/50">
+          <Card className="bg-card border-border">
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-cyan-400">{therapeuticAreas.reduce((sum, a) => sum + a.recentDeals, 0)}</div>
-              <div className="text-sm text-slate-400">Recent Deals</div>
+              <div className="text-2xl font-bold text-primary">{therapeuticAreas.reduce((sum, a) => sum + a.recentDeals, 0)}</div>
+              <div className="text-sm text-muted-foreground">Recent Deals</div>
             </CardContent>
           </Card>
-          <Card className="bg-slate-800/50 border-slate-700/50">
+          <Card className="bg-card border-border">
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-amber-400">{therapeuticAreas.reduce((sum, a) => sum + a.competitorCount, 0)}</div>
-              <div className="text-sm text-slate-400">Total Competitors</div>
+              <div className="text-2xl font-bold text-amber-700 dark:text-amber-500">{therapeuticAreas.reduce((sum, a) => sum + a.competitorCount, 0)}</div>
+              <div className="text-sm text-muted-foreground">Total Competitors</div>
             </CardContent>
           </Card>
         </div>
@@ -339,7 +343,7 @@ ${a.name}
               variant={filter === f.key ? "default" : "outline"}
               size="sm"
               onClick={() => setFilter(f.key as typeof filter)}
-              className={filter === f.key ? "bg-cyan-600 hover:bg-cyan-700" : "border-slate-700 text-slate-400"}
+              className={filter === f.key ? "bg-primary hover:bg-primary/90" : ""}
             >
               {f.label}
             </Button>
@@ -348,14 +352,14 @@ ${a.name}
 
         {/* Compare Selection Bar */}
         {compareMode && compareSelection.length > 0 && (
-          <div className="bg-cyan-900/30 border border-cyan-700/50 rounded-lg p-4 mb-6 flex items-center justify-between">
+          <div className="bg-primary/10 border border-primary/30 rounded-lg p-4 mb-6 flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-cyan-300 text-sm">Comparing {compareSelection.length}/3:</span>
+              <span className="text-primary text-sm font-medium">Comparing {compareSelection.length}/3:</span>
               <div className="flex gap-2">
                 {comparedAreas.map((a) => (
-                  <Badge key={a.id} className="bg-cyan-600/30 text-cyan-300 border-cyan-500/50">
+                  <Badge key={a.id} className="bg-primary/20 text-primary border-primary/40">
                     {a.name}
-                    <button onClick={() => toggleCompare(a.id)} className="ml-1 hover:text-white">
+                    <button onClick={() => toggleCompare(a.id)} className="ml-1 hover:text-foreground">
                       <X className="h-3 w-3" />
                     </button>
                   </Badge>
@@ -365,31 +369,31 @@ ${a.name}
             {compareSelection.length >= 2 && (
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
+                  <Button size="sm" className="bg-primary hover:bg-primary/90">
                     View Comparison
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="bg-slate-900 border-slate-700 max-w-4xl">
+                <DialogContent className="bg-card border-border max-w-4xl">
                   <DialogHeader>
-                    <DialogTitle className="text-white">Side-by-Side Comparison</DialogTitle>
+                    <DialogTitle className="text-foreground">Side-by-Side Comparison</DialogTitle>
                   </DialogHeader>
                   <div className="grid gap-4" style={{ gridTemplateColumns: `repeat(${comparedAreas.length}, 1fr)` }}>
                     {comparedAreas.map((area) => (
                       <div key={area.id} className="space-y-4">
-                        <h3 className="text-lg font-semibold text-white text-center border-b border-slate-700 pb-2">{area.name}</h3>
+                        <h3 className="text-lg font-semibold text-foreground text-center border-b border-border pb-2">{area.name}</h3>
                         <div className="space-y-2 text-sm">
-                          <div className="flex justify-between"><span className="text-slate-400">TAM</span><span className="text-white font-medium">${area.tam}B</span></div>
-                          <div className="flex justify-between"><span className="text-slate-400">CAGR</span><span className="text-emerald-400 font-medium">{area.cagr}%</span></div>
-                          <div className="flex justify-between"><span className="text-slate-400">Score</span><span className={`font-medium ${getScoreColor(area.attractivenessScore)}`}>{area.attractivenessScore}</span></div>
-                          <div className="flex justify-between"><span className="text-slate-400">Competitors</span><span className="text-white font-medium">{area.competitorCount}</span></div>
-                          <div className="flex justify-between"><span className="text-slate-400">Regulatory</span><span className="text-white font-medium">{area.regulatoryComplexity}</span></div>
-                          <div className="flex justify-between"><span className="text-slate-400">IP Landscape</span><span className="text-white font-medium">{area.ipLandscape}</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">TAM</span><span className="text-foreground font-medium">${area.tam}B</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">CAGR</span><span className="text-emerald-700 dark:text-emerald-400 font-medium">{area.cagr}%</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">Score</span><span className={`font-medium ${getScoreColor(area.attractivenessScore)}`}>{area.attractivenessScore}</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">Competitors</span><span className="text-foreground font-medium">{area.competitorCount}</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">Regulatory</span><span className="text-foreground font-medium">{area.regulatoryComplexity}</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">IP Landscape</span><span className="text-foreground font-medium">{area.ipLandscape}</span></div>
                         </div>
                         {/* Mini sparkline */}
                         <div className="h-16">
                           <ResponsiveContainer width="100%" height="100%">
                             <AreaChart data={area.historicalData}>
-                              <Area type="monotone" dataKey="tam" stroke="#06b6d4" fill="#06b6d4" fillOpacity={0.2} strokeWidth={2} />
+                              <Area type="monotone" dataKey="tam" stroke={chartStrokeColor} fill={chartFillColor} fillOpacity={0.2} strokeWidth={2} />
                             </AreaChart>
                           </ResponsiveContainer>
                         </div>
@@ -407,19 +411,19 @@ ${a.name}
           {filteredAreas.map((area) => (
             <Card
               key={area.id}
-              className={`bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all cursor-pointer ${
-                compareMode && compareSelection.includes(area.id) ? "ring-2 ring-cyan-500" : ""
+              className={`bg-card border-border hover:border-primary/50 transition-all cursor-pointer ${
+                compareMode && compareSelection.includes(area.id) ? "ring-2 ring-primary" : ""
               }`}
               onClick={() => (compareMode ? toggleCompare(area.id) : setSelectedArea(area))}
             >
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-lg text-white flex items-center gap-2">
+                  <CardTitle className="text-lg text-foreground flex items-center gap-2">
                     {compareMode && (
                       <div className={`w-5 h-5 rounded border-2 flex items-center justify-center ${
-                        compareSelection.includes(area.id) ? "bg-cyan-600 border-cyan-600" : "border-slate-600"
+                        compareSelection.includes(area.id) ? "bg-primary border-primary" : "border-border"
                       }`}>
-                        {compareSelection.includes(area.id) && <Check className="h-3 w-3 text-white" />}
+                        {compareSelection.includes(area.id) && <Check className="h-3 w-3 text-primary-foreground" />}
                       </div>
                     )}
                     {area.name}
@@ -434,19 +438,19 @@ ${a.name}
                 <div className="h-12">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={area.historicalData}>
-                      <Area type="monotone" dataKey="tam" stroke="#06b6d4" fill="#06b6d4" fillOpacity={0.1} strokeWidth={2} />
+                      <Area type="monotone" dataKey="tam" stroke={chartStrokeColor} fill={chartFillColor} fillOpacity={0.1} strokeWidth={2} />
                     </AreaChart>
                   </ResponsiveContainer>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <div className="text-slate-400">TAM</div>
-                    <div className="text-white font-semibold">${area.tam}B</div>
+                    <div className="text-muted-foreground">TAM</div>
+                    <div className="text-foreground font-semibold">${area.tam}B</div>
                   </div>
                   <div>
-                    <div className="text-slate-400">CAGR</div>
-                    <div className="text-emerald-400 font-semibold flex items-center gap-1">
+                    <div className="text-muted-foreground">CAGR</div>
+                    <div className="text-emerald-700 dark:text-emerald-400 font-semibold flex items-center gap-1">
                       <TrendingUp className="h-3 w-3" />
                       {area.cagr}%
                     </div>
@@ -457,12 +461,12 @@ ${a.name}
                   <Badge className={getComplexityColor(area.regulatoryComplexity)}>
                     {area.regulatoryComplexity} Regulatory
                   </Badge>
-                  <Badge className={`${area.ipLandscape === "Open" ? "bg-emerald-500/20 text-emerald-400" : area.ipLandscape === "Moderate" ? "bg-amber-500/20 text-amber-400" : "bg-rose-500/20 text-rose-400"} border-0`}>
+                  <Badge className={`${area.ipLandscape === "Open" ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400" : area.ipLandscape === "Moderate" ? "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400" : "bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400"} border-0`}>
                     {area.ipLandscape} IP
                   </Badge>
                 </div>
 
-                <div className="flex items-center justify-between text-xs text-slate-500">
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <span>{area.competitorCount} competitors</span>
                   <span>{area.recentDeals} recent deals</span>
                 </div>
@@ -474,11 +478,11 @@ ${a.name}
 
       {/* Detail Panel Dialog */}
       <Dialog open={!!selectedArea} onOpenChange={() => setSelectedArea(null)}>
-        <DialogContent className="bg-slate-900 border-slate-700 max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="bg-card border-border max-w-3xl max-h-[90vh] overflow-y-auto">
           {selectedArea && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl text-white flex items-center justify-between">
+                <DialogTitle className="text-2xl text-foreground flex items-center justify-between">
                   {selectedArea.name}
                   <span className={`text-3xl font-bold ${getScoreColor(selectedArea.attractivenessScore)}`}>
                     {selectedArea.attractivenessScore}/100
@@ -489,34 +493,34 @@ ${a.name}
               <div className="space-y-6">
                 {/* Key Metrics */}
                 <div className="grid grid-cols-4 gap-4">
-                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
-                    <div className="text-2xl font-bold text-white">${selectedArea.tam}B</div>
-                    <div className="text-xs text-slate-400">TAM</div>
+                  <div className="bg-muted/50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-foreground">${selectedArea.tam}B</div>
+                    <div className="text-xs text-muted-foreground">TAM</div>
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
-                    <div className="text-2xl font-bold text-emerald-400">{selectedArea.cagr}%</div>
-                    <div className="text-xs text-slate-400">CAGR</div>
+                  <div className="bg-muted/50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">{selectedArea.cagr}%</div>
+                    <div className="text-xs text-muted-foreground">CAGR</div>
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
-                    <div className="text-2xl font-bold text-cyan-400">{selectedArea.competitorCount}</div>
-                    <div className="text-xs text-slate-400">Competitors</div>
+                  <div className="bg-muted/50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-primary">{selectedArea.competitorCount}</div>
+                    <div className="text-xs text-muted-foreground">Competitors</div>
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
-                    <div className="text-2xl font-bold text-amber-400">{selectedArea.pipelineStrength}</div>
-                    <div className="text-xs text-slate-400">Pipeline Score</div>
+                  <div className="bg-muted/50 rounded-lg p-3 text-center">
+                    <div className="text-2xl font-bold text-amber-700 dark:text-amber-500">{selectedArea.pipelineStrength}</div>
+                    <div className="text-xs text-muted-foreground">Pipeline Score</div>
                   </div>
                 </div>
 
                 {/* Historical Chart */}
                 <div>
-                  <h3 className="text-sm font-medium text-slate-300 mb-3">TAM Growth Trajectory</h3>
-                  <div className="h-48 bg-slate-800/30 rounded-lg p-4">
+                  <h3 className="text-sm font-medium text-foreground mb-3">TAM Growth Trajectory</h3>
+                  <div className="h-48 bg-muted/30 rounded-lg p-4">
                     <ResponsiveContainer width="100%" height="100%">
                       <AreaChart data={selectedArea.historicalData}>
-                        <XAxis dataKey="year" stroke="#64748b" fontSize={12} />
-                        <YAxis stroke="#64748b" fontSize={12} />
+                        <XAxis dataKey="year" stroke="hsl(var(--muted-foreground))" fontSize={12} />
+                        <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} />
                         <ChartTooltip content={<ChartTooltipContent />} />
-                        <Area type="monotone" dataKey="tam" stroke="#06b6d4" fill="#06b6d4" fillOpacity={0.2} strokeWidth={2} name="TAM ($B)" />
+                        <Area type="monotone" dataKey="tam" stroke={chartStrokeColor} fill={chartFillColor} fillOpacity={0.2} strokeWidth={2} name="TAM ($B)" />
                       </AreaChart>
                     </ResponsiveContainer>
                   </div>
@@ -524,13 +528,13 @@ ${a.name}
 
                 {/* Score Breakdown */}
                 <div>
-                  <h3 className="text-sm font-medium text-slate-300 mb-3 flex items-center gap-2">
+                  <h3 className="text-sm font-medium text-foreground mb-3 flex items-center gap-2">
                     Score Breakdown
                     <Tooltip>
                       <TooltipTrigger>
-                        <Info className="h-4 w-4 text-slate-500" />
+                        <Info className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
-                      <TooltipContent className="bg-slate-800 border-slate-700 max-w-xs">
+                      <TooltipContent className="bg-popover border-border max-w-xs">
                         <p className="text-sm">Attractiveness score calculated from weighted factors: Market Size (25%), Growth (25%), Competition (20%), Regulatory (15%), IP (15%)</p>
                       </TooltipContent>
                     </Tooltip>
@@ -539,10 +543,10 @@ ${a.name}
                     {Object.entries(selectedArea.scoreBreakdown).map(([key, value]) => (
                       <div key={key} className="space-y-1">
                         <div className="flex justify-between text-sm">
-                          <span className="text-slate-400 capitalize">{key.replace(/([A-Z])/g, " $1").trim()}</span>
-                          <span className="text-white">{value}/100</span>
+                          <span className="text-muted-foreground capitalize">{key.replace(/([A-Z])/g, " $1").trim()}</span>
+                          <span className="text-foreground">{value}/100</span>
                         </div>
-                        <Progress value={value} className="h-2 bg-slate-700" />
+                        <Progress value={value} className="h-2 bg-muted" />
                       </div>
                     ))}
                   </div>
@@ -550,10 +554,10 @@ ${a.name}
 
                 {/* Top Competitors */}
                 <div>
-                  <h3 className="text-sm font-medium text-slate-300 mb-3">Top Competitors</h3>
+                  <h3 className="text-sm font-medium text-foreground mb-3">Top Competitors</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedArea.topCompetitors.map((comp) => (
-                      <Badge key={comp} className="bg-slate-700/50 text-slate-300 border-slate-600">
+                      <Badge key={comp} className="bg-muted text-muted-foreground border-border">
                         {comp}
                       </Badge>
                     ))}
@@ -563,14 +567,14 @@ ${a.name}
                 {/* Recent M&A */}
                 {selectedArea.recentMA.length > 0 && (
                   <div>
-                    <h3 className="text-sm font-medium text-slate-300 mb-3">Recent M&A Activity</h3>
+                    <h3 className="text-sm font-medium text-foreground mb-3">Recent M&A Activity</h3>
                     <div className="space-y-2">
                       {selectedArea.recentMA.map((deal, i) => (
-                        <div key={i} className="bg-slate-800/50 rounded-lg p-3 flex justify-between items-center">
-                          <span className="text-white text-sm">{deal.deal}</span>
+                        <div key={i} className="bg-muted/50 rounded-lg p-3 flex justify-between items-center">
+                          <span className="text-foreground text-sm">{deal.deal}</span>
                           <div className="flex items-center gap-3">
-                            <span className="text-emerald-400 font-semibold">{deal.value}</span>
-                            <span className="text-slate-500 text-xs">{deal.date}</span>
+                            <span className="text-emerald-700 dark:text-emerald-400 font-semibold">{deal.value}</span>
+                            <span className="text-muted-foreground text-xs">{deal.date}</span>
                           </div>
                         </div>
                       ))}
