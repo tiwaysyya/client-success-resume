@@ -65,7 +65,7 @@ export default {
         "violet-bg": "hsl(var(--violet-bg))",
         "slate-dark": "hsl(var(--slate-dark))",
         "teal-accent": "hsl(var(--teal-accent))",
-        "cyan-accent": "hsl(var(--cyan-accent))",
+        "blue-accent": "hsl(var(--blue-accent))",
       },
       borderRadius: {
         lg: "var(--radius)",
