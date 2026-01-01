@@ -39,7 +39,9 @@ const Projects = () => {
         "Time-critical step highlighting",
         "Parallel experiment support"
       ],
-      tech: ["JavaScript", "HTML/CSS", "Process Automation"]
+      tech: ["JavaScript", "HTML/CSS", "Process Automation"],
+      link: "https://tiwaysyya.github.io/lab-multi-protocol-timer/",
+      external: true
     }
   ];
 
@@ -65,12 +67,23 @@ const Projects = () => {
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
                   {project.link && (
-                    <Link 
-                      to={project.link} 
-                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1"
-                    >
-                      Try it live <ExternalLink className="w-3 h-3" />
-                    </Link>
+                    project.external ? (
+                      <a 
+                        href={project.link} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1"
+                      >
+                        Try it live <ExternalLink className="w-3 h-3" />
+                      </a>
+                    ) : (
+                      <Link 
+                        to={project.link} 
+                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1"
+                      >
+                        Try it live <ExternalLink className="w-3 h-3" />
+                      </Link>
+                    )
                   )}
                 </div>
               </div>
