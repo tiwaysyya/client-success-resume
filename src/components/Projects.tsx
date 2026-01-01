@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, TrendingUp, Target } from "lucide-react";
+import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, TrendingUp, Target, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -55,6 +55,19 @@ const Projects = () => {
       ],
       tech: ["React", "Recharts", "Data Visualisation"],
       link: "/biotech-market"
+    },
+    {
+      icon: DollarSign,
+      title: "Unit Economics Health Monitor",
+      description: "Real-time financial dashboard that tracks CAC/LTV ratios with automated alerts when payback period exceeds safe thresholds.",
+      story: "Many startups 'scale into a black hole' — growing users while hemorrhaging cash. Built this to catch the warning signs early.",
+      features: [
+        "Live CAC/LTV tracking with threshold alerts",
+        "Cohort-based LTV decay curves",
+        "Channel-level acquisition breakdown"
+      ],
+      tech: ["React", "Recharts", "Slack Integration", "Stripe API"],
+      link: "/unit-economics"
     },
     {
       icon: Timer,
