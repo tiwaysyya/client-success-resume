@@ -2,7 +2,7 @@ const MyStory = () => {
   return (
     <section id="my-story" className="py-24 px-4">
       <div className="container max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-primary">
           From lab benches to startup trenches.
         </h2>
         
