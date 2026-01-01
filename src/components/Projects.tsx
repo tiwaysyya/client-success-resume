@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, TrendingUp } from "lucide-react";
+import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, TrendingUp, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -29,6 +29,19 @@ const Projects = () => {
       ],
       tech: ["React", "Firecrawl", "AI/LLM", "Content Strategy"],
       link: "/social-proof"
+    },
+    {
+      icon: Target,
+      title: "User Research Deep Dive",
+      description: "PM-style user research synthesis. 10 biotech interviews distilled into pain points and a Feature Priority Matrix with strategic roadmap recommendations.",
+      story: "Wanted to show I can translate raw customer feedback into product decisions. Built the framework founders need.",
+      features: [
+        "10 synthesized biotech user interviews",
+        "Interactive Impact vs Effort matrix",
+        "AI-powered interview analysis tool"
+      ],
+      tech: ["React", "AI/LLM", "Product Strategy", "UX Research"],
+      link: "/user-research"
     },
     {
       icon: LayoutDashboard,

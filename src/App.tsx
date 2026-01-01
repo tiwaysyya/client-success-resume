@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Presentation from "./pages/Presentation";
 import FoundersIntelligence from "./pages/FoundersIntelligence";
 import SocialProofScraper from "./pages/SocialProofScraper";
+import UserResearchDashboard from "./pages/UserResearchDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/presentation" element={<Presentation />} />
           <Route path="/intel" element={<FoundersIntelligence />} />
           <Route path="/social-proof" element={<SocialProofScraper />} />
+          <Route path="/user-research" element={<UserResearchDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
