@@ -261,80 +261,90 @@ RECOMMENDATIONS
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Health Status Banner */}
-        <div className={`${health.bg} border border-border/40 rounded-lg p-4 mb-8`}>
+        <div className={`${health.bg} border border-border/40 rounded-xl p-5 mb-8 backdrop-blur-sm animate-pulse-glow`}>
           <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center gap-3">
-              {health.status === "Healthy" ? (
-                <TrendingUp className={health.color} size={24} />
-              ) : health.status === "Watch" ? (
-                <AlertTriangle className={health.color} size={24} />
-              ) : (
-                <TrendingDown className={health.color} size={24} />
-              )}
+            <div className="flex items-center gap-4">
+              <div className={`p-3 rounded-xl ${health.bg} animate-float`}>
+                {health.status === "Healthy" ? (
+                  <TrendingUp className={health.color} size={28} />
+                ) : health.status === "Watch" ? (
+                  <AlertTriangle className={health.color} size={28} />
+                ) : (
+                  <TrendingDown className={health.color} size={28} />
+                )}
+              </div>
               <div>
-                <p className={`font-semibold ${health.color}`}>Unit Economics Status: {health.status}</p>
+                <p className={`text-lg font-bold ${health.color}`}>Unit Economics Status: {health.status}</p>
                 <p className="text-sm text-muted-foreground">
-                  LTV/CAC Ratio: {currentMetrics.ratio.toFixed(2)}x | Payback: {currentMetrics.payback} months
+                  LTV/CAC Ratio: <span className="font-semibold text-foreground">{currentMetrics.ratio.toFixed(2)}x</span> | Payback: <span className="font-semibold text-foreground">{currentMetrics.payback} months</span>
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <RefreshCw size={14} />
-              Last updated: {new Date().toLocaleString()}
+            <div className="flex items-center gap-2 text-sm text-muted-foreground bg-background/50 px-3 py-1.5 rounded-full">
+              <RefreshCw size={14} className="animate-spin" style={{ animationDuration: '3s' }} />
+              Live
             </div>
           </div>
         </div>
 
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <Card className="bg-card border-border/40">
+          <Card className="glow-card bg-card border-border/40 animate-slide-up stagger-1 opacity-0">
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-2">
-                <DollarSign className="text-primary" size={20} />
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <DollarSign className="text-primary" size={20} />
+                </div>
                 <Badge variant={currentMetrics.cac > previousMetrics.cac ? "destructive" : "default"} className="text-xs">
                   {currentMetrics.cac > previousMetrics.cac ? "+" : ""}{((currentMetrics.cac - previousMetrics.cac) / previousMetrics.cac * 100).toFixed(1)}%
                 </Badge>
               </div>
-              <p className="text-2xl font-bold">${currentMetrics.cac}</p>
+              <p className="text-3xl font-bold tracking-tight">${currentMetrics.cac}</p>
               <p className="text-sm text-muted-foreground">Customer Acquisition Cost</p>
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border/40">
+          <Card className="glow-card bg-card border-border/40 animate-slide-up stagger-2 opacity-0">
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-2">
-                <Users className="text-primary" size={20} />
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <Users className="text-primary" size={20} />
+                </div>
                 <Badge variant="default" className="text-xs">
                   +{((currentMetrics.ltv - previousMetrics.ltv) / previousMetrics.ltv * 100).toFixed(1)}%
                 </Badge>
               </div>
-              <p className="text-2xl font-bold">${currentMetrics.ltv}</p>
+              <p className="text-3xl font-bold tracking-tight">${currentMetrics.ltv}</p>
               <p className="text-sm text-muted-foreground">Lifetime Value</p>
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border/40">
+          <Card className="glow-card bg-card border-border/40 animate-slide-up stagger-3 opacity-0">
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-2">
-                <Zap className={health.color} size={20} />
+                <div className={`p-2 rounded-lg ${health.bg}`}>
+                  <Zap className={health.color} size={20} />
+                </div>
                 <Badge variant={currentMetrics.ratio < 3 ? "secondary" : "default"} className="text-xs">
                   {currentMetrics.ratio >= 3 ? "Target Met" : "Below Target"}
                 </Badge>
               </div>
-              <p className="text-2xl font-bold">{currentMetrics.ratio.toFixed(2)}x</p>
+              <p className="text-3xl font-bold tracking-tight">{currentMetrics.ratio.toFixed(2)}x</p>
               <p className="text-sm text-muted-foreground">LTV/CAC Ratio</p>
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border/40">
+          <Card className="glow-card bg-card border-border/40 animate-slide-up stagger-4 opacity-0">
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-2">
-                <Clock className={paybackHealth.color} size={20} />
+                <div className={`p-2 rounded-lg ${currentMetrics.payback <= 6 ? 'bg-green-500/20' : 'bg-red-500/20'}`}>
+                  <Clock className={paybackHealth.color} size={20} />
+                </div>
                 <Badge variant={currentMetrics.payback > 6 ? "destructive" : "default"} className="text-xs">
                   {currentMetrics.payback <= 6 ? "Safe" : "Exceeds 6mo"}
                 </Badge>
               </div>
-              <p className="text-2xl font-bold">{currentMetrics.payback}mo</p>
+              <p className="text-3xl font-bold tracking-tight">{currentMetrics.payback}mo</p>
               <p className="text-sm text-muted-foreground">Payback Period</p>
             </CardContent>
           </Card>
