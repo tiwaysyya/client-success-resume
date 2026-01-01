@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink } from "lucide-react";
+import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -16,6 +16,19 @@ const Projects = () => {
       ],
       tech: ["React", "Supabase", "Firecrawl", "AI/LLM"],
       link: "/intel"
+    },
+    {
+      icon: Users,
+      title: "Internal Ops Bottleneck Killer",
+      description: "Reduced manual admin by 85%. Automated onboarding dashboard that triggers IT setup, Slack invites, and welcome emails when a new hire is added.",
+      story: "Watched ops teams drown in repetitive onboarding tasks. Built automation that turns 60 minutes of admin into 9 seconds.",
+      features: [
+        "Automated task triggering on new hire entry",
+        "Real-time progress tracking per employee",
+        "Time savings metrics dashboard"
+      ],
+      tech: ["React", "Automation", "Webhooks"],
+      link: "/onboarding"
     },
     {
       icon: LayoutDashboard,
