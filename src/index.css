@@ -50,10 +50,10 @@
     --teal-accent: 169 100% 70%;
     --cyan-accent: 192 100% 65%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(249 100% 67%), hsl(169 100% 50%));
-    --gradient-accent: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(249 30% 98%));
-    --gradient-hero: linear-gradient(135deg, hsl(249 100% 67% / 0.1), hsl(169 100% 50% / 0.05));
+    --gradient-primary: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
+    --gradient-accent: linear-gradient(135deg, hsl(249 100% 67%), hsl(336 100% 44%));
+    --gradient-subtle: linear-gradient(180deg, hsl(336 100% 44% / 0.05), hsl(249 100% 67% / 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(336 100% 44% / 0.15), hsl(249 100% 67% / 0.2));
 
     --shadow-elegant: 0 4px 24px -4px hsl(249 100% 67% / 0.25);
     --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.08);
@@ -111,10 +111,10 @@
     --teal-accent: 169 100% 70%;
     --cyan-accent: 192 100% 65%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(249 100% 70%), hsl(169 100% 50%));
-    --gradient-accent: linear-gradient(135deg, hsl(336 100% 50%), hsl(249 100% 70%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 5%), hsl(0 0% 10%));
-    --gradient-hero: linear-gradient(135deg, hsl(249 100% 70% / 0.15), hsl(169 100% 50% / 0.1));
+    --gradient-primary: linear-gradient(135deg, hsl(336 100% 50%), hsl(249 100% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(249 100% 70%), hsl(336 100% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(336 100% 50% / 0.1), hsl(249 100% 70% / 0.15));
+    --gradient-hero: linear-gradient(135deg, hsl(336 100% 50% / 0.2), hsl(249 100% 70% / 0.25));
 
     --shadow-elegant: 0 4px 24px -4px hsl(249 100% 70% / 0.3);
     --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.5);
