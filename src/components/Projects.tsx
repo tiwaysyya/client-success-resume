@@ -46,16 +46,15 @@ const Projects = () => {
     {
       icon: LayoutDashboard,
       title: "Biotech Market Analysis Dashboard",
-      description: "Saw a gap in how therapeutic areas were evaluated. Built a tool that ranks 8 markets by feasibility, attractiveness, and clinical risk.",
+      description: "Saw a gap in how therapeutic areas were evaluated. Built a tool that ranks 6 therapeutic areas by attractiveness, growth, and competitive intensity.",
       story: "No one asked me to build this. I wanted faster diligence-style assessments, so I made one.",
       features: [
-        "Stakeholder-specific views for different users",
-        "Dynamic filters to surface opportunities",
-        "Diligence-ready insights in minutes"
+        "Side-by-side comparison of therapeutic areas",
+        "Score breakdown with weighted factors",
+        "Historical TAM growth trajectories"
       ],
-      tech: ["Python", "SQL", "Data Visualisation"],
-      link: "https://tiwaysyya.github.io/biotech-market-dashboard/",
-      external: true
+      tech: ["React", "Recharts", "Data Visualisation"],
+      link: "/biotech-market"
     },
     {
       icon: Timer,
