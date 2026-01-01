@@ -5,3 +5,9 @@ verify_jwt = false
 
 [functions.generate-intel-deck]
 verify_jwt = false
+
+[functions.scrape-pain-points]
+verify_jwt = false
+
+[functions.generate-linkedin-posts]
+verify_jwt = false

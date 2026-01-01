@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, Users } from "lucide-react";
+import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -18,17 +18,17 @@ const Projects = () => {
       link: "/intel"
     },
     {
-      icon: Users,
-      title: "Internal Ops Bottleneck Killer",
-      description: "Reduced manual admin by 85%. Automated onboarding dashboard that triggers IT setup, Slack invites, and welcome emails when a new hire is added.",
-      story: "Watched ops teams drown in repetitive onboarding tasks. Built automation that turns 60 minutes of admin into 9 seconds.",
+      icon: TrendingUp,
+      title: "Social Proof Scraper",
+      description: "Growth hacker's toolkit. Monitors Reddit and Twitter for customer pain points, then generates CEO-ready LinkedIn posts that address those frustrations.",
+      story: "Saw founders struggle to find authentic customer voices. Built a tool that turns social chatter into content gold.",
       features: [
-        "Automated task triggering on new hire entry",
-        "Real-time progress tracking per employee",
-        "Time savings metrics dashboard"
+        "Real-time Reddit/Twitter pain point monitoring",
+        "AI-categorized customer frustration database",
+        "3 viral LinkedIn post templates per search"
       ],
-      tech: ["React", "Automation", "Webhooks"],
-      link: "/onboarding"
+      tech: ["React", "Firecrawl", "AI/LLM", "Content Strategy"],
+      link: "/social-proof"
     },
     {
       icon: LayoutDashboard,
