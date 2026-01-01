@@ -57,12 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Startup palette
-        "neon-green": "hsl(var(--neon-green))",
-        "electric-purple": "hsl(var(--electric-purple))",
-        "hot-pink": "hsl(var(--hot-pink))",
-        "cyber-blue": "hsl(var(--cyber-blue))",
-        "velocity-orange": "hsl(var(--velocity-orange))",
+        // JumpStart palette
+        "teal-primary": "hsl(var(--teal-primary))",
+        "teal-light": "hsl(var(--teal-light))",
+        "teal-dark": "hsl(var(--teal-dark))",
+        "green-accent": "hsl(var(--green-accent))",
+        "aqua-bg": "hsl(var(--aqua-bg))",
         "slate-dark": "hsl(var(--slate-dark))",
       },
       borderRadius: {
