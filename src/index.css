@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* JumpStart Generalists Design System
-   Colors: #7155FF, #01FFD1, #FFFFFF, #000000, #E20054, #00D2FF
+   Colors: #7155FF, #01FFD1, #FFFFFF, #000000, #E20054, #3B68FF
    All colors MUST be HSL.
 */
 
@@ -22,11 +22,11 @@
     --primary: 249 100% 67%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 100% 50%;
+    --secondary: 169 100% 50%;
     --secondary-foreground: 0 0% 0%;
 
     --muted: 249 30% 96%;
-    --muted-foreground: 249 20% 40%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 336 100% 44%;
     --accent-foreground: 0 0% 100%;
@@ -34,8 +34,8 @@
     --destructive: 336 100% 44%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 249 20% 90%;
-    --input: 249 20% 92%;
+    --border: 0 0% 90%;
+    --input: 0 0% 92%;
     --ring: 249 100% 67%;
 
     --radius: 0.75rem;
@@ -47,13 +47,13 @@
     --violet-accent: 336 100% 44%;
     --violet-bg: 0 0% 100%;
     --slate-dark: 0 0% 0%;
-    --teal-accent: 195 100% 50%;
-    --cyan-accent: 195 100% 50%;
+    --teal-accent: 169 100% 50%;
+    --blue-accent: 225 100% 62%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
-    --gradient-accent: linear-gradient(135deg, hsl(249 100% 67%), hsl(336 100% 44%));
-    --gradient-subtle: linear-gradient(180deg, hsl(336 100% 44% / 0.05), hsl(249 100% 67% / 0.1));
-    --gradient-hero: linear-gradient(135deg, hsl(336 100% 44% / 0.15), hsl(249 100% 67% / 0.2));
+    --gradient-primary: linear-gradient(135deg, hsl(249 100% 67%), hsl(225 100% 62%));
+    --gradient-accent: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
+    --gradient-subtle: linear-gradient(180deg, hsl(249 100% 67% / 0.05), hsl(225 100% 62% / 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(249 100% 67% / 0.15), hsl(225 100% 62% / 0.2));
 
     --shadow-elegant: 0 4px 24px -4px hsl(249 100% 67% / 0.25);
     --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.08);
@@ -67,67 +67,67 @@
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 169 100% 50%;
     --sidebar-accent-foreground: 0 0% 0%;
-    --sidebar-border: 249 20% 90%;
+    --sidebar-border: 0 0% 90%;
     --sidebar-ring: 249 100% 67%;
   }
 
   .dark {
     /* Dark mode - JumpStart Generalists on dark */
-    --background: 0 0% 5%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 8%;
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 8%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 249 100% 70%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 249 100% 67%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 169 100% 70%;
+    --secondary: 169 100% 50%;
     --secondary-foreground: 0 0% 0%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 336 100% 50%;
+    --accent: 336 100% 44%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 336 100% 50%;
+    --destructive: 336 100% 44%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 249 100% 70%;
+    --ring: 249 100% 67%;
     
     /* JumpStart Generalists palette - on dark */
-    --violet-primary: 249 100% 70%;
-    --violet-light: 249 100% 82%;
-    --violet-dark: 249 100% 60%;
-    --violet-accent: 336 100% 50%;
-    --violet-bg: 0 0% 5%;
-    --slate-dark: 0 0% 5%;
-    --teal-accent: 195 100% 50%;
-    --cyan-accent: 195 100% 50%;
+    --violet-primary: 249 100% 67%;
+    --violet-light: 249 100% 80%;
+    --violet-dark: 249 100% 55%;
+    --violet-accent: 336 100% 44%;
+    --violet-bg: 0 0% 0%;
+    --slate-dark: 0 0% 0%;
+    --teal-accent: 169 100% 50%;
+    --blue-accent: 225 100% 62%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(336 100% 50%), hsl(249 100% 70%));
-    --gradient-accent: linear-gradient(135deg, hsl(249 100% 70%), hsl(336 100% 50%));
-    --gradient-subtle: linear-gradient(180deg, hsl(336 100% 50% / 0.1), hsl(249 100% 70% / 0.15));
-    --gradient-hero: linear-gradient(135deg, hsl(336 100% 50% / 0.2), hsl(249 100% 70% / 0.25));
+    --gradient-primary: linear-gradient(135deg, hsl(249 100% 67%), hsl(225 100% 62%));
+    --gradient-accent: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
+    --gradient-subtle: linear-gradient(180deg, hsl(249 100% 67% / 0.1), hsl(225 100% 62% / 0.15));
+    --gradient-hero: linear-gradient(135deg, hsl(249 100% 67% / 0.2), hsl(225 100% 62% / 0.25));
 
-    --shadow-elegant: 0 4px 24px -4px hsl(249 100% 70% / 0.3);
+    --shadow-elegant: 0 4px 24px -4px hsl(249 100% 67% / 0.3);
     --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 60px hsl(249 100% 70% / 0.35);
+    --shadow-glow: 0 0 60px hsl(249 100% 67% / 0.35);
     
-    --sidebar-background: 0 0% 5%;
+    --sidebar-background: 0 0% 0%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 249 100% 70%;
-    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-primary: 249 100% 67%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 169 100% 50%;
     --sidebar-accent-foreground: 0 0% 0%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 249 100% 70%;
+    --sidebar-ring: 249 100% 67%;
   }
 }
 
