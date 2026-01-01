@@ -47,7 +47,7 @@
     --violet-accent: 336 100% 44%;
     --violet-bg: 0 0% 100%;
     --slate-dark: 0 0% 0%;
-    --teal-accent: 168 30% 35%;
+    --teal-accent: 169 100% 50%;
     --cyan-accent: 169 100% 75%;
 
     --gradient-primary: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
@@ -108,7 +108,7 @@
     --violet-accent: 336 100% 50%;
     --violet-bg: 0 0% 5%;
     --slate-dark: 0 0% 5%;
-    --teal-accent: 168 30% 35%;
+    --teal-accent: 169 100% 50%;
     --cyan-accent: 169 100% 75%;
 
     --gradient-primary: linear-gradient(135deg, hsl(336 100% 50%), hsl(249 100% 70%));
