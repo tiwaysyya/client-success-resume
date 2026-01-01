@@ -11,3 +11,9 @@ verify_jwt = false
 
 [functions.generate-linkedin-posts]
 verify_jwt = false
+
+[functions.analyze-interview]
+verify_jwt = false
+
+[functions.generate-feature-matrix]
+verify_jwt = false
