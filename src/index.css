@@ -70,11 +70,11 @@
   }
 
   .dark {
-    /* Dark mode - the main event. Electric, bold, startup. */
-    --background: 225 25% 8%;
+    /* Dark mode - electric, bold, startup - slightly lifted */
+    --background: 225 20% 14%;
     --foreground: 0 0% 95%;
 
-    --card: 225 25% 12%;
+    --card: 225 20% 18%;
     --card-foreground: 0 0% 95%;
 
     --popover: 225 25% 12%;
