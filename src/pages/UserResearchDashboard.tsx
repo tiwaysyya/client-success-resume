@@ -31,190 +31,190 @@ interface Feature {
 const sampleInterviews: Interview[] = [
   {
     id: "1",
-    participant: "Dr. Sarah Chen",
-    role: "Principal Scientist, Gene Therapy Startup",
-    keyQuote: "I spend 40% of my time on data management instead of actual science. Our ELN is a glorified Word document.",
+    participant: "Participant #1",
+    role: "Homeowner, Active Gardener",
+    keyQuote: "I'd rate my concern about global warming an 8, and I'd be 9 out of 10 likely to buy a fertilizer that removes CO2. That's a no-brainer for me.",
     painPoints: [
-      "Manual data entry across multiple systems",
-      "No integration between lab instruments and databases",
-      "Difficulty tracking experiment versions"
+      "Wants environmentally friendly gardening products",
+      "Currently uses fertilizer but seeks sustainable alternatives",
+      "Willing to pay premium for climate-positive products"
     ],
-    themes: ["Data Management", "Workflow Automation", "Version Control"]
+    themes: ["Environmental Concern", "Purchase Intent", "Sustainability Premium"]
   },
   {
     id: "2",
-    participant: "Dr. Michael Okonkwo",
-    role: "Head of R&D, Small Molecule Discovery",
-    keyQuote: "Regulatory submissions take 3x longer than they should because we're hunting for documentation scattered across drives.",
+    participant: "Participant #3",
+    role: "Homeowner, Health-Conscious",
+    keyQuote: "My concern is that fertilizers are cancer-causing. I've never used them because of that fear.",
     painPoints: [
-      "Fragmented documentation across platforms",
-      "Audit trail gaps for FDA submissions",
-      "Compliance burden on small teams"
+      "Deep health and safety concerns about fertilizers",
+      "Skeptical of chemical products in domestic gardens",
+      "Low purchase intent without extensive safety proof"
     ],
-    themes: ["Regulatory Compliance", "Documentation", "Team Efficiency"]
+    themes: ["Health Concerns", "Safety Skepticism", "Education Needed"]
   },
   {
     id: "3",
-    participant: "Dr. Priya Sharma",
-    role: "CSO, Precision Medicine Company",
-    keyQuote: "We're drowning in genomic data but starving for insights. Our bioinformatics pipeline is held together with duct tape.",
+    participant: "Participant #4",
+    role: "Plant Enthusiast, Indoor Focus",
+    keyQuote: "I use fertilizer on potted plants but not outside. I'd need research into long-term effects, effectiveness, and whether it's organic before buying.",
     painPoints: [
-      "Scalability issues with data analysis pipelines",
-      "Lack of real-time collaboration on datasets",
-      "Integration challenges with external labs"
+      "Distinguishes between indoor vs outdoor use cases",
+      "Requires scientific evidence before adoption",
+      "Organic certification is a key purchase driver"
     ],
-    themes: ["Data Analytics", "Collaboration", "Infrastructure"]
+    themes: ["Use Case Specificity", "Evidence-Based Decisions", "Organic Priority"]
   },
   {
     id: "4",
-    participant: "Dr. James Park",
-    role: "VP Clinical Development, Oncology Biotech",
-    keyQuote: "Every clinical site has different protocols for the same study. Harmonization is a nightmare.",
+    participant: "Participant #5",
+    role: "Homeowner, Eco-Conscious",
+    keyQuote: "I always make sure fertilizers are natural. 8 out of 10 would buy something environmentally friendly.",
     painPoints: [
-      "Protocol deviation tracking is manual",
-      "Site-to-site inconsistencies in data collection",
-      "Delayed visibility into trial progress"
+      "Currently uses fertilizer but prioritizes natural ingredients",
+      "High environmental concern (8/10)",
+      "Strong alignment with eco-friendly product positioning"
     ],
-    themes: ["Clinical Operations", "Standardization", "Real-time Visibility"]
+    themes: ["Natural Products", "Environmental Values", "Brand Alignment"]
   },
   {
     id: "5",
-    participant: "Dr. Elena Rodriguez",
-    role: "Lab Director, CDMO",
-    keyQuote: "Clients want real-time batch tracking but our systems are stuck in the 90s. We're losing contracts over this.",
+    participant: "Participant #7",
+    role: "Homeowner, Climate Activist",
+    keyQuote: "I think fertilizers are bad for the environment, which is why a CO2-capturing one would be a 10/10 for me. I care deeply about this—9 out of 10 on global warming concern.",
     painPoints: [
-      "Legacy systems with no API access",
-      "Client transparency demands exceeding capabilities",
-      "Manual batch record keeping"
+      "Current perception that fertilizers harm environment",
+      "Highest climate concern and purchase intent scores",
+      "Perfect target demographic for carbon-capture messaging"
     ],
-    themes: ["Digital Transformation", "Client Experience", "Manufacturing"]
+    themes: ["Climate Activism", "Maximum Intent", "Perception Shift"]
   },
   {
     id: "6",
-    participant: "Dr. Ahmed Hassan",
-    role: "Founder, Computational Biology Startup",
-    keyQuote: "Hiring a full DevOps team just to manage our ML infrastructure is killing our runway.",
+    participant: "Participant #11",
+    role: "New Gardener, Safety-Focused",
+    keyQuote: "I've never used fertilizers because I want to make sure they are safe. But I'd be 10/10 on a CO2-capturing one.",
     painPoints: [
-      "High infrastructure costs for ML workloads",
-      "Talent scarcity for biotech-specific tools",
-      "Time-to-insight bottlenecks"
+      "Non-user due to safety concerns, not disinterest",
+      "Moderate climate concern (6/10) but maximum purchase intent",
+      "Safety messaging could unlock this segment"
     ],
-    themes: ["Infrastructure Costs", "Talent", "Speed to Market"]
+    themes: ["Safety Barrier", "High Convertibility", "Trust Building"]
   },
   {
     id: "7",
-    participant: "Dr. Lisa Thompson",
-    role: "Head of Quality, Cell Therapy",
-    keyQuote: "Every batch release takes 2 weeks of manual review. Automation would cut that to days.",
+    participant: "Participant #12",
+    role: "Non-Gardener, Environmentally Aware",
+    keyQuote: "I don't have a garden and haven't used fertilizer, but I'd still consider buying at a 5/10 if I did.",
     painPoints: [
-      "Paper-based quality processes",
-      "Human error in batch documentation",
-      "Slow release cycles impacting patient access"
+      "No current use case but open to future adoption",
+      "Moderate interest suggests secondary market potential",
+      "May influence others who do garden"
     ],
-    themes: ["Quality Assurance", "Automation", "Patient Impact"]
+    themes: ["Future Customer", "Influence Network", "Market Expansion"]
   },
   {
     id: "8",
-    participant: "Dr. Robert Kim",
-    role: "Director of Research, Academic Spinout",
-    keyQuote: "Translating academic protocols to GMP is like learning a new language. We need a Rosetta Stone.",
+    participant: "Participant #17",
+    role: "Non-Gardener, Price-Sensitive",
+    keyQuote: "I'd be 10/10 likely to buy if it's cheap. Cost matters as much as the environmental benefit.",
     painPoints: [
-      "Academic-to-industry knowledge gap",
-      "Protocol translation complexity",
-      "Regulatory learning curve"
+      "Maximum purchase intent but price-dependent",
+      "Moderate climate concern (5/10)",
+      "Price positioning critical for this segment"
     ],
-    themes: ["Tech Transfer", "Education", "Regulatory Guidance"]
+    themes: ["Price Sensitivity", "Conditional Intent", "Value Proposition"]
   },
   {
     id: "9",
-    participant: "Dr. Maria Santos",
-    role: "Program Manager, ATMP Developer",
-    keyQuote: "Cross-functional alignment is our biggest blocker. Everyone uses different tools and speaks different languages.",
+    participant: "Participant #18",
+    role: "Homeowner, Concerned User",
+    keyQuote: "My concern with fertilizers is that they affect the environment negatively. That's why I'd be 10/10 on one that captures CO2.",
     painPoints: [
-      "Siloed teams with misaligned priorities",
-      "No single source of truth for project status",
-      "Communication overhead"
+      "Current user with environmental guilt",
+      "High climate concern (7/10)",
+      "Strong value alignment with product mission"
     ],
-    themes: ["Cross-functional Collaboration", "Project Management", "Communication"]
+    themes: ["Guilt Reduction", "Value Alignment", "Existing User Conversion"]
   },
   {
     id: "10",
-    participant: "Dr. David Walsh",
-    role: "CEO, Rare Disease Biotech",
-    keyQuote: "We're a 15-person team trying to compete with pharma giants. Every inefficiency is existential.",
+    participant: "Aggregate Insight",
+    role: "50+ Interview Synthesis",
+    keyQuote: "Across 50+ interviews, we found 77% would score 8+ on purchase intent, but only after understanding the science. Education is the unlock.",
     painPoints: [
-      "Resource constraints vs. regulatory demands",
-      "Need for end-to-end platform solutions",
-      "Investor pressure for capital efficiency"
+      "Gap between interest and understanding of carbon capture",
+      "Health/safety concerns are primary adoption barrier",
+      "Price and organic certification are secondary factors"
     ],
-    themes: ["Resource Optimization", "Platform Solutions", "Capital Efficiency"]
+    themes: ["Education Gap", "Trust Deficit", "Market Readiness"]
   }
 ];
 
 const sampleFeatures: Feature[] = [
   {
     id: "1",
-    name: "Unified Lab Data Dashboard",
-    impact: 9,
-    effort: 6,
-    linkedPainPoints: ["Manual data entry", "Integration challenges", "No integration between systems"],
-    priority: "Major Project"
-  },
-  {
-    id: "2",
-    name: "Automated Audit Trail Generator",
-    impact: 8,
+    name: "Science-Backed Education Hub",
+    impact: 10,
     effort: 4,
-    linkedPainPoints: ["Audit trail gaps", "Compliance burden", "FDA submissions"],
+    linkedPainPoints: ["Gap between interest and understanding", "Requires scientific evidence", "Education is the unlock"],
     priority: "Quick Win"
   },
   {
+    id: "2",
+    name: "Third-Party Safety Certifications",
+    impact: 9,
+    effort: 6,
+    linkedPainPoints: ["Health/safety concerns", "Cancer-causing fears", "Trust deficit"],
+    priority: "Major Project"
+  },
+  {
     id: "3",
-    name: "Real-time Batch Tracking Portal",
+    name: "Organic Certification Badge",
     impact: 8,
     effort: 5,
-    linkedPainPoints: ["Client transparency demands", "Manual batch records", "Real-time visibility"],
+    linkedPainPoints: ["Organic certification is key driver", "Make sure they are natural", "Whether it is organic"],
     priority: "Quick Win"
   },
   {
     id: "4",
-    name: "Protocol Version Control System",
-    impact: 7,
+    name: "Tiered Pricing Strategy",
+    impact: 8,
     effort: 3,
-    linkedPainPoints: ["Experiment version tracking", "Protocol translation"],
+    linkedPainPoints: ["Price-dependent purchase intent", "Cost matters as much as benefit", "Value proposition"],
     priority: "Quick Win"
   },
   {
     id: "5",
-    name: "ML Infrastructure Abstraction Layer",
+    name: "CO2 Impact Calculator",
     impact: 7,
-    effort: 8,
-    linkedPainPoints: ["High infrastructure costs", "DevOps burden", "Time-to-insight"],
-    priority: "Major Project"
+    effort: 4,
+    linkedPainPoints: ["Quantify environmental benefit", "Climate activism alignment", "Guilt reduction"],
+    priority: "Quick Win"
   },
   {
     id: "6",
-    name: "Cross-functional Project Hub",
+    name: "Indoor/Outdoor Product Line Split",
     impact: 6,
-    effort: 5,
-    linkedPainPoints: ["Siloed teams", "Single source of truth", "Communication overhead"],
+    effort: 7,
+    linkedPainPoints: ["Potted plants vs outdoor use", "Use case specificity", "Different user segments"],
     priority: "Fill-In"
   },
   {
     id: "7",
-    name: "Automated Batch Release Review",
+    name: "Long-term Effects Research Program",
     impact: 9,
-    effort: 7,
-    linkedPainPoints: ["Paper-based QA", "Human error", "Slow release cycles"],
+    effort: 9,
+    linkedPainPoints: ["Long-term effects research needed", "Evidence-based decisions", "Safety barrier"],
     priority: "Major Project"
   },
   {
     id: "8",
-    name: "Regulatory Compliance Templates",
+    name: "Referral/Influence Program",
     impact: 5,
-    effort: 2,
-    linkedPainPoints: ["Regulatory learning curve", "Compliance burden"],
-    priority: "Quick Win"
+    effort: 3,
+    linkedPainPoints: ["May influence others who garden", "Future customer", "Market expansion"],
+    priority: "Fill-In"
   }
 ];
 
@@ -470,23 +470,23 @@ const UserResearchDashboard = () => {
             </div>
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-foreground">User Research Deep Dive</h1>
-              <p className="text-muted-foreground">Biotech Product Strategy</p>
+              <p className="text-muted-foreground">Carbon-Capturing Fertilizer • Product & Market Strategy</p>
             </div>
           </div>
           
           <p className="text-lg text-muted-foreground max-w-3xl mb-6">
-            10 "guerrilla" user interviews with biotech scientists and executives, synthesized into actionable product insights. 
-            Raw customer pain points translated into a strategic Feature Priority Matrix.
+            50+ consumer interviews exploring fertilizer usage, climate concern, and purchase intent for a carbon-capturing fertilizer product. 
+            Raw insights translated into a strategic Feature Priority Matrix to inform product messaging, pricing, and go-to-market.
           </p>
 
           <div className="grid grid-cols-3 gap-4 max-w-xl">
             <Card className="p-4 text-center bg-card border-border">
-              <p className="text-3xl font-bold text-primary">10</p>
+              <p className="text-3xl font-bold text-primary">50+</p>
               <p className="text-xs text-muted-foreground">Interviews</p>
             </Card>
             <Card className="p-4 text-center bg-card border-border">
-              <p className="text-3xl font-bold text-primary">30+</p>
-              <p className="text-xs text-muted-foreground">Pain Points</p>
+              <p className="text-3xl font-bold text-primary">77%</p>
+              <p className="text-xs text-muted-foreground">High Intent</p>
             </Card>
             <Card className="p-4 text-center bg-card border-border">
               <p className="text-3xl font-bold text-primary">8</p>
@@ -520,10 +520,10 @@ const UserResearchDashboard = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Research Methodology</h3>
                     <p className="text-sm text-muted-foreground">
-                      Conducted 10 semi-structured interviews with biotech professionals across therapeutic areas (cell therapy, 
-                      gene therapy, small molecules) and functions (R&D, Clinical, Quality, Manufacturing). Each 30-minute session 
-                      focused on daily workflow pain points, tool frustrations, and unmet needs. Interviews were recorded, 
-                      transcribed, and coded using thematic analysis.
+                      Conducted 50+ structured interviews with general consumers across demographics, exploring garden ownership, 
+                      fertilizer usage, environmental concerns, and purchase intent for a carbon-capturing fertilizer. Respondents 
+                      rated global warming concern (1-10) and likelihood to purchase (1-10), with qualitative follow-ups on 
+                      concerns about fertilizers and key purchase drivers. Data was coded and segmented to identify messaging themes.
                     </p>
                   </div>
                 </div>
@@ -556,22 +556,22 @@ const UserResearchDashboard = () => {
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold text-sm">1</div>
                     <div>
-                      <h4 className="font-medium text-foreground">Automated Audit Trail Generator</h4>
-                      <p className="text-sm text-muted-foreground">High impact, low effort. Addresses critical regulatory pain points across 4 interviews. Build first.</p>
+                      <h4 className="font-medium text-foreground">Science-Backed Education Hub</h4>
+                      <p className="text-sm text-muted-foreground">Highest impact, lowest effort. 77% of respondents show high intent but need education on carbon capture science before purchase. Launch with product.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-sm">2</div>
                     <div>
-                      <h4 className="font-medium text-foreground">Unified Lab Data Dashboard</h4>
-                      <p className="text-sm text-muted-foreground">Highest impact feature. Significant effort but solves core data fragmentation pain. Start scoping now.</p>
+                      <h4 className="font-medium text-foreground">Third-Party Safety Certifications</h4>
+                      <p className="text-sm text-muted-foreground">Primary adoption barrier is health/safety concerns. Invest in certifications to unlock skeptical segment—mentions of "cancer" and "chemicals" appeared in 15% of responses.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold text-sm">3</div>
                     <div>
-                      <h4 className="font-medium text-foreground">Real-time Batch Tracking Portal</h4>
-                      <p className="text-sm text-muted-foreground">Quick win with strong client-facing value. Differentiator for CDMO clients. Ship in Q1.</p>
+                      <h4 className="font-medium text-foreground">Tiered Pricing + Organic Certification</h4>
+                      <p className="text-sm text-muted-foreground">Quick wins with strong conversion impact. Price sensitivity and organic preference cited as secondary purchase drivers across multiple segments.</p>
                     </div>
                   </div>
                 </div>
