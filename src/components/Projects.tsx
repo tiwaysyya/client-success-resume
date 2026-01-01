@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, TrendingUp, Target, DollarSign } from "lucide-react";
+import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, Target, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -16,19 +16,6 @@ const Projects = () => {
       ],
       tech: ["React", "Supabase", "Firecrawl", "AI/LLM"],
       link: "/intel"
-    },
-    {
-      icon: TrendingUp,
-      title: "Social Proof Scraper",
-      description: "Growth hacker's toolkit. Monitors Reddit and Twitter for customer pain points, then generates CEO-ready LinkedIn posts that address those frustrations.",
-      story: "Saw founders struggle to find authentic customer voices. Built a tool that turns social chatter into content gold.",
-      features: [
-        "Real-time Reddit/Twitter pain point monitoring",
-        "AI-categorized customer frustration database",
-        "3 viral LinkedIn post templates per search"
-      ],
-      tech: ["React", "Firecrawl", "AI/LLM", "Content Strategy"],
-      link: "/social-proof"
     },
     {
       icon: Target,
