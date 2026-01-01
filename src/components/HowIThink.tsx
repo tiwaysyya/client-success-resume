@@ -35,7 +35,7 @@ const HowIThink = () => {
     <section id="how-i-think" className="py-24 px-4">
       <div className="container max-w-6xl mx-auto space-y-20">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
             How I Work
           </h2>
         </div>
@@ -47,8 +47,8 @@ const HowIThink = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {hats.map((hat, index) => (
-              <Card key={index} className="p-6 border-cocoa/30 bg-card hover:shadow-lg transition-all">
-                <p className="text-lg font-bold text-foreground mb-2">{hat.domain}</p>
+              <Card key={index} className="p-6 border-primary/30 bg-card hover:border-primary/60 hover:shadow-lg transition-all">
+                <p className="text-lg font-bold text-primary mb-2">{hat.domain}</p>
                 <p className="text-sm text-muted-foreground">{hat.description}</p>
               </Card>
             ))}
@@ -62,8 +62,8 @@ const HowIThink = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {defaults.map((item, index) => (
-              <Card key={index} className="p-6 border-cocoa/30 bg-card hover:shadow-lg transition-all">
-                <h4 className="text-lg font-bold text-foreground mb-2">{item.principle}</h4>
+              <Card key={index} className="p-6 border-secondary/30 bg-card hover:border-secondary/60 hover:shadow-lg transition-all">
+                <h4 className="text-lg font-bold text-secondary mb-2">{item.principle}</h4>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
               </Card>
             ))}
