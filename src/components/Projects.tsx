@@ -1,8 +1,22 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Lightbulb } from "lucide-react";
+import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
+    {
+      icon: Radar,
+      title: "Founder's Intelligence Dashboard",
+      description: "Competitive intelligence tool that tracks competitor moves and generates strategic response recommendations using AI.",
+      story: "Founders need to track competitors but lack time. Built an automated intel system that scrapes, analyzes, and recommends.",
+      features: [
+        "Real-time competitor website & news scraping",
+        "AI-powered categorization of updates",
+        "3-bullet strategic response for each competitor"
+      ],
+      tech: ["React", "Supabase", "Firecrawl", "AI/LLM"],
+      link: "/intel"
+    },
     {
       icon: LayoutDashboard,
       title: "Biotech Market Analysis Dashboard",
@@ -48,7 +62,17 @@ const Projects = () => {
                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
                   <project.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
+                  {project.link && (
+                    <Link 
+                      to={project.link} 
+                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline mt-1"
+                    >
+                      Try it live <ExternalLink className="w-3 h-3" />
+                    </Link>
+                  )}
+                </div>
               </div>
 
               <p className="text-muted-foreground mb-4">{project.description}</p>
