@@ -34,7 +34,7 @@ const Projects = () => {
     {
       icon: LayoutDashboard,
       title: "Biotech Market Analysis Dashboard",
-      description: "I built a dynamic dashboard that aggregates data to score and compare six therapeutic areas using weighted factors. It uses React and Recharts to visualize growth trajectories and competitive intensity in real-time.",
+      description: "Dynamic dashboard that aggregates data to score and compare 6 therapeutic areas using weighted factors to visualize growth trajectories and competitive intensity in real-time.",
       problem: "While leading biotech investment research for the Imperial Investment Society, I found that market data was scattered online, making the research process tedious.",
       impact: "To accelerate commercial strategy, I turned a weeks-long manual research process into an instant evaluation tool for rapid decision-making.",
       features: [
