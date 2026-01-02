@@ -22,7 +22,7 @@ const Experience = () => {
       achievements: [
         "Grew engagement 45% to 1,500+ readers by running data-driven content experiments",
         "Built and trained a 10-person team on structured research frameworks",
-        "Shipped 30+ publications with 100% on-time record through workflow optimisation"
+        "Delivered 30+ publications with 100% on-time record through workflow optimisation"
       ],
       keyResult: "45% engagement growth → 1,500+ readers"
     },
@@ -34,7 +34,7 @@ const Experience = () => {
       achievements: [
         "Grew membership 50% through rapid weekly experimentation using engagement data",
         "Cold-outreached and secured speakers from McKinsey, PwC, EY, Goldman Sachs",
-        "Shipped flagship events with 150+ participants"
+        "Ran flagship events with 150+ participants"
       ],
       keyResult: "50% membership growth"
     },
@@ -44,7 +44,7 @@ const Experience = () => {
       company: "RHB Asset Management",
       period: "Jul 2024 - Aug 2024",
       achievements: [
-        "Shipped Q2 research 3x faster by building rapid synthesis workflows with Bloomberg",
+        "Completed Q2 research 3x faster by building rapid synthesis workflows with Bloomberg",
         "Directly influenced portfolio allocation through high-impact stock pitch",
         "Delivered 5+ internal research reports with positive analyst feedback"
       ],

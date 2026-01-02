@@ -4,7 +4,7 @@ const SignalsOfImpact = () => {
   const metrics = [
     { value: "2", label: "Tools built from scratch" },
     { value: "50+", label: "Cold outreach conversations" },
-    { value: "45%", label: "Engagement growth shipped" },
+    { value: "45%", label: "Engagement growth delivered" },
     { value: "50%", label: "Community growth delivered" },
     { value: "1st", label: "Place pitch competition" },
     { value: "1,500+", label: "Newsletter readers reached" },
@@ -20,7 +20,7 @@ const SignalsOfImpact = () => {
             Proof of Proactivity
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Numbers from things I built, led, and shipped.
+            Numbers from things I built, led, and delivered.
           </p>
         </div>
 
