@@ -24,7 +24,7 @@ const Experience = () => {
         "Built and trained a 10-person team on structured research frameworks",
         "Delivered 30+ publications with 100% on-time record through workflow optimisation"
       ],
-      keyResult: "45% engagement growth → 1,500+ readers"
+      
     },
     {
       icon: TrendingUp,
