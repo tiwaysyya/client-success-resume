@@ -18,7 +18,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Generalist. Problem-solver. Ready to jump in and help your team win.
+          Generalist. Problem-solver. Ready to plug in and make your team stronger.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center pt-8">
