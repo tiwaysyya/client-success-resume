@@ -4,11 +4,11 @@ import { CheckCircle2 } from "lucide-react";
 const HowToUseMe = () => {
   const thrive = [
     "Ambiguity: open ended problems and room to think",
-    "Speed: accelerated learning and growth in a fast scaling environment",
+    "Speed: accelerated learning and growth in a fast scaling business",
     "Cross-functional work: close collaboration across teams",
     "Ownership: responsibility of projects and people from day one",
     "Impact: work that has a tangible effect on business trajectory",
-    "Early stage building: especially creating from scratch"
+    "Early stage building: turning ideas into reality without a handbook"
   ];
 
   const roles = [
