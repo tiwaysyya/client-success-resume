@@ -20,15 +20,6 @@ const HowToUseMe = () => {
     "Business Operations"
   ];
 
-  const expectations = [
-    "I'll figure it out",
-    "I ship, then iterate",
-    "I ask questions early",
-    "I stay aligned",
-    "I move fast",
-    "I build things that work"
-  ];
-
   return (
     <section id="how-to-use-me" className="py-24 px-4">
       <div className="container max-w-5xl mx-auto">
@@ -60,21 +51,6 @@ const HowToUseMe = () => {
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <p className="text-foreground">{role}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
-
-          {/* Expectations */}
-          <Card className="p-8 border-border bg-card">
-            <h3 className="text-2xl font-bold mb-6 text-foreground">If you work with me, expect:</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {expectations.map((expectation, index) => (
-                <div 
-                  key={index} 
-                  className="bg-secondary rounded-lg p-4 text-center"
-                >
-                  <p className="font-semibold text-secondary-foreground">{expectation}</p>
                 </div>
               ))}
             </div>
