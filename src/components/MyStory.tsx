@@ -3,20 +3,20 @@ const MyStory = () => {
     <section id="my-story" className="py-24 px-4">
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-primary">
-          From lab benches to startup trenches.
+          From science to strategy.
         </h2>
         
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Imperial Biotechnology graduate. But I've never been content just studying. I build things, lead teams, and chase problems worth solving.
+            Biotechnology graduate from Imperial College London. I started in the lab, but I have always been more interested in building things than staying in one lane. I like spotting problems, taking ownership, and leading teams.
           </p>
           
           <p>
-            I've led societies, trained teams of 10+, grown communities 50%, won pitch competitions, and built tools to solve my own problems. I take initiative, and I know how to bring others along.
+            Alongside my degree, I have led student societies, trained and managed teams of over 10 people, grown communities by more than 50%, won pitch competitions, and built tools to solve problems I ran into myself. Most of that work started because something was not working and I decided to fix it rather than wait for instructions.
           </p>
           
           <p>
-            I thrive when given ownership and room to figure things out. Give me a seat at the table and I'll make things happen.
+            I do my best work in fast moving environments where priorities shift and resources are limited. Give me ownership, trust, and a real problem to solve, and I will take it from idea to outcome while bringing others with me.
           </p>
         </div>
       </div>
