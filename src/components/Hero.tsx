@@ -10,7 +10,7 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-background">
       <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
         <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-          I build things.
+          I build solutions.
           <br />
           I fix problems.
           <br />
