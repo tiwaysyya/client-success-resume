@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { LayoutDashboard, Timer, Lightbulb, Radar, ExternalLink, Target, DollarSign } from "lucide-react";
+import { LayoutDashboard, Timer, Radar, ExternalLink, Target, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -62,9 +62,9 @@ const Projects = () => {
     {
       icon: Timer,
       title: "Lab Workflow Timer",
-      description: "Protocol automation tool for wet lab experiments with time-critical steps.",
-      problem: "Kept missing time-critical steps during multi-hour lab protocols — one mistake meant restarting the entire experiment.",
-      solution: "Built a timer that parses protocols, sequences steps, and alerts me before each critical action.",
+      description: "An automation tool that parses scientific protocols into a sequenced timeline and sets up multiple step-labeled timers that can run simultaneously.",
+      problem: "During long, complex lab protocols, the high pressure of parallel task management and limited timeframes often led to human error. Missing a single time-critical step meant the entire experiment had to be scrapped and restarted.",
+      impact: "To eliminate costly operational waste, I replaced manual tracking of multiple physical timers with a failsafe system that guarantees protocol adherence and protects the integrity of long-term projects.",
       features: [
         "Protocol parsing and automated timers",
         "Time-critical step highlighting",
@@ -126,12 +126,6 @@ const Projects = () => {
                   <span className="text-xs font-semibold text-muted-foreground uppercase">Problem:</span>
                   <p className="text-sm text-foreground">{project.problem}</p>
                 </div>
-                {project.solution && (
-                  <div className="flex items-start gap-2">
-                    <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-foreground font-medium">{project.solution}</p>
-                  </div>
-                )}
                 {project.impact && (
                   <div className="flex items-start gap-2 pt-1 border-t border-border/50">
                     <span className="text-xs font-semibold text-primary uppercase">Startup Impact:</span>
