@@ -12,7 +12,7 @@ const Experience = () => {
         "Led discovery from scratch: 50+ cold stakeholder interviews translated into actionable go-to-market strategy",
         "Built pricing model and market entry plan from unit economics, segmentation and competitive analysis"
       ],
-      keyResult: "30% profitability projected in pricing model"
+      
     },
     {
       icon: Users,
@@ -103,13 +103,6 @@ const Experience = () => {
                   ))}
                 </ul>
 
-                {exp.keyResult && (
-                  <div className="pt-3 border-t border-border">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                      {exp.keyResult}
-                    </span>
-                  </div>
-                )}
               </div>
             </div>
           ))}
