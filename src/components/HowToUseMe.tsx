@@ -6,7 +6,7 @@ const HowToUseMe = () => {
     "Ambiguity: open ended problems and room to think",
     "Speed: accelerated learning and growth in a fast scaling environment",
     "Cross-functional work: close collaboration across teams",
-    "Ownership: owning projects from start to finish",
+    "Ownership: responsibility of projects and people from day one",
     "Impact: work that has a tangible effect on business trajectory",
     "Early stage building: especially creating from scratch"
   ];
