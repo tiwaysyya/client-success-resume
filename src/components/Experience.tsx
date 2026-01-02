@@ -48,7 +48,6 @@ const Experience = () => {
         "Directly influenced portfolio allocation through high-impact stock pitch",
         "Delivered 5+ internal research reports with positive analyst feedback"
       ],
-      keyResult: "Covered RM 5B+ in assets"
     },
     {
       icon: Briefcase,
