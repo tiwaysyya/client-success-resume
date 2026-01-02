@@ -8,15 +8,15 @@ const MyStory = () => {
         
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Biotechnology graduate from Imperial College London. I started in the lab, but I have always been more interested in building things than staying in one lane. I like spotting problems, taking ownership, and leading teams.
+            Biotechnology graduate from Imperial College London. I started in the lab, but I have always been <strong className="text-foreground">more interested in building things</strong> than staying in one lane. I like <strong className="text-foreground">spotting problems, taking ownership, and leading teams</strong>.
           </p>
           
           <p>
-            Alongside my degree, I have led student societies, trained and managed teams of over 10 people, grown communities by more than 50%, won pitch competitions, and built tools to solve problems I ran into myself. Most of that work started because something was not working and I decided to fix it rather than wait for instructions.
+            Alongside my degree, I have led student societies, trained and managed teams of over 10 people, grown communities by more than 50%, won pitch competitions, and built tools to solve problems I ran into myself. Most of that work started because something was not working and I <strong className="text-foreground">decided to fix it rather than wait for instructions</strong>.
           </p>
           
           <p>
-            I do my best work in fast moving environments where priorities shift and resources are limited. Give me ownership, trust, and a real problem to solve, and I will take it from idea to outcome while bringing others with me.
+            I do my best work in <strong className="text-foreground">fast moving environments where priorities shift and resources are limited</strong>. Give me ownership, trust, and a real problem to solve, and I will take it from idea to outcome while bringing others with me.
           </p>
         </div>
       </div>
