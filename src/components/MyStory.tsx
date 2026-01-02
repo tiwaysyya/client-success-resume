@@ -3,7 +3,7 @@ const MyStory = () => {
     <section id="my-story" className="py-24 px-4">
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-primary">
-          Who am I?
+          Who I am
         </h2>
         
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
