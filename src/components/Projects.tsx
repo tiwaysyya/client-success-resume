@@ -8,7 +8,8 @@ const Projects = () => {
       icon: Radar,
       title: "Founder's Intelligence Dashboard",
       description: "Competitive intelligence tool that tracks competitor moves and generates strategic response recommendations using AI.",
-      story: "Founders need to track competitors but lack time. Built an automated intel system that scrapes, analyzes, and recommends.",
+      problem: "During my time at an early-stage startup, I saw founders spending hours manually tracking competitor websites and news — time they didn't have.",
+      solution: "Built an automated intel system that scrapes competitor updates, categorizes them with AI, and generates actionable strategic responses.",
       features: [
         "Real-time competitor website & news scraping",
         "AI-powered categorization of updates",
@@ -21,7 +22,8 @@ const Projects = () => {
       icon: Target,
       title: "User Research Deep Dive",
       description: "PM-style user research synthesis. 10 biotech interviews distilled into pain points and a Feature Priority Matrix with strategic roadmap recommendations.",
-      story: "Wanted to show I can translate raw customer feedback into product decisions. Built the framework founders need.",
+      problem: "Watched product teams drown in interview transcripts with no systematic way to extract actionable insights or prioritize features.",
+      solution: "Created a framework that synthesizes raw customer feedback into a visual Impact vs Effort matrix with clear prioritization recommendations.",
       features: [
         "10 synthesized biotech user interviews",
         "Interactive Impact vs Effort matrix",
@@ -33,8 +35,9 @@ const Projects = () => {
     {
       icon: LayoutDashboard,
       title: "Biotech Market Analysis Dashboard",
-      description: "Saw a gap in how therapeutic areas were evaluated. Built a tool that ranks 6 therapeutic areas by attractiveness, growth, and competitive intensity.",
-      story: "No one asked me to build this. I wanted faster diligence-style assessments, so I made one.",
+      description: "Ranks 6 therapeutic areas by attractiveness, growth, and competitive intensity for rapid market evaluation.",
+      problem: "Found that diligence-style market assessments in biotech were slow, inconsistent, and often buried in slide decks.",
+      solution: "Built a dashboard that scores and compares therapeutic areas side-by-side with transparent, weighted factors.",
       features: [
         "Side-by-side comparison of therapeutic areas",
         "Score breakdown with weighted factors",
@@ -47,7 +50,8 @@ const Projects = () => {
       icon: DollarSign,
       title: "Unit Economics Health Monitor",
       description: "Real-time financial dashboard that tracks CAC/LTV ratios with automated alerts when payback period exceeds safe thresholds.",
-      story: "Many startups 'scale into a black hole' — growing users while hemorrhaging cash. Built this to catch the warning signs early.",
+      problem: "Saw startups 'scale into a black hole' — growing users while hemorrhaging cash, with no early warning system.",
+      solution: "Built a live monitor that tracks unit economics by cohort and channel, alerting when metrics hit danger zones.",
       features: [
         "Live CAC/LTV tracking with threshold alerts",
         "Cohort-based LTV decay curves",
@@ -59,8 +63,9 @@ const Projects = () => {
     {
       icon: Timer,
       title: "Lab Workflow Timer",
-      description: "Wet lab protocols are time-critical and error-prone. Built a tool that parses protocols and automates timing.",
-      story: "Got frustrated with missed steps in experiments. Built the solution myself.",
+      description: "Protocol automation tool for wet lab experiments with time-critical steps.",
+      problem: "Kept missing time-critical steps during multi-hour lab protocols — one mistake meant restarting the entire experiment.",
+      solution: "Built a timer that parses protocols, sequences steps, and alerts me before each critical action.",
       features: [
         "Protocol parsing and automated timers",
         "Time-critical step highlighting",
@@ -117,9 +122,15 @@ const Projects = () => {
 
               <p className="text-muted-foreground mb-4">{project.description}</p>
               
-              <div className="flex items-start gap-2 mb-6 p-3 bg-secondary/50 rounded-lg">
-                <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-sm text-foreground italic">{project.story}</p>
+              <div className="mb-6 p-3 bg-secondary/50 rounded-lg space-y-2">
+                <div className="flex items-start gap-2">
+                  <span className="text-xs font-semibold text-muted-foreground uppercase">Problem:</span>
+                  <p className="text-sm text-foreground">{project.problem}</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-foreground font-medium">{project.solution}</p>
+                </div>
               </div>
 
               <div className="space-y-4">
