@@ -22,7 +22,7 @@ const Projects = () => {
       icon: Target,
       title: "User Research Deep Dive",
       description: "Automated platform that processes raw interview transcripts to instantly pull out feature requests, pain points, and user sentiment.",
-      problem: "While leading product strategy at an early-stage startup, analyzing dozens of manual interviews became a massive bottleneck. We were losing days of momentum just trying to synthesize feedback into actionable steps.",
+      problem: "While leading product strategy at an early-stage startup, analyzing dozens of manual interviews was a bottleneck.",
       impact: "To shrink the product feedback loop, I cut the time from \"interview\" to \"insight\" by 80%, letting us pivot strategy in hours rather than weeks.",
       features: [
         "10 synthesized biotech user interviews",
