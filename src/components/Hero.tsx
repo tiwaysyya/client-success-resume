@@ -12,7 +12,7 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
           I build solutions.
           <br />
-          I fix problems.
+          I unblock teams.
           <br />
           I move fast.
         </h1>
