@@ -10,28 +10,24 @@ const HowIThink = () => {
 
   const defaults = [
     {
-      principle: "Ambiguity",
-      description: "Open ended problems and room to think."
+      principle: "Act first",
+      description: "I get something moving, then improve it once there is real feedback."
     },
     {
-      principle: "Speed",
-      description: "Fast growth and rapid iteration."
+      principle: "Own the work",
+      description: "If it is mine, I take full responsibility and keep it aligned with what matters most."
     },
     {
-      principle: "Cross-functional work",
-      description: "Close collaboration across teams."
+      principle: "Think out loud",
+      description: "I ask questions early, share progress, and adjust openly as things evolve."
     },
     {
-      principle: "Ownership",
-      description: "Owning projects from start to finish."
+      principle: "Let evidence lead",
+      description: "I test assumptions and change course when the results point another way."
     },
     {
-      principle: "Impact",
-      description: "Work that has a visible effect on the business."
-    },
-    {
-      principle: "Early stage building",
-      description: "Especially creating from scratch."
+      principle: "Build practical solutions",
+      description: "I put together simple tools, systems, and workflows that help work get done."
     }
   ];
 
