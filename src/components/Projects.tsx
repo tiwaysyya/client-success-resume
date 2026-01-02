@@ -77,7 +77,7 @@ const Projects = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Things I've Built
+            Tools I've Built
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Side projects. No one asked me to. I just saw problems and built solutions.
