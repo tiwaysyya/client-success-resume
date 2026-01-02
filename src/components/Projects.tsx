@@ -34,9 +34,9 @@ const Projects = () => {
     {
       icon: LayoutDashboard,
       title: "Biotech Market Analysis Dashboard",
-      description: "Ranks 6 therapeutic areas by attractiveness, growth, and competitive intensity for rapid market evaluation.",
-      problem: "Found that diligence-style market assessments in biotech were slow, inconsistent, and often buried in slide decks.",
-      solution: "Built a dashboard that scores and compares therapeutic areas side-by-side with transparent, weighted factors.",
+      description: "I built a dynamic dashboard that aggregates data to score and compare six therapeutic areas using weighted factors. It uses React and Recharts to visualize growth trajectories and competitive intensity in real-time.",
+      problem: "While leading biotech investment research for the Imperial Investment Society, I found that market data was scattered online, making the research process tedious.",
+      impact: "To accelerate commercial strategy, I turned a weeks-long manual research process into an instant evaluation tool for rapid decision-making.",
       features: [
         "Side-by-side comparison of therapeutic areas",
         "Score breakdown with weighted factors",
