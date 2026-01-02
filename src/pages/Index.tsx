@@ -3,7 +3,6 @@ import ThreePillars from "@/components/ThreePillars";
 import MyStory from "@/components/MyStory";
 import HowIThink from "@/components/HowIThink";
 import Projects from "@/components/Projects";
-import CaseStudies from "@/components/CaseStudies";
 import Experience from "@/components/Experience";
 import HowToUseMe from "@/components/HowToUseMe";
 import SignalsOfImpact from "@/components/SignalsOfImpact";
@@ -17,7 +16,6 @@ const Index = () => {
       <MyStory />
       <HowIThink />
       <Projects />
-      <CaseStudies />
       <Experience />
       <HowToUseMe />
       <SignalsOfImpact />
