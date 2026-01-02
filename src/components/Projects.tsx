@@ -23,7 +23,6 @@ const Projects = () => {
       title: "User Research Deep Dive",
       description: "Automated platform that processes raw interview transcripts to instantly pull out feature requests, pain points, and user sentiment.",
       problem: "While leading product strategy at an early-stage startup, analyzing dozens of manual interviews became a massive bottleneck. We were losing days of momentum just trying to synthesize feedback into actionable steps.",
-      solution: "Built an automated platform that processes raw interview transcripts to instantly pull out feature requests, pain points, and user sentiment.",
       impact: "To shrink the product feedback loop, I cut the time from \"interview\" to \"insight\" by 80%, letting us pivot strategy in hours rather than weeks.",
       features: [
         "10 synthesized biotech user interviews",
@@ -128,10 +127,12 @@ const Projects = () => {
                   <span className="text-xs font-semibold text-muted-foreground uppercase">Problem:</span>
                   <p className="text-sm text-foreground">{project.problem}</p>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-foreground font-medium">{project.solution}</p>
-                </div>
+                {project.solution && (
+                  <div className="flex items-start gap-2">
+                    <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-foreground font-medium">{project.solution}</p>
+                  </div>
+                )}
                 {project.impact && (
                   <div className="flex items-start gap-2 pt-1 border-t border-border/50">
                     <span className="text-xs font-semibold text-primary uppercase">Startup Impact:</span>
