@@ -7,9 +7,9 @@ const Projects = () => {
     {
       icon: Radar,
       title: "Founder's Intelligence Dashboard",
-      description: "Competitive intelligence tool that tracks competitor moves and generates strategic response recommendations using AI.",
-      problem: "During my time at an early-stage startup, I saw founders spending hours manually tracking competitor websites and news — time they didn't have.",
-      solution: "Built an automated intel system that scrapes competitor updates, categorizes them with AI, and generates actionable strategic responses.",
+      description: "An automated intelligence system that scrapes competitor updates and uses AI to categorize them.",
+      problem: "While serving as Product strategy lead at an early-stage startup, I wasted hours manually tracking competitor sites and news. This was critical data, but the manual collection was a slow process I simply didn't have time for.",
+      impact: "To reclaim valuable founder bandwidth, I replaced a manual, daily chore with a real-time feed that provides strategic responses in seconds.",
       features: [
         "Real-time competitor website & news scraping",
         "AI-powered categorization of updates",
