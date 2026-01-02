@@ -7,7 +7,7 @@ const Contact = () => {
     <section id="contact" className="py-24 px-4">
       <div className="container max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-          Let's build something worth shipping.
+          Let's build something worth building.
         </h2>
         
         <Card className="p-8 md:p-12 mt-12 border-border bg-card">
