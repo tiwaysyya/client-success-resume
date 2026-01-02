@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "2", label: "Tools built from scratch" },
+    { value: "5", label: "Tools built from scratch" },
     { value: "50+", label: "Cold outreach conversations" },
     { value: "45%", label: "Engagement growth delivered" },
     { value: "50%", label: "Community growth delivered" },
