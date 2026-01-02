@@ -48,9 +48,9 @@ const Projects = () => {
     {
       icon: DollarSign,
       title: "Unit Economics Health Monitor",
-      description: "Real-time financial dashboard that tracks CAC/LTV ratios with automated alerts when payback period exceeds safe thresholds.",
-      problem: "Saw startups 'scale into a black hole' — growing users while hemorrhaging cash, with no early warning system.",
-      solution: "Built a live monitor that tracks unit economics by cohort and channel, alerting when metrics hit danger zones.",
+      description: "A real-time financial monitor that tracks CAC/LTV ratios by cohort and acquisition channel, providing automated alerts the moment a payback period exceeds safe thresholds, ensuring growth remains sustainable.",
+      problem: "While researching more about startup operational challenges, I noticed companies often \"scale into a black hole\" by growing users while hemorrhaging cash. Without an early warning system, founders often realize their unit economics are broken only after it's too late to pivot.",
+      impact: "To protect business longevity, I created a tool that replaces reactive accounting with a proactive system for identifying and fixing \"danger zone\" metrics instantly.",
       features: [
         "Live CAC/LTV tracking with threshold alerts",
         "Cohort-based LTV decay curves",
