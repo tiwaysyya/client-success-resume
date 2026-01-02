@@ -25,7 +25,6 @@ const Projects = () => {
       problem: "While leading product strategy at an early-stage startup, analyzing dozens of manual interviews was a bottleneck.",
       impact: "To shrink the product feedback loop, I cut the time from \"interview\" to \"insight\" by 80%, letting us pivot strategy in hours rather than weeks.",
       features: [
-        "10 synthesized biotech user interviews",
         "Interactive Impact vs Effort matrix",
         "AI-powered interview analysis tool"
       ],
