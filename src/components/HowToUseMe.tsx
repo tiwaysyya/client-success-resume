@@ -7,7 +7,7 @@ const HowToUseMe = () => {
     "Speed: fast growth and rapid iteration",
     "Cross-functional work: close collaboration across teams",
     "Ownership: owning projects from start to finish",
-    "Impact: work that has a visible effect on the business",
+    "Impact: work that has a tangible effect on business trajectory",
     "Early stage building: especially creating from scratch"
   ];
 
