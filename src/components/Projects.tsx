@@ -21,9 +21,10 @@ const Projects = () => {
     {
       icon: Target,
       title: "User Research Deep Dive",
-      description: "PM-style user research synthesis. 10 biotech interviews distilled into pain points and a Feature Priority Matrix with strategic roadmap recommendations.",
-      problem: "Watched product teams drown in interview transcripts with no systematic way to extract actionable insights or prioritize features.",
-      solution: "Created a framework that synthesizes raw customer feedback into a visual Impact vs Effort matrix with clear prioritization recommendations.",
+      description: "Automated platform that processes raw interview transcripts to instantly pull out feature requests, pain points, and user sentiment.",
+      problem: "While leading product strategy at an early-stage startup, analyzing dozens of manual interviews became a massive bottleneck. We were losing days of momentum just trying to synthesize feedback into actionable steps.",
+      solution: "Built an automated platform that processes raw interview transcripts to instantly pull out feature requests, pain points, and user sentiment.",
+      impact: "To shrink the product feedback loop, I cut the time from \"interview\" to \"insight\" by 80%, letting us pivot strategy in hours rather than weeks.",
       features: [
         "10 synthesized biotech user interviews",
         "Interactive Impact vs Effort matrix",
@@ -131,6 +132,12 @@ const Projects = () => {
                   <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-foreground font-medium">{project.solution}</p>
                 </div>
+                {project.impact && (
+                  <div className="flex items-start gap-2 pt-1 border-t border-border/50">
+                    <span className="text-xs font-semibold text-primary uppercase">Startup Impact:</span>
+                    <p className="text-sm text-foreground">{project.impact}</p>
+                  </div>
+                )}
               </div>
 
               <div className="space-y-4">
