@@ -10,6 +10,7 @@ import SocialProofScraper from "./pages/SocialProofScraper";
 import UserResearchDashboard from "./pages/UserResearchDashboard";
 import BiotechMarketDashboard from "./pages/BiotechMarketDashboard";
 import UnitEconomicsDashboard from "./pages/UnitEconomicsDashboard";
+import JumpstartCV from "./pages/JumpstartCV";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ function App() {
             <Route path="/user-research" element={<UserResearchDashboard />} />
             <Route path="/biotech-market" element={<BiotechMarketDashboard />} />
             <Route path="/unit-economics" element={<UnitEconomicsDashboard />} />
+            <Route path="/cv" element={<JumpstartCV />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
