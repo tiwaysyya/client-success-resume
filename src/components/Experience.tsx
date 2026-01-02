@@ -36,7 +36,7 @@ const Experience = () => {
         "Cold-outreached and secured speakers from McKinsey, PwC, EY, Goldman Sachs",
         "Ran flagship events with 150+ participants"
       ],
-      keyResult: "50% membership growth"
+      
     },
     {
       icon: Zap,
