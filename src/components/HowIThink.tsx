@@ -10,24 +10,24 @@ const HowIThink = () => {
 
   const defaults = [
     {
-      principle: "Bias to action",
-      description: "Start with action. Improve with data."
+      principle: "Act first",
+      description: "I get something moving, then improve it once there is real feedback."
     },
     {
-      principle: "Own my lane",
-      description: "I take full responsibility while staying aligned with priorities."
+      principle: "Own the work",
+      description: "If it is mine, I take full responsibility and keep it aligned with what matters most."
     },
     {
-      principle: "Learn in public",
-      description: "Ask questions early, share context, iterate openly."
+      principle: "Think out loud",
+      description: "I ask questions early, share progress, and adjust openly as things evolve."
     },
     {
-      principle: "Data over intuition",
-      description: "Test assumptions. Let results guide decisions."
+      principle: "Let evidence lead",
+      description: "I test assumptions and change course when the results point another way."
     },
     {
-      principle: "Build things that work",
-      description: "Tools, dashboards, automations. I make ideas real."
+      principle: "Build practical solutions",
+      description: "I put together simple tools, systems, and workflows that help work get done."
     }
   ];
 
@@ -58,7 +58,7 @@ const HowIThink = () => {
         {/* Default Mode */}
         <div className="space-y-8">
           <h3 className="text-3xl font-bold text-center text-foreground">
-            My Default Mode
+            My default mode
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {defaults.map((item, index) => (
