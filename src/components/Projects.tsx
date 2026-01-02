@@ -63,8 +63,8 @@ const Projects = () => {
       icon: Timer,
       title: "Lab Workflow Timer",
       description: "An automation tool that parses scientific protocols into a sequenced timeline and sets up multiple step-labeled timers that can run simultaneously.",
-      problem: "During long, complex lab protocols, the high pressure of parallel task management and limited timeframes often led to human error. Missing a single time-critical step meant the entire experiment had to be scrapped and restarted.",
-      impact: "To eliminate costly operational waste, I replaced manual tracking of multiple physical timers with a failsafe system that guarantees protocol adherence and protects the integrity of long-term projects.",
+      problem: "In the lab, the high pressure of parallel task management and limited timeframes often led to human error. Missing a single time-critical step meant the entire experiment had to be scrapped and restarted.",
+      impact: "I replaced manual tracking of multiple physical timers with a failsafe system that guarantees protocol adherence and protects the integrity of long-term projects.",
       features: [
         "Protocol parsing and automated timers",
         "Time-critical step highlighting",
