@@ -10,7 +10,7 @@
 @layer base {
   :root {
     /* Light mode - Soft blue-purple palette */
-    --background: 240 33% 99%;
+    --background: 250 30% 98%;
     --foreground: 235 25% 27%;
 
     --card: 0 0% 100%;
