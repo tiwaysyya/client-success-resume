@@ -164,18 +164,18 @@ const Experience = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <h3 className="text-lg font-bold text-foreground">{exp.role}</h3>
-                    <span className="text-sm text-muted-foreground">{exp.period}</span>
+                    <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
+                    <span className="text-base text-muted-foreground">{exp.period}</span>
                   </div>
-                  <p className="text-primary text-sm font-medium">{exp.company}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{exp.context}</p>
+                  <p className="text-primary text-base font-medium">{exp.company}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{exp.context}</p>
                 </div>
               </div>
 
               {/* Problems & Solutions - Clean table-like layout */}
               <div className="ml-14 space-y-2">
                 {exp.problems.map((item, i) => (
-                  <div key={i} className="grid grid-cols-[auto_1fr] gap-x-3 text-sm">
+                  <div key={i} className="grid grid-cols-[auto_1fr] gap-x-3 text-base">
                     <span className="text-destructive/70">→</span>
                     <p>
                       <span className="text-muted-foreground">{item.problem}:</span>{" "}
@@ -188,9 +188,9 @@ const Experience = () => {
               {/* Built Tools */}
               {exp.builtTools && exp.builtTools.length > 0 && (
                 <div className="ml-14 mt-3 space-y-1">
-                  <span className="text-primary font-medium text-sm">Built:</span>
+                  <span className="text-primary font-medium text-base">Built:</span>
                   {exp.builtTools.map((tool, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm ml-2">
+                    <div key={i} className="flex items-center gap-2 text-base ml-2">
                       <span className="text-muted-foreground">•</span>
                       {'external' in tool && tool.external ? (
                         <a 
