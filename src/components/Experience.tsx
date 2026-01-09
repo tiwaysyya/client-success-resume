@@ -1,64 +1,139 @@
-import { Briefcase, TrendingUp, Users, Rocket, Zap } from "lucide-react";
+import { Briefcase, TrendingUp, Users, Rocket, Zap, Radar, Target, LayoutDashboard, DollarSign, Timer } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
       icon: Rocket,
-      role: "Product & Market Strategy Lead",
-      company: "CO2LLECT (Climate Startup)",
+      role: "Co-founder & Product-Market Strategy Lead",
+      company: "CO2LLECT",
       period: "Oct 2024 - Jun 2025",
-      achievements: [
-        "Won 1st place pitch competition. Presented commercially grounded business case to VCs and Imperial Enterprise Lab",
-        "Led discovery from scratch: 50+ cold stakeholder interviews translated into actionable go-to-market strategy",
-        "Built pricing model and market entry plan from unit economics, segmentation and competitive analysis"
+      context: "Early-stage climate startup. Won 1st place Imperial pitch competition.",
+      problems: [
+        {
+          problem: "No validated demand before building",
+          solution: "50+ cold stakeholder interviews → eliminated 2 non-viable product directions early"
+        },
+        {
+          problem: "Pricing was guesswork",
+          solution: "Built unit economics from first principles → £1.30/kg price point at 40% gross margin"
+        },
+        {
+          problem: "High customer adoption risk",
+          solution: "Designed trust-led acquisition: free trial batches for one crop cycle before paid orders"
+        }
       ],
-      
+      builtTool: {
+        name: "Founder's Intelligence Dashboard",
+        reason: "Wasted hours manually tracking competitor sites",
+        what: "Automated scraper + AI categorization → strategic signals in seconds",
+        link: "/intel"
+      }
     },
     {
       icon: Users,
       role: "Investment Editorial Head",
       company: "Imperial Investment Society",
       period: "Oct 2024 - Jun 2025",
-      achievements: [
-        "Grew engagement 45% to 1,500+ readers by running data-driven content experiments",
-        "Built and trained a 10-person team on structured research frameworks",
-        "Delivered 30+ publications with 100% on-time record through workflow optimisation"
+      context: "Led 10-analyst team. 30+ monthly publications. 100% on-time record.",
+      problems: [
+        {
+          problem: "Low reader engagement",
+          solution: "Data-driven content experiments → scaled readership 45% to 1,500+ active readers"
+        },
+        {
+          problem: "Inconsistent research quality",
+          solution: "Enforced strict research standards and workflows across team"
+        }
       ],
-      
+      builtTool: {
+        name: "Biotech Market Analysis Dashboard",
+        reason: "Market data scattered online, research tedious",
+        what: "Aggregated data across 6 therapeutic areas → instant evaluation tool",
+        link: "/biotech-market"
+      }
     },
     {
       icon: TrendingUp,
       role: "Strategy & Branding Director",
       company: "GenCorporate",
       period: "Oct 2023 - Oct 2024",
-      achievements: [
-        "Grew membership 50% through rapid weekly experimentation using engagement data",
-        "Cold-outreached and secured speakers from McKinsey, PwC, EY, Goldman Sachs",
-        "Ran flagship events with 150+ participants"
-      ],
-      
+      context: "Career society. Flagship events 150+ attendees.",
+      problems: [
+        {
+          problem: "Stagnant membership growth",
+          solution: "Analysed engagement data → reshaped outreach around highest-engaged segments → 800 to 1,200+ members"
+        },
+        {
+          problem: "Needed industry speaker credibility",
+          solution: "Cold-outreach secured McKinsey, PwC, EY, Goldman Sachs speakers"
+        }
+      ]
     },
     {
       icon: Zap,
-      role: "Equity Analyst Intern",
+      role: "Equity Analyst Intern (Buy-Side)",
       company: "RHB Asset Management",
       period: "Jul 2024 - Aug 2024",
-      achievements: [
-        "Completed Q2 research 3x faster by building rapid synthesis workflows with Bloomberg",
-        "Directly influenced portfolio allocation through high-impact stock pitch",
-        "Delivered 5+ internal research reports with positive analyst feedback"
+      context: "RM 1-15B market cap healthcare coverage. Q2 earnings cycle.",
+      problems: [
+        {
+          problem: "Slow post-earnings turnaround",
+          solution: "Built rapid synthesis workflows → delivered 10+ earnings notes within 24-48 hours"
+        },
+        {
+          problem: "Hidden valuation risks in pharma pipeline",
+          solution: "Identified Phase II/III trial delays across 5+ names → flagged 6-12 month launch deferrals"
+        },
+        {
+          problem: "Portfolio needed alpha opportunities",
+          solution: "Pitched RM10B+ contractor based on infrastructure spending analysis"
+        }
       ],
+      builtTool: {
+        name: "Unit Economics Health Monitor",
+        reason: "Companies scale into black holes without early warning",
+        what: "Real-time CAC/LTV tracking with threshold alerts",
+        link: "/unit-economics"
+      }
     },
     {
       icon: Briefcase,
       role: "Patent Law Intern",
       company: "KASS International",
       period: "Aug 2023 - Sep 2023",
-      achievements: [
-        "Analysed 10+ biotech patents and synthesised findings into focused risk assessments",
-        "Authored 10+ B2B explainer articles clarifying complex regulatory procedures",
-        "Improved claim language through cross-functional coordination with attorneys"
+      context: "IP law firm. Medical device patent work.",
+      problems: [
+        {
+          problem: "Clients committed to products before knowing IP risk",
+          solution: "Reviewed 20+ competitor patents → mapped freedom-to-operate risk and white space"
+        },
+        {
+          problem: "No centralized patent tracking",
+          solution: "Built multi-jurisdiction tracking system → summarised examiner feedback into actionable next steps"
+        }
       ]
+    },
+    {
+      icon: Timer,
+      role: "Research Student",
+      company: "Imperial College London",
+      period: "Oct 2022 - Jun 2025",
+      context: "BSc Biotechnology (Hons). Upper Second Class.",
+      problems: [
+        {
+          problem: "Lab protocols required parallel timer management",
+          solution: "Missing a time-critical step = scrapped experiment"
+        }
+      ],
+      builtTool: {
+        name: "Lab Workflow Timer",
+        reason: "High-pressure parallel task management led to errors",
+        what: "Automated protocol parsing + simultaneous timers → failsafe system",
+        link: "https://tiwaysyya.github.io/lab-multi-protocol-timer/",
+        external: true
+      }
     }
   ];
 
@@ -67,10 +142,10 @@ const Experience = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Experience
+            Work & What I Built
           </h2>
           <p className="text-muted-foreground text-lg">
-            BSc Biotechnology (Hons), Imperial College London. Upper Second Class Honours
+            Problems I encountered. Solutions I shipped.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4"></div>
         </div>
@@ -86,23 +161,60 @@ const Experience = () => {
               </div>
               
               <div className="bg-card rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-1">{exp.role}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-card-foreground mb-1">{exp.role}</h3>
                     <p className="text-primary font-medium">{exp.company}</p>
                   </div>
-                  <span className="text-muted-foreground font-medium mt-2 md:mt-0">{exp.period}</span>
+                  <span className="text-muted-foreground font-medium mt-2 md:mt-0 text-sm">{exp.period}</span>
                 </div>
                 
-                <ul className="space-y-2 mb-4">
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start text-muted-foreground">
-                      <span className="text-accent mr-2 mt-1">▸</span>
-                      <span>{achievement}</span>
-                    </li>
+                <p className="text-sm text-muted-foreground mb-4 italic">{exp.context}</p>
+                
+                <div className="space-y-3 mb-4">
+                  {exp.problems.map((item, i) => (
+                    <div key={i} className="flex items-start text-sm">
+                      <span className="text-destructive font-medium mr-2 shrink-0">▸</span>
+                      <div>
+                        <span className="text-muted-foreground">{item.problem}</span>
+                        <span className="text-muted-foreground mx-2">→</span>
+                        <span className="text-foreground">{item.solution}</span>
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
 
+                {exp.builtTool && (
+                  <div className="mt-4 p-3 bg-secondary/50 rounded-lg border border-primary/20">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Radar className="w-4 h-4 text-primary" />
+                      <span className="text-sm font-semibold text-primary">Tool I Built:</span>
+                      {exp.builtTool.external ? (
+                        <a 
+                          href={exp.builtTool.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-bold text-foreground hover:text-primary inline-flex items-center gap-1"
+                        >
+                          {exp.builtTool.name} <ExternalLink className="w-3 h-3" />
+                        </a>
+                      ) : (
+                        <Link 
+                          to={exp.builtTool.link}
+                          className="text-sm font-bold text-foreground hover:text-primary inline-flex items-center gap-1"
+                        >
+                          {exp.builtTool.name} <ExternalLink className="w-3 h-3" />
+                        </Link>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      <span className="text-destructive/80">Problem:</span> {exp.builtTool.reason}
+                    </p>
+                    <p className="text-xs text-foreground mt-1">
+                      <span className="text-primary">Built:</span> {exp.builtTool.what}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           ))}
