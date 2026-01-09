@@ -24,12 +24,23 @@ const Experience = () => {
           solution: "Designed trust-led acquisition: free trial batches for one crop cycle before paid orders"
         }
       ],
-      builtTool: {
-        name: "Founder's Intelligence Dashboard",
-        reason: "Wasted hours manually tracking competitor sites",
-        what: "Automated scraper + AI categorization → strategic signals in seconds",
-        link: "/intel"
-      }
+      builtTools: [
+        {
+          name: "Founder's Intelligence Dashboard",
+          what: "Automated scraper + AI categorization → competitor updates in seconds",
+          link: "/intel"
+        },
+        {
+          name: "User Research Deep Dive",
+          what: "AI interview analysis → instant feature requests & pain points",
+          link: "/user-research"
+        },
+        {
+          name: "Unit Economics Health Monitor",
+          what: "Real-time CAC/LTV tracking with threshold alerts",
+          link: "/unit-economics"
+        }
+      ]
     },
     {
       icon: Users,
@@ -90,13 +101,7 @@ const Experience = () => {
           problem: "Portfolio needed alpha opportunities",
           solution: "Pitched RM10B+ contractor based on infrastructure spending analysis"
         }
-      ],
-      builtTool: {
-        name: "Unit Economics Health Monitor",
-        reason: "Companies scale into black holes without early warning",
-        what: "Real-time CAC/LTV tracking with threshold alerts",
-        link: "/unit-economics"
-      }
+      ]
     },
     {
       icon: Briefcase,
@@ -178,7 +183,35 @@ const Experience = () => {
                 ))}
               </div>
 
-              {/* Built Tool - Compact inline */}
+              {/* Built Tools */}
+              {exp.builtTools && exp.builtTools.length > 0 && (
+                <div className="ml-14 mt-3 space-y-1">
+                  <span className="text-primary font-medium text-sm">Built:</span>
+                  {exp.builtTools.map((tool, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm ml-2">
+                      <span className="text-muted-foreground">•</span>
+                      {'external' in tool && tool.external ? (
+                        <a 
+                          href={tool.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold text-foreground hover:text-primary inline-flex items-center gap-1 underline underline-offset-2"
+                        >
+                          {tool.name} <ExternalLink className="w-3 h-3" />
+                        </a>
+                      ) : (
+                        <Link 
+                          to={tool.link}
+                          className="font-semibold text-foreground hover:text-primary inline-flex items-center gap-1 underline underline-offset-2"
+                        >
+                          {tool.name} <ExternalLink className="w-3 h-3" />
+                        </Link>
+                      )}
+                      <span className="text-muted-foreground">— {tool.what}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
               {exp.builtTool && (
                 <div className="ml-14 mt-3 flex items-center gap-2 text-sm">
                   <span className="text-primary font-medium">Built:</span>
