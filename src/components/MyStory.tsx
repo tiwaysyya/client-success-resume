@@ -8,7 +8,7 @@ const MyStory = () => {
         
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Biotechnology graduate from Imperial College London. I started in the lab, but I have always been <strong className="text-foreground">more interested in building things</strong> than staying in one lane. I like <strong className="text-foreground">spotting problems, taking ownership, and leading teams</strong>.
+            As a Biotechnology graduate from Imperial College London, I started in the lab, but I have always been <strong className="text-foreground">more interested in building things</strong> than staying in one lane. I like <strong className="text-foreground">spotting problems, taking ownership, and leading teams</strong>.
           </p>
           
           <p>
