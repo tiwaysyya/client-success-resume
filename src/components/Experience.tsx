@@ -139,83 +139,74 @@ const Experience = () => {
 
   return (
     <section className="py-20 px-4 bg-background">
-      <div className="container max-w-6xl mx-auto">
+      <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Work & What I Built
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Problems I encountered. Solutions I shipped.
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div 
-              key={index}
-              className="relative pl-8 md:pl-12 pb-8 border-l-2 border-primary/20 hover:border-primary/40 transition-colors"
-            >
-              <div className="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <exp.icon className="w-3 h-3 text-white" />
-              </div>
-              
-              <div className="bg-card rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-card-foreground mb-1">{exp.role}</h3>
-                    <p className="text-primary font-medium">{exp.company}</p>
+            <div key={index} className="group">
+              {/* Header */}
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0">
+                  <exp.icon className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <h3 className="text-lg font-bold text-foreground">{exp.role}</h3>
+                    <span className="text-sm text-muted-foreground">{exp.period}</span>
                   </div>
-                  <span className="text-muted-foreground font-medium mt-2 md:mt-0 text-sm">{exp.period}</span>
+                  <p className="text-primary text-sm font-medium">{exp.company}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{exp.context}</p>
                 </div>
-                
-                <p className="text-sm text-muted-foreground mb-4 italic">{exp.context}</p>
-                
-                <div className="space-y-3 mb-4">
-                  {exp.problems.map((item, i) => (
-                    <div key={i} className="flex items-start text-sm">
-                      <span className="text-destructive font-medium mr-2 shrink-0">▸</span>
-                      <div>
-                        <span className="text-muted-foreground">{item.problem}</span>
-                        <span className="text-muted-foreground mx-2">→</span>
-                        <span className="text-foreground">{item.solution}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              </div>
 
-                {exp.builtTool && (
-                  <div className="mt-4 p-3 bg-secondary/50 rounded-lg border border-primary/20">
-                    <div className="flex items-center gap-2 mb-1">
-                      <Radar className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-semibold text-primary">Tool I Built:</span>
-                      {exp.builtTool.external ? (
-                        <a 
-                          href={exp.builtTool.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm font-bold text-foreground hover:text-primary inline-flex items-center gap-1"
-                        >
-                          {exp.builtTool.name} <ExternalLink className="w-3 h-3" />
-                        </a>
-                      ) : (
-                        <Link 
-                          to={exp.builtTool.link}
-                          className="text-sm font-bold text-foreground hover:text-primary inline-flex items-center gap-1"
-                        >
-                          {exp.builtTool.name} <ExternalLink className="w-3 h-3" />
-                        </Link>
-                      )}
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      <span className="text-destructive/80">Problem:</span> {exp.builtTool.reason}
-                    </p>
-                    <p className="text-xs text-foreground mt-1">
-                      <span className="text-primary">Built:</span> {exp.builtTool.what}
+              {/* Problems & Solutions - Clean table-like layout */}
+              <div className="ml-14 space-y-2">
+                {exp.problems.map((item, i) => (
+                  <div key={i} className="grid grid-cols-[auto_1fr] gap-x-3 text-sm">
+                    <span className="text-destructive/70">→</span>
+                    <p>
+                      <span className="text-muted-foreground">{item.problem}:</span>{" "}
+                      <span className="text-foreground">{item.solution}</span>
                     </p>
                   </div>
-                )}
+                ))}
               </div>
+
+              {/* Built Tool - Compact inline */}
+              {exp.builtTool && (
+                <div className="ml-14 mt-3 flex items-center gap-2 text-sm">
+                  <span className="text-primary font-medium">Built:</span>
+                  {exp.builtTool.external ? (
+                    <a 
+                      href={exp.builtTool.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-foreground hover:text-primary inline-flex items-center gap-1 underline underline-offset-2"
+                    >
+                      {exp.builtTool.name} <ExternalLink className="w-3 h-3" />
+                    </a>
+                  ) : (
+                    <Link 
+                      to={exp.builtTool.link}
+                      className="font-semibold text-foreground hover:text-primary inline-flex items-center gap-1 underline underline-offset-2"
+                    >
+                      {exp.builtTool.name} <ExternalLink className="w-3 h-3" />
+                    </Link>
+                  )}
+                  <span className="text-muted-foreground">— {exp.builtTool.what}</span>
+                </div>
+              )}
+
+              {/* Divider */}
+              {index < experiences.length - 1 && (
+                <div className="ml-14 mt-8 border-b border-border/50"></div>
+              )}
             </div>
           ))}
         </div>
