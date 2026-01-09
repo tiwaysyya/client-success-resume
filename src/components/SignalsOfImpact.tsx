@@ -2,11 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "45%", label: "Engagement growth as Editorial Head" },
+    { value: "50+", label: "Customer interviews led" },
+    { value: "40%", label: "Gross margin achieved" },
     { value: "1,500+", label: "Readers reached" },
-    { value: "1st", label: "Place pitch competition" },
-    { value: "50%", label: "Membership growth driven" },
-    { value: "10", label: "Person team built & trained" }
+    { value: "45%", label: "Readership growth" },
+    { value: "30+", label: "Monthly publications delivered" },
+    { value: "1,200+", label: "Members grown from 800" },
+    { value: "10+", label: "Earnings notes in 24-48hrs" },
+    { value: "1st", label: "Place startup pitch" }
   ];
 
   return (
