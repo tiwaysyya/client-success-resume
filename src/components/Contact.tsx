@@ -36,9 +36,12 @@ const Contact = () => {
               size="lg" 
               variant="outline"
               className="border-2"
+              asChild
             >
-              <FileText className="w-5 h-5 mr-2" />
-              Download CV
+              <a href="/Tiwaysyya_CV.docx" download>
+                <FileText className="w-5 h-5 mr-2" />
+                Download CV
+              </a>
             </Button>
           </div>
         </Card>
