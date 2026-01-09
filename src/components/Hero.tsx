@@ -32,16 +32,16 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            onClick={() => scrollToSection("case-studies")}
+            onClick={() => scrollToSection("what-ive-done")}
           >
             What I've Done
           </Button>
           <Button 
             size="lg" 
-            variant="outline"
-            className="border-2 border-primary hover:bg-primary/10"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            onClick={() => scrollToSection("pillars")}
           >
-            Download CV
+            What I Bring
           </Button>
         </div>
 
