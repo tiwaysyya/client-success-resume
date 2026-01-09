@@ -25,6 +25,13 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            onClick={() => scrollToSection("pillars")}
+          >
+            What I Bring
+          </Button>
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
             onClick={() => scrollToSection("how-i-think")}
           >
             How I Work
@@ -35,13 +42,6 @@ const Hero = () => {
             onClick={() => scrollToSection("what-ive-done")}
           >
             What I've Done
-          </Button>
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            onClick={() => scrollToSection("pillars")}
-          >
-            What I Bring
           </Button>
         </div>
 
