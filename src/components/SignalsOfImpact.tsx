@@ -20,7 +20,7 @@ const SignalsOfImpact = () => {
             Proof of Proactivity
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Numbers from things I built, led, and delivered.
+            Built. Led. Delivered.
           </p>
         </div>
 
