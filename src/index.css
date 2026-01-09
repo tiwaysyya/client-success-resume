@@ -2,132 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-/* JumpStart Generalists Design System
-   Colors: #7155FF, #01FFD1, #FFFFFF, #000000, #E20054, #3B68FF
+/* Portfolio Design System
+   Soft blues, purples, whites - professional & approachable
    All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Light mode - JumpStart Generalists palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Light mode - Soft blue-purple palette */
+    --background: 240 33% 99%;
+    --foreground: 235 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 235 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 235 25% 27%;
 
-    --primary: 249 100% 67%;
+    --primary: 252 85% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 169 100% 50%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 220 70% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 249 30% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 240 20% 96%;
+    --muted-foreground: 235 15% 50%;
 
-    --accent: 336 100% 44%;
+    --accent: 270 65% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 336 100% 44%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 92%;
-    --ring: 249 100% 67%;
+    --border: 240 15% 90%;
+    --input: 240 15% 93%;
+    --ring: 252 85% 60%;
 
     --radius: 0.75rem;
     
-    /* JumpStart Generalists palette */
-    --violet-primary: 249 100% 67%;
-    --violet-light: 249 100% 80%;
-    --violet-dark: 249 100% 55%;
-    --violet-accent: 336 100% 44%;
-    --violet-bg: 0 0% 100%;
-    --slate-dark: 0 0% 0%;
-    --teal-accent: 169 100% 50%;
-    --blue-accent: 225 100% 62%;
+    /* Custom palette */
+    --violet-primary: 252 85% 60%;
+    --violet-light: 252 85% 75%;
+    --violet-dark: 252 85% 50%;
+    --violet-accent: 270 65% 60%;
+    --violet-bg: 240 33% 99%;
+    --slate-dark: 235 25% 27%;
+    --teal-accent: 220 70% 55%;
+    --blue-accent: 210 80% 55%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(249 100% 67%), hsl(225 100% 62%));
-    --gradient-accent: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
-    --gradient-subtle: linear-gradient(180deg, hsl(249 100% 67% / 0.05), hsl(225 100% 62% / 0.1));
-    --gradient-hero: linear-gradient(135deg, hsl(249 100% 67% / 0.15), hsl(225 100% 62% / 0.2));
+    --gradient-primary: linear-gradient(135deg, hsl(252 85% 60%), hsl(270 65% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(270 65% 60%), hsl(220 70% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(252 85% 60% / 0.05), hsl(270 65% 60% / 0.08));
+    --gradient-hero: linear-gradient(135deg, hsl(240 33% 99%), hsl(252 85% 60% / 0.08));
 
-    --shadow-elegant: 0 4px 24px -4px hsl(249 100% 67% / 0.25);
-    --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.08);
-    --shadow-glow: 0 0 40px hsl(249 100% 67% / 0.3);
+    --shadow-elegant: 0 4px 24px -4px hsl(252 85% 60% / 0.2);
+    --shadow-card: 0 2px 16px -2px hsl(235 25% 27% / 0.06);
+    --shadow-glow: 0 0 40px hsl(252 85% 60% / 0.25);
     
     --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 0%;
-    --sidebar-primary: 249 100% 67%;
+    --sidebar-foreground: 235 25% 27%;
+    --sidebar-primary: 252 85% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 169 100% 50%;
-    --sidebar-accent-foreground: 0 0% 0%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 249 100% 67%;
+    --sidebar-accent: 270 65% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 15% 90%;
+    --sidebar-ring: 252 85% 60%;
   }
 
   .dark {
-    /* Dark mode - JumpStart Generalists on dark */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* Dark mode - Deep purple-blue palette (no pure black) */
+    --background: 235 35% 12%;
+    --foreground: 240 20% 98%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
+    --card: 235 30% 16%;
+    --card-foreground: 240 20% 98%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 235 30% 16%;
+    --popover-foreground: 240 20% 98%;
 
-    --primary: 249 100% 67%;
+    --primary: 252 85% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 169 100% 50%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 220 70% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 235 25% 22%;
+    --muted-foreground: 240 15% 70%;
 
-    --accent: 336 100% 44%;
+    --accent: 270 65% 65%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 336 100% 44%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 249 100% 67%;
+    --border: 235 25% 25%;
+    --input: 235 25% 20%;
+    --ring: 252 85% 65%;
     
-    /* JumpStart Generalists palette - on dark */
-    --violet-primary: 249 100% 67%;
-    --violet-light: 249 100% 80%;
-    --violet-dark: 249 100% 55%;
-    --violet-accent: 336 100% 44%;
-    --violet-bg: 0 0% 0%;
-    --slate-dark: 0 0% 0%;
-    --teal-accent: 169 100% 50%;
-    --blue-accent: 225 100% 62%;
+    /* Custom palette - on dark */
+    --violet-primary: 252 85% 65%;
+    --violet-light: 252 85% 78%;
+    --violet-dark: 252 85% 55%;
+    --violet-accent: 270 65% 65%;
+    --violet-bg: 235 35% 12%;
+    --slate-dark: 235 35% 12%;
+    --teal-accent: 220 70% 60%;
+    --blue-accent: 210 80% 60%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(249 100% 67%), hsl(225 100% 62%));
-    --gradient-accent: linear-gradient(135deg, hsl(336 100% 44%), hsl(249 100% 67%));
-    --gradient-subtle: linear-gradient(180deg, hsl(249 100% 67% / 0.1), hsl(225 100% 62% / 0.15));
-    --gradient-hero: linear-gradient(135deg, hsl(249 100% 67% / 0.2), hsl(225 100% 62% / 0.25));
+    --gradient-primary: linear-gradient(135deg, hsl(252 85% 65%), hsl(270 65% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(270 65% 65%), hsl(220 70% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(252 85% 65% / 0.1), hsl(270 65% 65% / 0.12));
+    --gradient-hero: linear-gradient(135deg, hsl(235 35% 12%), hsl(252 85% 65% / 0.12));
 
-    --shadow-elegant: 0 4px 24px -4px hsl(249 100% 67% / 0.3);
-    --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 60px hsl(249 100% 67% / 0.35);
+    --shadow-elegant: 0 4px 24px -4px hsl(252 85% 65% / 0.25);
+    --shadow-card: 0 2px 16px -2px hsl(235 35% 5% / 0.4);
+    --shadow-glow: 0 0 60px hsl(252 85% 65% / 0.3);
     
-    --sidebar-background: 0 0% 0%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 249 100% 67%;
+    --sidebar-background: 235 35% 12%;
+    --sidebar-foreground: 240 20% 98%;
+    --sidebar-primary: 252 85% 65%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 169 100% 50%;
-    --sidebar-accent-foreground: 0 0% 0%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 249 100% 67%;
+    --sidebar-accent: 270 65% 65%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 235 25% 25%;
+    --sidebar-ring: 252 85% 65%;
   }
 }
 
