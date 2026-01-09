@@ -10,7 +10,7 @@
 @layer base {
   :root {
     /* Light mode - Soft blue-purple palette */
-    --background: 250 30% 98%;
+    --background: 0 0% 100%;
     --foreground: 235 25% 27%;
 
     --card: 0 0% 100%;
@@ -45,7 +45,7 @@
     --violet-light: 252 85% 75%;
     --violet-dark: 252 85% 50%;
     --violet-accent: 270 65% 60%;
-    --violet-bg: 240 33% 99%;
+    --violet-bg: 0 0% 100%;
     --slate-dark: 235 25% 27%;
     --teal-accent: 220 70% 55%;
     --blue-accent: 210 80% 55%;
