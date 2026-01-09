@@ -149,7 +149,9 @@ const Experience = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             What I've Done
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Solving problems. Building tools. Improving how teams work.
+          </p>
         </div>
 
         <div className="space-y-12">
