@@ -66,6 +66,26 @@ const Experience = () => {
       }
     },
     {
+      icon: Timer,
+      role: "Research Student",
+      company: "Imperial College London",
+      period: "Oct 2022 - Jun 2025",
+      context: "BSc Biotechnology (Hons). Upper Second Class.",
+      problems: [
+        {
+          problem: "Lab protocols required parallel timer management",
+          solution: "Missing a time-critical step = scrapped experiment"
+        }
+      ],
+      builtTool: {
+        name: "Lab Workflow Timer",
+        reason: "High-pressure parallel task management led to errors",
+        what: "Automated protocol parsing + simultaneous timers → failsafe system",
+        link: "https://tiwaysyya.github.io/lab-multi-protocol-timer/",
+        external: true
+      }
+    },
+    {
       icon: TrendingUp,
       role: "Strategy & Branding Director",
       company: "GenCorporate",
@@ -119,26 +139,6 @@ const Experience = () => {
           solution: "Built multi-jurisdiction tracking system → summarised examiner feedback into actionable next steps"
         }
       ]
-    },
-    {
-      icon: Timer,
-      role: "Research Student",
-      company: "Imperial College London",
-      period: "Oct 2022 - Jun 2025",
-      context: "BSc Biotechnology (Hons). Upper Second Class.",
-      problems: [
-        {
-          problem: "Lab protocols required parallel timer management",
-          solution: "Missing a time-critical step = scrapped experiment"
-        }
-      ],
-      builtTool: {
-        name: "Lab Workflow Timer",
-        reason: "High-pressure parallel task management led to errors",
-        what: "Automated protocol parsing + simultaneous timers → failsafe system",
-        link: "https://tiwaysyya.github.io/lab-multi-protocol-timer/",
-        external: true
-      }
     }
   ];
 
