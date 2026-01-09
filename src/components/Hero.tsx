@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-background">
       <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold leading-tight text-slate-800">
           I build solutions.
           <br />
           I move fast.
@@ -17,7 +17,7 @@ const Hero = () => {
           I help you win.
         </h1>
         
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
           Problem solver. High achiever. Winner.
         </p>
         
