@@ -147,7 +147,7 @@ const Experience = () => {
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Work & What I Built
+            What I've Done
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
         </div>
