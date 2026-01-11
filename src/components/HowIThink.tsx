@@ -2,10 +2,10 @@ import { Card } from "@/components/ui/card";
 
 const HowIThink = () => {
   const hats = [
-    { domain: "Product", description: "Scoping features, user research, roadmap prioritisation" },
-    { domain: "Growth", description: "Experiments, outreach, community building, content" },
-    { domain: "Operations", description: "Workflows, processes, cross-functional coordination" },
-    { domain: "Strategy", description: "Market analysis, stakeholder discovery, business cases" }
+    { domain: "Research & Analysis", description: "Data gathering, synthesis, benchmarking, due diligence" },
+    { domain: "Strategy", description: "Market sizing, competitive positioning, business cases" },
+    { domain: "Operations", description: "Workflow design, process improvement, coordination" },
+    { domain: "Stakeholder Management", description: "Presentations, client materials, cross-team alignment" }
   ];
 
   const defaults = [
