@@ -14,7 +14,7 @@ const Hero = () => {
           <br />
           I find what's blocking progress.
           <br />
-          I turn complexity into clarity.
+          I get things done.
         </h1>
         
         <p className="text-xl text-slate-600 max-w-2xl mx-auto font-inter">
