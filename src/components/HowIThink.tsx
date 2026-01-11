@@ -2,32 +2,32 @@ import { Card } from "@/components/ui/card";
 
 const HowIThink = () => {
   const hats = [
-    { domain: "Research & Analysis", description: "Data gathering, synthesis, benchmarking, due diligence" },
-    { domain: "Strategy", description: "Market sizing, competitive positioning, business cases" },
-    { domain: "Operations", description: "Workflow design, process improvement, coordination" },
-    { domain: "Stakeholder Management", description: "Presentations, client materials, cross-team alignment" }
+    { domain: "Financial Analysis", description: "Valuation, modelling, benchmarking, due diligence" },
+    { domain: "Client Materials", description: "Pitches, presentations, memoranda, marketing materials" },
+    { domain: "Transaction Execution", description: "End-to-end project management, coordination, delivery" },
+    { domain: "Stakeholder Management", description: "Client servicing, relationship building, cross-team work" }
   ];
 
   const defaults = [
     {
-      principle: "Act first",
-      description: "I get something moving, then improve it once there is real feedback."
+      principle: "Proactive",
+      description: "I get things moving early, then refine based on feedback rather than waiting for perfect information."
     },
     {
-      principle: "Own the work",
-      description: "If it is mine, I take full responsibility and keep it aligned with what matters most."
+      principle: "Own the outcome",
+      description: "I take full responsibility for my work and keep it aligned with what stakeholders need."
     },
     {
-      principle: "Think out loud",
-      description: "I ask questions early, share progress, and adjust openly as things evolve."
+      principle: "Communicate early",
+      description: "I flag issues, share progress, and adjust openly as priorities evolve."
     },
     {
-      principle: "Let evidence lead",
-      description: "I test assumptions and change course when the results point another way."
+      principle: "Detail-oriented",
+      description: "I check my work, verify assumptions, and ensure deliverables are polished and accurate."
     },
     {
-      principle: "Build practical solutions",
-      description: "I put together simple tools, systems, and workflows that help work get done."
+      principle: "Adaptable",
+      description: "I handle multiple workstreams, reprioritise when needed, and stay effective under pressure."
     }
   ];
 
