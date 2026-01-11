@@ -5,23 +5,23 @@ const ThreePillars = () => {
   const pillars = [
     {
       icon: UserCheck,
-      title: "Full Ownership",
-      description: "I take on complex projects without a playbook and drive them from ambiguity to completion, freeing up senior stakeholders to focus on strategy."
+      title: "Founder-Level Ownership",
+      description: "To give founders their time back, I take on the projects that don't have a manual and figure them out solo from start to finish."
     },
     {
       icon: Wrench,
-      title: "Technical Problem-Solving",
-      description: "I build tools and automations to eliminate inefficiencies—whether that's streamlining workflows or creating dashboards that surface key insights."
+      title: "Technical Scrappiness",
+      description: "To kill off repetitive manual work, I build my own automations and tools so the team can move faster without a big-company budget."
     },
     {
       icon: TrendingUp,
-      title: "Commercial Acumen",
-      description: "I dig into the data to understand what's driving performance, identify opportunities, and communicate findings that inform key decisions."
+      title: "Commercial Logic",
+      description: "To make sure the startup stays healthy and profitable, I dig into the data to find out which growth experiments are actually moving the needle."
     },
     {
       icon: Shuffle,
-      title: "Adaptive Learning",
-      description: "I quickly get up to speed in unfamiliar domains, teaching myself whatever skills are needed to deliver results as priorities evolve."
+      title: "Generalist Agility",
+      description: "To stay useful as the company's needs change, I jump between ops, data, and growth by teaching myself whatever skills are needed on the fly."
     }
   ];
 
@@ -29,7 +29,7 @@ const ThreePillars = () => {
     <section id="pillars" className="py-24 px-4 bg-secondary/30">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
-          What I Bring to the Team
+          What I Bring to the Startup Team
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

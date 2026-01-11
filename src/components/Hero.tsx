@@ -12,13 +12,13 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-800 font-inter">
           I learn fast in new domains.
           <br />
-          I find what's blocking progress.
+          I find what's slowing teams down.
           <br />
-          I get things done.
+          I fix how work gets done.
         </h1>
         
         <p className="text-xl text-slate-600 max-w-2xl mx-auto font-inter">
-          Analytical rigour. Commercial instinct. Bias for action.
+          Product thinking. Startup speed. Bias for action.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center pt-8">
