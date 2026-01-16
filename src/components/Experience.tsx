@@ -51,7 +51,7 @@ const Experience = () => {
       }
     },
     {
-      context: "During my BSc at Imperial, lab protocols often required running 3-4 parallel timers for different steps.",
+      context: "During my BSc at Imperial, lab protocols often required running several time-critical steps in parallel.",
       problem: "Missing a single time-critical step meant scrapping the entire experiment. Mental juggling led to errors.",
       solution: {
         description: "I built a protocol parser with simultaneous timers that eliminates human error in high-pressure lab work.",
