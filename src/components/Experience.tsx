@@ -45,7 +45,7 @@ const Experience = () => {
       context: "At the Imperial Investment Society, I oversaw biotech and pharma sector coverage, producing regular market updates and thematic analysis.",
       problem: "Sector evaluation relied on fragmented data pulled manually from multiple sources, with the same consolidation work repeated every two weeks across different focus areas.",
       solution: {
-        description: "I built a dashboard that aggregates market intelligence across 6 therapeutic areas for instant evaluation.",
+        description: "To remove that bottleneck, I built a dashboard aggregating key market signals across six therapeutic areas for instant prioritisation.",
         tool: "Biotech Market Analysis Dashboard",
         link: "/biotech-market"
       }
