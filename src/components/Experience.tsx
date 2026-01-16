@@ -33,7 +33,7 @@ const Experience = () => {
       }
     },
     {
-      context: "Pricing our product required understanding unit economics—but CAC, LTV, and margins lived in messy spreadsheets.",
+      context: "Pricing decisions depended on understanding CAC, LTV, and margins across the business.",
       problem: "No real-time visibility. We couldn't tell if our economics were healthy until it was too late to adjust.",
       solution: {
         description: "I built a live dashboard that tracks CAC/LTV with threshold alerts to catch problems early.",
