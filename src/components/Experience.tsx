@@ -16,7 +16,7 @@ const Experience = () => {
   const caseStudies: CaseStudy[] = [
     {
       context: "As co-founder of CO2LLECT, a climate startup, I needed to track competitors constantly—but manually checking websites and news took hours.",
-      problem: "By the time I finished researching, the intel was already stale. Decisions were delayed.",
+      problem: "Juggling a full courseload and other leadership roles, I couldn't allocate the hours this demanded.",
       solution: {
         description: "I built an automated scraper with AI categorization that delivers competitor updates in seconds.",
         tool: "Founder's Intelligence Dashboard",
