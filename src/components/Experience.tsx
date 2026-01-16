@@ -1,76 +1,63 @@
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card";
 
 interface CaseStudy {
-  tool: string;
+  context: string;
   problem: string;
-  solution: string;
-  link: string;
-  external?: boolean;
-  context: {
-    role: string;
-    company: string;
-    period: string;
+  solution: {
+    description: string;
+    tool: string;
+    link: string;
+    external?: boolean;
   };
 }
 
 const Experience = () => {
   const caseStudies: CaseStudy[] = [
     {
-      tool: "Founder's Intelligence Dashboard",
-      problem: "Competitor research was manual, slow, and often outdated by the time decisions were made",
-      solution: "Automated scraper + AI categorization delivers competitor updates in seconds, not hours",
-      link: "/intel",
-      context: {
-        role: "Co-founder & Product-Market Strategy Lead",
-        company: "CO2LLECT",
-        period: "Oct 2024 - Jun 2025"
+      context: "As co-founder of CO2LLECT, a climate startup, I needed to track competitors constantly—but manually checking websites and news took hours.",
+      problem: "By the time I finished researching, the intel was already stale. Decisions were delayed.",
+      solution: {
+        description: "I built an automated scraper with AI categorization that delivers competitor updates in seconds.",
+        tool: "Founder's Intelligence Dashboard",
+        link: "/intel"
       }
     },
     {
-      tool: "User Research Deep Dive",
-      problem: "Customer interview insights were scattered across notes, making pattern recognition impossible",
-      solution: "AI-powered interview analysis surfaces feature requests & pain points instantly",
-      link: "/user-research",
-      context: {
-        role: "Co-founder & Product-Market Strategy Lead",
-        company: "CO2LLECT",
-        period: "Oct 2024 - Jun 2025"
+      context: "We ran 50+ customer discovery interviews at CO2LLECT. Insights were buried across notes, recordings, and scattered docs.",
+      problem: "Patterns were invisible. We couldn't systematically identify what features customers actually wanted.",
+      solution: {
+        description: "I built an AI-powered analysis tool that extracts and categorizes pain points and feature requests from interview transcripts.",
+        tool: "User Research Deep Dive",
+        link: "/user-research"
       }
     },
     {
-      tool: "Unit Economics Health Monitor",
-      problem: "CAC/LTV calculations were done manually in spreadsheets with no real-time visibility",
-      solution: "Live tracking dashboard with threshold alerts catches unit economics problems early",
-      link: "/unit-economics",
-      context: {
-        role: "Co-founder & Product-Market Strategy Lead",
-        company: "CO2LLECT",
-        period: "Oct 2024 - Jun 2025"
+      context: "Pricing our biochar product required understanding unit economics—but CAC, LTV, and margins lived in messy spreadsheets.",
+      problem: "No real-time visibility. We couldn't tell if our economics were healthy until it was too late to adjust.",
+      solution: {
+        description: "I built a live dashboard that tracks CAC/LTV with threshold alerts to catch problems early.",
+        tool: "Unit Economics Health Monitor",
+        link: "/unit-economics"
       }
     },
     {
-      tool: "Biotech Market Analysis Dashboard",
-      problem: "Market data scattered across sources made therapeutic area evaluation tedious and error-prone",
-      solution: "Aggregated intelligence across 6 therapeutic areas for instant market evaluation",
-      link: "/biotech-market",
-      context: {
-        role: "Investment Editorial Head",
-        company: "Imperial Investment Society",
-        period: "Oct 2024 - Jun 2025"
+      context: "As Investment Editorial Head at Imperial Investment Society, my team covered biotech markets across therapeutic areas.",
+      problem: "Market data was scattered across databases, filings, and reports. Evaluating a sector took days of manual aggregation.",
+      solution: {
+        description: "I built a dashboard that aggregates market intelligence across 6 therapeutic areas for instant evaluation.",
+        tool: "Biotech Market Analysis Dashboard",
+        link: "/biotech-market"
       }
     },
     {
-      tool: "Lab Workflow Timer",
-      problem: "Parallel lab protocols required juggling multiple timers—one missed step scrapped entire experiments",
-      solution: "Automated protocol parsing with simultaneous timers eliminates human error in high-pressure lab work",
-      link: "https://tiwaysyya.github.io/lab-multi-protocol-timer/",
-      external: true,
-      context: {
-        role: "Research Student",
-        company: "Imperial College London",
-        period: "Oct 2022 - Jun 2025"
+      context: "During my BSc at Imperial, lab protocols often required running 3-4 parallel timers for different steps.",
+      problem: "Missing a single time-critical step meant scrapping the entire experiment. Mental juggling led to errors.",
+      solution: {
+        description: "I built a protocol parser with simultaneous timers that eliminates human error in high-pressure lab work.",
+        tool: "Lab Workflow Timer",
+        link: "https://tiwaysyya.github.io/lab-multi-protocol-timer/",
+        external: true
       }
     }
   ];
@@ -98,107 +85,74 @@ const Experience = () => {
 
   return (
     <section id="what-ive-done" className="py-20 px-4 bg-background">
-      <div className="container max-w-5xl mx-auto">
+      <div className="container max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Tools I've Built
+            What I've Built
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Each tool started as a problem I couldn't ignore. Here's what I built to fix them.
+            Real problems I encountered. Tools I built to solve them.
           </p>
         </div>
 
-        {/* Case Study Cards */}
-        <div className="grid gap-6 mb-16">
+        {/* Case Studies as Narrative */}
+        <div className="space-y-16">
           {caseStudies.map((study, index) => (
-            <Card 
-              key={index} 
-              className="group glow-card border border-border/50 bg-card overflow-hidden transition-all duration-300 hover:border-primary/30"
-            >
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-[1fr_auto] gap-0">
-                  {/* Main Content */}
-                  <div className="p-6 md:p-8">
-                    {/* Tool Name as Headline */}
-                    <div className="flex items-start justify-between gap-4 mb-4">
-                      {study.external ? (
-                        <a 
-                          href={study.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/link flex items-center gap-2"
-                        >
-                          <h3 className="text-2xl font-bold text-foreground group-hover/link:text-primary transition-colors">
-                            {study.tool}
-                          </h3>
-                          <ExternalLink className="w-5 h-5 text-muted-foreground group-hover/link:text-primary transition-colors" />
-                        </a>
-                      ) : (
-                        <Link 
-                          to={study.link}
-                          className="group/link flex items-center gap-2"
-                        >
-                          <h3 className="text-2xl font-bold text-foreground group-hover/link:text-primary transition-colors">
-                            {study.tool}
-                          </h3>
-                          <ArrowRight className="w-5 h-5 text-muted-foreground group-hover/link:text-primary group-hover/link:translate-x-1 transition-all" />
-                        </Link>
-                      )}
-                    </div>
-
-                    {/* Problem → Solution */}
-                    <div className="space-y-3 mb-4">
-                      <div className="flex gap-3">
-                        <span className="shrink-0 w-20 text-sm font-medium text-destructive/80 uppercase tracking-wide">Problem</span>
-                        <p className="text-muted-foreground">{study.problem}</p>
-                      </div>
-                      <div className="flex gap-3">
-                        <span className="shrink-0 w-20 text-sm font-medium text-primary uppercase tracking-wide">Solution</span>
-                        <p className="text-foreground">{study.solution}</p>
-                      </div>
-                    </div>
-
-                    {/* Context Badge */}
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="font-medium">{study.context.role}</span>
-                      <span>•</span>
-                      <span>{study.context.company}</span>
-                      <span>•</span>
-                      <span>{study.context.period}</span>
-                    </div>
-                  </div>
-
-                  {/* CTA Side Panel */}
-                  <div className="hidden md:flex items-center justify-center px-8 bg-gradient-to-br from-primary/5 to-accent/5 border-l border-border/50">
-                    {study.external ? (
-                      <a 
-                        href={study.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                      >
-                        View Tool
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    ) : (
-                      <Link 
-                        to={study.link}
-                        className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                      >
-                        Try it
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    )}
-                  </div>
+            <article key={index} className="relative">
+              {/* Number indicator */}
+              <div className="absolute -left-4 md:-left-12 top-0 text-6xl font-bold text-primary/10 select-none">
+                {index + 1}
+              </div>
+              
+              <div className="space-y-4 pl-4">
+                {/* Context */}
+                <p className="text-lg text-foreground leading-relaxed">
+                  {study.context}
+                </p>
+                
+                {/* Problem */}
+                <p className="text-lg text-muted-foreground leading-relaxed pl-4 border-l-2 border-destructive/30">
+                  {study.problem}
+                </p>
+                
+                {/* Solution with Tool Link */}
+                <div className="bg-gradient-to-r from-primary/5 to-transparent p-4 rounded-lg border-l-2 border-primary">
+                  <p className="text-lg text-foreground leading-relaxed mb-3">
+                    {study.solution.description}
+                  </p>
+                  {study.solution.external ? (
+                    <a 
+                      href={study.solution.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary font-semibold hover:underline underline-offset-4"
+                    >
+                      → {study.solution.tool}
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  ) : (
+                    <Link 
+                      to={study.solution.link}
+                      className="inline-flex items-center gap-2 text-primary font-semibold hover:underline underline-offset-4 group"
+                    >
+                      → {study.solution.tool}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  )}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+
+              {/* Divider */}
+              {index < caseStudies.length - 1 && (
+                <div className="mt-12 border-b border-border/30"></div>
+              )}
+            </article>
           ))}
         </div>
 
         {/* Additional Experience - Compact */}
-        <div className="border-t border-border pt-12">
+        <div className="border-t border-border mt-20 pt-12">
           <h3 className="text-xl font-bold text-foreground mb-6 text-center">
             Other Experience
           </h3>
