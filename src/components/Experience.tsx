@@ -18,7 +18,7 @@ const Experience = () => {
       context: "As a CO2LLECT co-founder, I needed to stay on top of competitor moves in real time.",
       problem: "Insights were scattered across notes and recordings, making patterns hard to spot and priorities unclear.",
       solution: {
-        description: "I built an automated scraper with AI categorization that delivers competitor updates in seconds.",
+        description: "I built an automated scraper with AI categorisation that surfaces competitor updates in seconds.",
         tool: "Founder's Intelligence Dashboard",
         link: "/intel"
       }
