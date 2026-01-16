@@ -42,7 +42,7 @@ const Experience = () => {
       }
     },
     {
-      context: "As Investment Editorial Head at Imperial Investment Society, my team covered biotech markets across therapeutic areas.",
+      context: "At the Imperial Investment Society, I oversaw biotech and pharma sector coverage, producing regular market updates and thematic analysis.",
       problem: "Market data was scattered across databases, filings, and reports. Evaluating a sector took days of manual aggregation.",
       solution: {
         description: "I built a dashboard that aggregates market intelligence across 6 therapeutic areas for instant evaluation.",
