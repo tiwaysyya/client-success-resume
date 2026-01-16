@@ -25,7 +25,7 @@ const Experience = () => {
     },
     {
       context: "At CO2LLECT, we ran 50+ customer discovery interviews to understand real user needs.",
-      problem: "Patterns were invisible. We couldn't systematically identify what features customers actually wanted.",
+      problem: "Insights were scattered across notes and recordings, making patterns hard to spot and priorities unclear.",
       solution: {
         description: "I built an AI-powered analysis tool that extracts and categorizes pain points and feature requests from interview transcripts.",
         tool: "User Research Deep Dive",
