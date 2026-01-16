@@ -41,7 +41,7 @@ const Hero = () => {
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
             onClick={() => scrollToSection("what-ive-done")}
           >
-            What I've Done
+            View Case Studies
           </Button>
         </div>
 
