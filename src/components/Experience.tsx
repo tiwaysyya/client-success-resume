@@ -34,7 +34,7 @@ const Experience = () => {
     },
     {
       context: "Pricing decisions depended on understanding CAC, LTV, and margins across the business.",
-      problem: "No real-time visibility. We couldn't tell if our economics were healthy until it was too late to adjust.",
+      problem: "Key metrics lived in disconnected spreadsheets with no real-time view of economic health.",
       solution: {
         description: "I built a live dashboard that tracks CAC/LTV with threshold alerts to catch problems early.",
         tool: "Unit Economics Health Monitor",
