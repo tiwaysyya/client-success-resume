@@ -21,7 +21,7 @@ const Index = () => {
       
       <footer className="py-8 px-4 bg-secondary/20 border-t border-border">
         <div className="container max-w-6xl mx-auto text-center text-muted-foreground">
-          <p>© 2025 Tiwaysyya Santhra Segaran. BSc Biotechnology (Hons), Imperial College London.</p>
+          <p>© 2025 Tiwaysyya Santhra Segaran. BSc Biotechnology (Hons), Imperial College London. Aspiring Product Manager.</p>
         </div>
       </footer>
     </div>

@@ -1,27 +1,32 @@
-import { UserCheck, Wrench, TrendingUp, Shuffle } from "lucide-react";
+import { Search, BarChart3, Users, Rocket, LineChart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const ThreePillars = () => {
   const pillars = [
     {
-      icon: UserCheck,
-      title: "Founder-Level Ownership",
-      description: "To give founders their time back, I take on the projects that don't have a manual and figure them out solo from start to finish."
+      icon: Search,
+      title: "Problem Discovery & Research",
+      description: "I identify business and customer problems through market research, competitive analysis, and user feedback — making sure we build the right thing before we build it."
     },
     {
-      icon: Wrench,
-      title: "Technical Scrappiness",
-      description: "To kill off repetitive manual work, I build my own automations and tools so the team can move faster without a big-company budget."
+      icon: BarChart3,
+      title: "Strategic Prioritisation",
+      description: "I make data-driven decisions to prioritise solutions based on impact, effort, and business goals — ensuring the team focuses on what moves the needle."
     },
     {
-      icon: TrendingUp,
-      title: "Commercial Logic",
-      description: "To make sure the startup stays healthy and profitable, I dig into the data to find out which growth experiments are actually moving the needle."
+      icon: Users,
+      title: "Cross-Functional Leadership",
+      description: "I coordinate and communicate across diverse teams — from engineering to design to stakeholders — to align everyone around a shared product vision."
     },
     {
-      icon: Shuffle,
-      title: "Generalist Agility",
-      description: "To stay useful as the company's needs change, I jump between ops, data, and growth by teaching myself whatever skills are needed on the fly."
+      icon: Rocket,
+      title: "Product Execution",
+      description: "I manage milestones, unblock teams, and deliver results on time — turning roadmaps into shipped products with clear accountability."
+    },
+    {
+      icon: LineChart,
+      title: "Data Analysis",
+      description: "I analyse metrics and translate data into decisions — from user behaviour patterns to unit economics, turning numbers into product direction."
     }
   ];
 
@@ -29,10 +34,10 @@ const ThreePillars = () => {
     <section id="pillars" className="py-24 px-4 bg-secondary/30">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
-          What I Bring to the Startup Team
+          Core Product Skills
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pillars.map((pillar, index) => (
             <Card 
               key={index}

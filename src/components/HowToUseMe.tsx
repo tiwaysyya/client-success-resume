@@ -3,21 +3,21 @@ import { CheckCircle2 } from "lucide-react";
 
 const HowToUseMe = () => {
   const thrive = [
-    "Ambiguity: open ended problems and room to think",
-    "Speed: accelerated learning and growth in a fast scaling business",
-    "Cross-functional work: close collaboration across teams",
-    "Ownership: responsibility of projects and people from day one",
-    "Impact: work that has a tangible effect on business trajectory",
-    "Early stage building: turning ideas into reality without a handbook"
+    "Ambiguity: open-ended problems where the solution isn't obvious yet",
+    "User obsession: direct access to customers and real feedback loops",
+    "Cross-functional work: close collaboration across engineering, design, and business",
+    "Ownership: responsibility for product outcomes from discovery to delivery",
+    "Impact: work that has a tangible effect on users and business trajectory",
+    "Speed: fast iteration cycles with room to learn and adapt"
   ];
 
   const roles = [
-    "Founder's Associate",
-    "Chief of Staff",
-    "Operations Associate",
-    "Growth Associate",
-    "Commercial Associate",
-    "Business Operations"
+    "Associate Product Manager",
+    "Junior Product Manager",
+    "Product Analyst",
+    "Product Operations Associate",
+    "Growth Product Manager",
+    "Technical Product Manager"
   ];
 
   return (
@@ -30,7 +30,6 @@ const HowToUseMe = () => {
         </div>
 
         <div className="space-y-12">
-          {/* Where I Thrive */}
           <Card className="p-8 border-border bg-card">
             <h3 className="text-2xl font-bold mb-6 text-foreground">I thrive in environments with:</h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -43,7 +42,6 @@ const HowToUseMe = () => {
             </div>
           </Card>
 
-          {/* Best Suited Roles */}
           <Card className="p-8 border-border bg-card">
             <h3 className="text-2xl font-bold mb-6 text-foreground">Roles I'm targeting:</h3>
             <div className="grid md:grid-cols-2 gap-4">

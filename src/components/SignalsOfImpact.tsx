@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card";
 
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "50+", label: "Customer interviews led" },
-    { value: "40%", label: "Gross margin achieved" },
-    { value: "1,500+", label: "Readers reached" },
-    { value: "45%", label: "Readership growth" },
-    { value: "30+", label: "Monthly publications delivered" },
-    { value: "1,200+", label: "Members grown from 800" },
-    { value: "10+", label: "Earnings notes in 24-48hrs" },
-    { value: "1st", label: "Place startup pitch" }
+    { value: "50+", label: "Customer discovery interviews led" },
+    { value: "2", label: "Non-viable product directions eliminated" },
+    { value: "40%", label: "Gross margin from pricing strategy" },
+    { value: "5+", label: "Investors engaged with pitch decks" },
+    { value: "30+", label: "Publications delivered on time" },
+    { value: "10", label: "Analysts managed in editorial pipeline" },
+    { value: "43%", label: "Member growth through data-driven pivot" },
+    { value: "1st", label: "Place startup pitch competition" }
   ];
 
   return (
@@ -17,10 +17,10 @@ const SignalsOfImpact = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Proof of Proactivity
+            Proof of Impact
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built. Led. Delivered.
+            Discovered. Prioritised. Delivered.
           </p>
         </div>
 
