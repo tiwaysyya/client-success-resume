@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-background">
       <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-800 font-inter">
+        <h1 className="text-3xl md:text-5xl font-bold leading-snug md:leading-snug text-slate-800 font-inter">
           I discover real problems.
           <br />
           I prioritise what matters.
