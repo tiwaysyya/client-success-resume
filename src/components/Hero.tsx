@@ -18,7 +18,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl text-slate-600 max-w-2xl mx-auto font-inter">
-          Product management. Cross-functional leadership. Data-driven execution.
+          User-first thinking. Cross-functional leadership. Data-driven execution.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center pt-8">
