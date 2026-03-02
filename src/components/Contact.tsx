@@ -1,50 +1,54 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Mail, Linkedin, FileText } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-4">
-      <div className="container max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-          Let's talk
+    <section id="contact" className="py-28 px-4">
+      <div className="container max-w-3xl mx-auto text-center">
+        <p className="text-sm font-sans uppercase tracking-[0.2em] text-muted-foreground mb-4">
+          Connect
+        </p>
+        <h2 className="text-4xl md:text-5xl font-serif mb-4 text-foreground">
+          Let's Talk
         </h2>
+        <p className="text-muted-foreground font-sans mb-12">
+          Open to product roles in London and remote.
+        </p>
         
-        <Card className="p-8 md:p-12 mt-12 border-border bg-card">
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              asChild
-            >
-              <a href="mailto:tiwaysyya@gmail.com">
-                <Mail className="w-5 h-5 mr-2" />
-                Email Me
-              </a>
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              asChild
-            >
-              <a href="https://www.linkedin.com/in/tiwaysyya-s-5440b1287" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5 mr-2" />
-                LinkedIn
-              </a>
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2"
-              asChild
-            >
-              <a href="/Tiwaysyya_CV.docx" download>
-                <FileText className="w-5 h-5 mr-2" />
-                Download CV
-              </a>
-            </Button>
-          </div>
-        </Card>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans tracking-wide"
+            asChild
+          >
+            <a href="mailto:tiwaysyya@gmail.com">
+              <Mail className="w-4 h-4 mr-2" />
+              Email Me
+            </a>
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-sans tracking-wide transition-all duration-300"
+            asChild
+          >
+            <a href="https://www.linkedin.com/in/tiwaysyya-s-5440b1287" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-4 h-4 mr-2" />
+              LinkedIn
+            </a>
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="border-border text-muted-foreground hover:border-primary hover:text-primary font-sans tracking-wide transition-all duration-300"
+            asChild
+          >
+            <a href="/Tiwaysyya_CV.docx" download>
+              <FileText className="w-4 h-4 mr-2" />
+              Download CV
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );

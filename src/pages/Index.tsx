@@ -19,9 +19,9 @@ const Index = () => {
       <SignalsOfImpact />
       <Contact />
       
-      <footer className="py-8 px-4 bg-secondary/20 border-t border-border">
-        <div className="container max-w-6xl mx-auto text-center text-muted-foreground">
-          <p>© 2025 Tiwaysyya Santhra Segaran. BSc Biotechnology (Hons), Imperial College London. Aspiring Product Manager.</p>
+      <footer className="py-8 px-4 border-t border-border">
+        <div className="container max-w-6xl mx-auto text-center text-xs text-muted-foreground font-sans tracking-wide">
+          <p>© 2025 Tiwaysyya Santhra Segaran · BSc Biotechnology (Hons), Imperial College London</p>
         </div>
       </footer>
     </div>

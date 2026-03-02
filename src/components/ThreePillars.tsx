@@ -1,56 +1,58 @@
 import { Search, BarChart3, Users, Rocket, LineChart } from "lucide-react";
-import { Card } from "@/components/ui/card";
 
 const ThreePillars = () => {
   const pillars = [
     {
       icon: Search,
-      title: "Problem Discovery & Research",
-      description: "I identify business and customer problems through market research, competitive analysis, and user feedback — making sure we build the right thing before we build it."
+      title: "Problem Discovery",
+      description: "Market research, competitive analysis, and user feedback to ensure we build the right thing."
     },
     {
       icon: BarChart3,
       title: "Strategic Prioritisation",
-      description: "I make data-driven decisions to prioritise solutions based on impact, effort, and business goals — ensuring the team focuses on what moves the needle."
+      description: "Data-driven decisions to focus the team on highest-impact work."
     },
     {
       icon: Users,
       title: "Cross-Functional Leadership",
-      description: "I coordinate and communicate across diverse teams — from engineering to design to stakeholders — to align everyone around a shared product vision."
+      description: "Aligning engineering, design, and stakeholders around a shared product vision."
     },
     {
       icon: Rocket,
       title: "Product Execution",
-      description: "I manage milestones, unblock teams, and deliver results on time — turning roadmaps into shipped products with clear accountability."
+      description: "Managing milestones and unblocking teams to ship on time."
     },
     {
       icon: LineChart,
       title: "Data Analysis",
-      description: "I analyse metrics and translate data into decisions — from user behaviour patterns to unit economics, turning numbers into product direction."
+      description: "Translating metrics into product direction — from user behaviour to unit economics."
     }
   ];
 
   return (
-    <section id="pillars" className="py-24 px-4 bg-secondary/30">
-      <div className="container max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
-          Core Product Skills
+    <section id="pillars" className="py-28 px-4 bg-primary text-primary-foreground">
+      <div className="container max-w-5xl mx-auto">
+        <p className="text-sm font-sans uppercase tracking-[0.2em] text-primary-foreground/60 mb-4 text-center">
+          Core Skills
+        </p>
+        <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-primary-foreground">
+          What I Bring
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-primary-foreground/10">
           {pillars.map((pillar, index) => (
-            <Card 
+            <div 
               key={index}
-              className="p-8 hover:shadow-lg transition-all duration-300 border-border bg-card"
+              className="p-10 bg-primary hover:bg-secondary transition-colors duration-300 group"
             >
-              <pillar.icon className="w-12 h-12 mb-6 text-primary" />
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
+              <pillar.icon className="w-8 h-8 mb-6 text-accent group-hover:text-warm-accent-light transition-colors duration-300" />
+              <h3 className="text-xl font-serif mb-3 text-primary-foreground">
                 {pillar.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-primary-foreground/70 font-sans text-sm leading-relaxed">
                 {pillar.description}
               </p>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

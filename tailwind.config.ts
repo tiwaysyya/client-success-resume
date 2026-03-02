@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'space': ['Space Grotesk', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'serif': ['Playfair Display', 'serif'],
+        'sans': ['DM Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,15 +61,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // JumpStart Generalists palette
-        "violet-primary": "hsl(var(--violet-primary))",
-        "violet-light": "hsl(var(--violet-light))",
-        "violet-dark": "hsl(var(--violet-dark))",
-        "violet-accent": "hsl(var(--violet-accent))",
-        "violet-bg": "hsl(var(--violet-bg))",
-        "slate-dark": "hsl(var(--slate-dark))",
-        "teal-accent": "hsl(var(--teal-accent))",
-        "blue-accent": "hsl(var(--blue-accent))",
+        navy: "hsl(var(--navy))",
+        "navy-light": "hsl(var(--navy-light))",
+        cream: "hsl(var(--cream))",
+        "cream-dark": "hsl(var(--cream-dark))",
+        "warm-accent": "hsl(var(--warm-accent))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -78,20 +74,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

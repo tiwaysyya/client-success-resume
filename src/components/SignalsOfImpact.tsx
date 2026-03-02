@@ -1,5 +1,3 @@
-import { Card } from "@/components/ui/card";
-
 const SignalsOfImpact = () => {
   const metrics = [
     { value: "50+", label: "Customer discovery interviews led" },
@@ -13,30 +11,33 @@ const SignalsOfImpact = () => {
   ];
 
   return (
-    <section id="signals" className="py-24 px-4 bg-secondary/30">
-      <div className="container max-w-6xl mx-auto">
+    <section id="signals" className="py-28 px-4 bg-primary text-primary-foreground">
+      <div className="container max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <p className="text-sm font-sans uppercase tracking-[0.2em] text-primary-foreground/50 mb-4">
+            Results
+          </p>
+          <h2 className="text-4xl md:text-5xl font-serif mb-4 text-primary-foreground">
             Proof of Impact
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-primary-foreground/60 font-sans">
             Discovered. Prioritised. Delivered.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-primary-foreground/10">
           {metrics.map((metric, index) => (
-            <Card 
+            <div 
               key={index} 
-              className="p-6 text-center hover:shadow-lg transition-all border-border bg-card"
+              className="p-8 text-center bg-primary hover:bg-secondary transition-colors duration-300"
             >
-              <p className="text-4xl md:text-5xl font-bold text-primary mb-2">
+              <p className="text-4xl md:text-5xl font-serif text-accent mb-2">
                 {metric.value}
               </p>
-              <p className="text-sm text-muted-foreground leading-tight">
+              <p className="text-xs text-primary-foreground/60 font-sans leading-tight uppercase tracking-wide">
                 {metric.label}
               </p>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
