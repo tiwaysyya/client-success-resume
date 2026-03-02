@@ -64,22 +64,22 @@ const Experience = () => {
 
   const additionalExperience = [
     {
+      role: "Patent Analyst Intern",
+      company: "KASS International",
+      period: "Aug 2023 - Sep 2023",
+      highlight: <>Built multi-jurisdiction tracking system. Conducted <strong className="text-foreground font-medium">competitive landscape analysis</strong> across 6+ biotech filings.</>
+    },
+    {
       role: "Strategy & Growth Lead",
       company: "GenCorporate",
       period: "Oct 2023 - Oct 2024",
-      highlight: "Analysed engagement data to pivot outreach strategy, driving 43% member growth. Negotiated partnerships with Tier-1 firms."
+      highlight: <>Analysed engagement data to pivot outreach strategy, <strong className="text-foreground font-medium">driving 43% member growth</strong>. Negotiated partnerships with Tier-1 firms.</>
     },
     {
       role: "Equity Research Analyst Intern",
       company: "RHB Asset Management",
       period: "Jul 2024 - Aug 2024",
-      highlight: "Conducted competitive analysis across 20+ healthcare providers. Led 12+ expert interviews to inform portfolio positioning."
-    },
-    {
-      role: "Patent Analyst Intern",
-      company: "KASS International",
-      period: "Aug 2023 - Sep 2023",
-      highlight: "Built multi-jurisdiction tracking system. Conducted competitive landscape analysis across 6+ biotech filings."
+      highlight: <>Conducted competitive analysis across 20+ healthcare providers. Led <strong className="text-foreground font-medium">12+ expert interviews</strong> to inform portfolio positioning.</>
     }
   ];
 
@@ -152,20 +152,20 @@ const Experience = () => {
 
         {/* Additional Experience */}
         <div className="border-t border-border mt-24 pt-16">
-          <h3 className="text-2xl font-serif text-foreground mb-10 text-center">
+          <h3 className="text-3xl font-serif text-foreground mb-10 text-center">
             Other Experience
           </h3>
           <div className="space-y-0 border-t border-border">
             {additionalExperience.map((exp, index) => (
               <div 
                 key={index} 
-                className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-8 py-5 border-b border-border hover:bg-muted/50 transition-colors duration-300 px-4"
+                className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-10 py-6 border-b border-border hover:bg-muted/50 transition-colors duration-300 px-4"
               >
-                <div className="md:w-48 flex-shrink-0">
-                  <h4 className="font-sans font-medium text-foreground text-sm">{exp.role}</h4>
-                  <p className="text-accent text-xs font-sans">{exp.company} · {exp.period}</p>
+                <div className="md:w-56 flex-shrink-0">
+                  <h4 className="font-sans font-semibold text-foreground text-base">{exp.role}</h4>
+                  <p className="text-accent text-sm font-sans">{exp.company} · {exp.period}</p>
                 </div>
-                <p className="text-sm text-muted-foreground font-sans">{exp.highlight}</p>
+                <p className="text-base text-muted-foreground font-sans leading-relaxed">{exp.highlight}</p>
               </div>
             ))}
           </div>
