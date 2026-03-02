@@ -64,22 +64,22 @@ const Experience = () => {
 
   const additionalExperience = [
     {
-      role: "Strategy & Branding Director",
+      role: "Strategy & Growth Lead",
       company: "GenCorporate",
       period: "Oct 2023 - Oct 2024",
-      highlight: "Grew membership 800 → 1,200+ through data-driven outreach. Secured McKinsey, PwC, EY, Goldman Sachs speakers."
+      highlight: "Analysed engagement data to pivot outreach strategy, driving 43% member growth. Negotiated partnerships with Tier-1 firms."
     },
     {
-      role: "Equity Analyst Intern (Buy-Side)",
+      role: "Equity Research Analyst Intern",
       company: "RHB Asset Management",
       period: "Jul 2024 - Aug 2024",
-      highlight: "Delivered 10+ earnings notes within 24-48 hours. Identified Phase II/III trial delays across 5+ names."
+      highlight: "Conducted competitive analysis across 20+ healthcare providers. Led 12+ expert interviews to inform portfolio positioning."
     },
     {
-      role: "Patent Law Intern",
+      role: "Patent Analyst Intern",
       company: "KASS International",
       period: "Aug 2023 - Sep 2023",
-      highlight: "Reviewed 20+ competitor patents for FTO risk. Built multi-jurisdiction patent tracking system."
+      highlight: "Built multi-jurisdiction tracking system. Conducted competitive landscape analysis across 6+ biotech filings."
     }
   ];
 

@@ -2,32 +2,32 @@ import { Card } from "@/components/ui/card";
 
 const HowIThink = () => {
   const hats = [
-    { domain: "Product", description: "Scoping features, user research, roadmap prioritisation" },
-    { domain: "Growth", description: "Experiments, outreach, community building, content" },
-    { domain: "Operations", description: "Workflows, processes, cross-functional coordination" },
-    { domain: "Strategy", description: "Market analysis, stakeholder discovery, business cases" }
+    { domain: "Discovery", description: "User interviews, pain point mapping, competitive analysis" },
+    { domain: "Strategy", description: "Prioritisation frameworks, roadmap planning, business cases" },
+    { domain: "Execution", description: "Sprint management, milestone tracking, cross-team coordination" },
+    { domain: "Analysis", description: "Metrics dashboards, A/B testing, data-driven decision making" }
   ];
 
   const defaults = [
     {
-      principle: "Act first",
-      description: "I get something moving, then improve it once there is real feedback."
+      principle: "Start with the user",
+      description: "I talk to users first and let their problems define what we build."
     },
     {
-      principle: "Own the work",
-      description: "If it is mine, I take full responsibility and keep it aligned with what matters most."
+      principle: "Prioritise ruthlessly",
+      description: "I use data and frameworks to focus the team on the highest-impact work."
     },
     {
-      principle: "Think out loud",
-      description: "I ask questions early, share progress, and adjust openly as things evolve."
+      principle: "Own the outcome",
+      description: "I take full responsibility for delivery and keep stakeholders aligned."
     },
     {
       principle: "Let evidence lead",
-      description: "I test assumptions and change course when the results point another way."
+      description: "I test assumptions with data and change course when the numbers say so."
     },
     {
-      principle: "Build practical solutions",
-      description: "I put together simple tools, systems, and workflows that help work get done."
+      principle: "Ship and iterate",
+      description: "I get a working version out fast, then improve based on real feedback."
     }
   ];
 
@@ -40,10 +40,10 @@ const HowIThink = () => {
           </h2>
         </div>
 
-        {/* Hats I Wear */}
+        {/* Product Domains */}
         <div className="space-y-8">
           <h3 className="text-3xl font-bold text-center text-foreground">
-            I Wear Every Hat
+            The Product Lifecycle
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {hats.map((hat, index) => (

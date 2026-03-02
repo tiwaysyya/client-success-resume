@@ -4,47 +4,47 @@ import { Badge } from "@/components/ui/badge";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "ESG & Sustainability Analysis",
+      category: "Product & Research",
       skills: [
-        "ESG Risk Assessment",
-        "Transition Analysis",
-        "Climate Scenario Modelling",
-        "Stewardship Research",
-        "Regulatory Impact Analysis",
-        "Materiality Mapping"
+        "User Interviews",
+        "Market Research",
+        "Competitive Analysis",
+        "Problem Discovery",
+        "PRD Writing",
+        "Feature Prioritisation"
       ]
     },
     {
-      category: "Investment Research",
+      category: "Strategy & Analysis",
       skills: [
-        "Equity Analysis",
-        "Financial Modelling",
-        "DCF Valuation",
-        "Peer Benchmarking",
-        "Sector Research",
-        "Stock Pitching"
+        "Data Analysis",
+        "Unit Economics",
+        "Risk Assessment",
+        "Business Cases",
+        "Due Diligence",
+        "Pricing Strategy"
       ]
     },
     {
-      category: "Scientific & Policy Synthesis",
+      category: "Leadership & Execution",
       skills: [
-        "Biotechnology Research",
-        "Evidence Integrity",
-        "Patent Analysis",
-        "Policy Evaluation",
-        "Regulatory Diligence",
-        "Risk-Benefit Assessment"
+        "Cross-Functional Coordination",
+        "Stakeholder Management",
+        "Sprint Planning",
+        "Timeline Management",
+        "Team Leadership",
+        "Clear Communication"
       ]
     },
     {
-      category: "Technical & Data Tools",
+      category: "Technical & Tools",
       skills: [
-        "Bloomberg Terminal",
-        "ESG Datasets",
+        "Figma",
+        "Power BI",
         "Excel Modelling",
-        "Financial Analysis",
-        "Data Synthesis",
-        "Presentation Design"
+        "Python (Basic)",
+        "AI Automation Tools",
+        "Agile Methodologies"
       ]
     }
   ];

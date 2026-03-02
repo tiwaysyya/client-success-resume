@@ -10,15 +10,15 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-background">
       <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-800 font-inter">
-          I learn fast in new domains.
+          I discover real problems.
           <br />
-          I find what's slowing teams down.
+          I prioritise what matters.
           <br />
-          I fix how work gets done.
+          I ship products that work.
         </h1>
         
         <p className="text-xl text-slate-600 max-w-2xl mx-auto font-inter">
-          Product thinking. Startup speed. Bias for action.
+          Product management. Cross-functional leadership. Data-driven execution.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center pt-8">
