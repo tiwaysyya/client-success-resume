@@ -1,71 +1,60 @@
-import { Card } from "@/components/ui/card";
-
 const HowIThink = () => {
-  const hats = [
-    { domain: "Discovery", description: "User interviews, pain point mapping, competitive analysis" },
-    { domain: "Strategy", description: "Prioritisation frameworks, roadmap planning, business cases" },
-    { domain: "Execution", description: "Sprint management, milestone tracking, cross-team coordination" },
-    { domain: "Analysis", description: "Metrics dashboards, A/B testing, data-driven decision making" }
+  const lifecycle = [
+    { stage: "01", domain: "Discover", description: "User interviews, pain point mapping, competitive analysis" },
+    { stage: "02", domain: "Strategise", description: "Prioritisation frameworks, roadmap planning, business cases" },
+    { stage: "03", domain: "Execute", description: "Sprint management, milestone tracking, cross-team coordination" },
+    { stage: "04", domain: "Measure", description: "Metrics dashboards, A/B testing, data-driven decision making" }
   ];
 
   const defaults = [
-    {
-      principle: "Start with the user",
-      description: "I talk to users first and let their problems define what we build."
-    },
-    {
-      principle: "Prioritise ruthlessly",
-      description: "I use data and frameworks to focus the team on the highest-impact work."
-    },
-    {
-      principle: "Own the outcome",
-      description: "I take full responsibility for delivery and keep stakeholders aligned."
-    },
-    {
-      principle: "Let evidence lead",
-      description: "I test assumptions with data and change course when the numbers say so."
-    },
-    {
-      principle: "Ship and iterate",
-      description: "I get a working version out fast, then improve based on real feedback."
-    }
+    { principle: "Start with the user", description: "Talk to users first. Let their problems define what we build." },
+    { principle: "Prioritise ruthlessly", description: "Use data and frameworks to focus on highest-impact work." },
+    { principle: "Own the outcome", description: "Take full responsibility for delivery and stakeholder alignment." },
+    { principle: "Let evidence lead", description: "Test assumptions with data. Change course when numbers say so." },
+    { principle: "Ship and iterate", description: "Get a working version out fast. Improve based on real feedback." }
   ];
 
   return (
-    <section id="how-i-think" className="py-24 px-4">
-      <div className="container max-w-6xl mx-auto space-y-20">
+    <section id="how-i-think" className="py-28 px-4">
+      <div className="container max-w-5xl mx-auto space-y-24">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+          <p className="text-sm font-sans uppercase tracking-[0.2em] text-muted-foreground mb-4">
+            Approach
+          </p>
+          <h2 className="text-4xl md:text-5xl font-serif text-foreground">
             How I Work
           </h2>
         </div>
 
-        {/* Product Domains */}
-        <div className="space-y-8">
-          <h3 className="text-3xl font-bold text-center text-foreground">
+        {/* Product Lifecycle */}
+        <div className="space-y-10">
+          <h3 className="text-2xl font-serif text-center text-foreground">
             The Product Lifecycle
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {hats.map((hat, index) => (
-              <Card key={index} className="p-6 border-primary/30 bg-card hover:border-primary/60 hover:shadow-lg transition-all">
-                <p className="text-lg font-bold text-primary mb-2">{hat.domain}</p>
-                <p className="text-sm text-muted-foreground">{hat.description}</p>
-              </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {lifecycle.map((item, index) => (
+              <div key={index} className="group">
+                <p className="text-5xl font-serif text-accent/30 mb-3">{item.stage}</p>
+                <h4 className="text-lg font-serif text-foreground mb-2">{item.domain}</h4>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.description}</p>
+              </div>
             ))}
           </div>
         </div>
 
+        <div className="editorial-divider"></div>
+
         {/* Default Mode */}
-        <div className="space-y-8">
-          <h3 className="text-3xl font-bold text-center text-foreground">
-            My default mode
+        <div className="space-y-10">
+          <h3 className="text-2xl font-serif text-center text-foreground">
+            My Operating Principles
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-0 border-t border-border">
             {defaults.map((item, index) => (
-              <Card key={index} className="p-6 border-secondary/30 bg-card hover:border-secondary/60 hover:shadow-lg transition-all">
-                <h4 className="text-lg font-bold text-secondary mb-2">{item.principle}</h4>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </Card>
+              <div key={index} className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6 border-b border-border group hover:bg-muted/50 transition-colors duration-300 px-4">
+                <h4 className="text-lg font-serif text-foreground md:w-56 flex-shrink-0">{item.principle}</h4>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">{item.description}</p>
+              </div>
             ))}
           </div>
         </div>

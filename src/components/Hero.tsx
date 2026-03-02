@@ -8,49 +8,55 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-background">
-      <div className="container max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-        <h1 className="text-3xl md:text-5xl font-bold leading-snug md:leading-snug text-slate-800 font-inter">
-          I discover real problems.
+      <div className="container max-w-4xl mx-auto text-center space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <p className="text-sm font-sans uppercase tracking-[0.2em] text-muted-foreground">
+          Product · Strategy · Execution
+        </p>
+
+        <h1 className="text-4xl md:text-6xl font-serif leading-tight text-foreground">
+          I find the problems worth solving
           <br />
-          I prioritise what matters.
-          <br />
-          I ship products that work.
+          <span className="text-accent italic">and build what works.</span>
         </h1>
         
-        <p className="text-xl text-slate-600 max-w-2xl mx-auto font-inter">
+        <p className="text-lg text-muted-foreground max-w-xl mx-auto font-sans leading-relaxed">
           User-first thinking. Cross-functional leadership. Data-driven execution.
         </p>
         
-        <div className="flex flex-wrap gap-4 justify-center pt-8">
+        <div className="editorial-divider"></div>
+
+        <div className="flex flex-wrap gap-4 justify-center pt-4">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans tracking-wide"
             onClick={() => scrollToSection("pillars")}
           >
             What I Bring
           </Button>
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-sans tracking-wide transition-all duration-300"
             onClick={() => scrollToSection("how-i-think")}
           >
             How I Work
           </Button>
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-sans tracking-wide transition-all duration-300"
             onClick={() => scrollToSection("what-ive-done")}
           >
-            View Case Studies
+            Case Studies
           </Button>
         </div>
 
-        <div className="pt-12 animate-bounce">
+        <div className="pt-16">
           <button
-            onClick={() => scrollToSection("pillars")}
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            onClick={() => scrollToSection("my-story")}
+            className="text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
-            <ArrowDown className="w-6 h-6 mx-auto" />
+            <ArrowDown className="w-5 h-5 mx-auto animate-bounce" />
           </button>
         </div>
       </div>
