@@ -47,7 +47,7 @@ const Hero = () => {
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-sans tracking-wide transition-all duration-300"
             onClick={() => scrollToSection("what-ive-done")}
           >
-            Case Studies
+            What I've Built
           </Button>
         </div>
 
