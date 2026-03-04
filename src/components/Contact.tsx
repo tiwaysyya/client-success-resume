@@ -43,7 +43,7 @@ const Contact = () => {
             className="border-border text-muted-foreground hover:border-primary hover:text-primary font-sans tracking-wide transition-all duration-300"
             asChild
           >
-            <a href="/Tiwaysyya_CV.docx" download>
+            <a href="/Tiwaysyya_Product_CV.pdf" download>
               <FileText className="w-4 h-4 mr-2" />
               Download CV
             </a>
