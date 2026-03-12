@@ -1,13 +1,13 @@
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "50+", label: "Customer discovery interviews led" },
-    { value: "2", label: "Non-viable product directions eliminated" },
-    { value: "40%", label: "Gross margin from pricing strategy" },
-    { value: "5+", label: "Investors engaged with pitch decks" },
-    { value: "30+", label: "Publications delivered on time" },
-    { value: "10", label: "Analysts managed in editorial pipeline" },
-    { value: "43%", label: "Member growth through data-driven pivot" },
-    { value: "1st", label: "Place startup pitch competition" }
+    { value: "3+", label: "AI workflow tools built and shipped" },
+    { value: "50+", label: "User interviews led for discovery" },
+    { value: "Hours→Min", label: "Manual consolidation automated" },
+    { value: "6", label: "Sectors covered in market intelligence" },
+    { value: "30+", label: "Publications delivered on deadline" },
+    { value: "45%", label: "Member growth via data-driven ops" },
+    { value: "10", label: "Analysts coordinated cross-functionally" },
+    { value: "5+", label: "Stakeholders engaged with case studies" }
   ];
 
   return (
@@ -21,7 +21,7 @@ const SignalsOfImpact = () => {
             Proof of Impact
           </h2>
           <p className="text-lg text-primary-foreground/60 font-sans">
-            Discovered. Prioritised. Delivered.
+            Identified. Enabled. Measured.
           </p>
         </div>
 

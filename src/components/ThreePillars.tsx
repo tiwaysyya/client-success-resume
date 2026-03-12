@@ -1,31 +1,31 @@
-import { Search, BarChart3, Users, Rocket, LineChart } from "lucide-react";
+import { Bot, Wrench, Users, BarChart3, Shield } from "lucide-react";
 
 const ThreePillars = () => {
   const pillars = [
     {
-      icon: Search,
-      title: "Problem Discovery",
-      description: "Market research, competitive analysis, and user feedback to ensure we build the right thing."
+      icon: Bot,
+      title: "AI Workflow Design",
+      description: "Identifying automation opportunities and translating team needs into practical AI-enabled solutions."
     },
     {
-      icon: BarChart3,
-      title: "Strategic Prioritisation",
-      description: "Data-driven decisions to focus the team on highest-impact work."
+      icon: Wrench,
+      title: "Tool Evaluation & Rollout",
+      description: "Discovering, trialling, and deploying AI tools with pragmatic recommendations and light configuration."
     },
     {
       icon: Users,
-      title: "Cross-Functional Leadership",
-      description: "Aligning engineering, design, and stakeholders around a shared product vision."
+      title: "Cross-Functional Enablement",
+      description: "Designing role-relevant training, running demos, and building feedback loops that make adoption stick."
     },
     {
-      icon: Rocket,
-      title: "Product Execution",
-      description: "Managing milestones and unblocking teams to ship on time."
+      icon: BarChart3,
+      title: "Impact Tracking",
+      description: "Measuring adoption, quantifying efficiencies, and surfacing case studies that drive organisational learning."
     },
     {
-      icon: LineChart,
-      title: "Data Analysis",
-      description: "Translating metrics into product direction — from user behaviour to unit economics."
+      icon: Shield,
+      title: "Responsible AI Adoption",
+      description: "Partnering with IT, InfoSec, and stakeholders to ensure tools are rolled out safely with clear processes."
     }
   ];
 

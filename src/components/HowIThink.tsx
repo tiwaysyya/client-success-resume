@@ -1,17 +1,17 @@
 const HowIThink = () => {
   const lifecycle = [
-    { stage: "01", domain: "Discover", description: "User interviews, pain point mapping, competitive analysis" },
-    { stage: "02", domain: "Strategise", description: "Prioritisation frameworks, roadmap planning, business cases" },
-    { stage: "03", domain: "Execute", description: "Sprint management, milestone tracking, cross-team coordination" },
-    { stage: "04", domain: "Measure", description: "Metrics dashboards, A/B testing, data-driven decision making" }
+    { stage: "01", domain: "Identify", description: "Spot automation opportunities by understanding team workflows and pain points" },
+    { stage: "02", domain: "Evaluate", description: "Trial tools, assess fit, and make pragmatic build-vs-buy recommendations" },
+    { stage: "03", domain: "Enable", description: "Design training, run demos, and create feedback loops for confident adoption" },
+    { stage: "04", domain: "Measure", description: "Track adoption metrics, quantify efficiency gains, and share learnings" }
   ];
 
   const defaults = [
-    { principle: "Start with the user", description: "Talk to users first. Let their problems define what we build." },
-    { principle: "Prioritise ruthlessly", description: "Use data and frameworks to focus on highest-impact work." },
-    { principle: "Own the outcome", description: "Take full responsibility for delivery and stakeholder alignment." },
-    { principle: "Let evidence lead", description: "Test assumptions with data. Change course when numbers say so." },
-    { principle: "Ship and iterate", description: "Get a working version out fast. Improve based on real feedback." }
+    { principle: "Start with the workflow", description: "Understand how teams actually work before introducing any tool." },
+    { principle: "Reduce friction, don't add it", description: "Strong operational instincts — every change should make things simpler." },
+    { principle: "Safety-first rollout", description: "Partner with IT and InfoSec to ensure responsible, process-driven adoption." },
+    { principle: "Make it copyable", description: "Document what worked so other teams can replicate wins independently." },
+    { principle: "Measure what matters", description: "Track real efficiency gains and build case studies that prove value." }
   ];
 
   return (
@@ -26,10 +26,10 @@ const HowIThink = () => {
           </h2>
         </div>
 
-        {/* Product Lifecycle */}
+        {/* AI Ops Lifecycle */}
         <div className="space-y-10">
           <h3 className="text-2xl font-serif text-center text-foreground">
-            The Product Lifecycle
+            The AI Enablement Lifecycle
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {lifecycle.map((item, index) => (
@@ -44,7 +44,7 @@ const HowIThink = () => {
 
         <div className="editorial-divider"></div>
 
-        {/* Default Mode */}
+        {/* Operating Principles */}
         <div className="space-y-10">
           <h3 className="text-2xl font-serif text-center text-foreground">
             My Operating Principles
