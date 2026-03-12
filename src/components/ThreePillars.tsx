@@ -1,31 +1,31 @@
-import { Bot, Wrench, Users, BarChart3, Shield } from "lucide-react";
+import { Wrench, Users, BarChart3, Shield, Zap } from "lucide-react";
 
 const ThreePillars = () => {
   const pillars = [
     {
-      icon: Bot,
-      title: "AI Workflow Design",
-      description: "Identifying automation opportunities and translating team needs into practical AI-enabled solutions."
+      icon: Zap,
+      title: "Workflow Automation",
+      description: "Spotting repetitive processes and building practical solutions that save teams real time."
     },
     {
       icon: Wrench,
       title: "Tool Evaluation & Rollout",
-      description: "Discovering, trialling, and deploying AI tools with pragmatic recommendations and light configuration."
+      description: "Finding the right tools, running trials, and making pragmatic recommendations based on actual fit."
     },
     {
       icon: Users,
-      title: "Cross-Functional Enablement",
-      description: "Designing role-relevant training, running demos, and building feedback loops that make adoption stick."
+      title: "Cross-Functional Coordination",
+      description: "Aligning stakeholders across teams, designing training, and creating feedback loops that stick."
     },
     {
       icon: BarChart3,
-      title: "Impact Tracking",
-      description: "Measuring adoption, quantifying efficiencies, and surfacing case studies that drive organisational learning."
+      title: "Impact Measurement",
+      description: "Tracking adoption and efficiency gains, then packaging learnings so others can replicate."
     },
     {
       icon: Shield,
-      title: "Responsible AI Adoption",
-      description: "Partnering with IT, InfoSec, and stakeholders to ensure tools are rolled out safely with clear processes."
+      title: "Process & Governance",
+      description: "Ensuring new tools and workflows are rolled out responsibly with clear documentation and oversight."
     }
   ];
 

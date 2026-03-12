@@ -10,17 +10,17 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-background">
       <div className="container max-w-4xl mx-auto text-center space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
         <p className="text-sm font-sans uppercase tracking-[0.2em] text-muted-foreground">
-          AI Ops · Enablement · Workflow Automation
+          Operations · AI · Enablement
         </p>
 
         <h1 className="text-4xl md:text-6xl font-serif leading-tight text-foreground">
-          I find where AI creates real value
+          I make tools and teams
           <br />
-          <span className="text-accent italic">and make adoption stick.</span>
+          <span className="text-accent italic">work better together.</span>
         </h1>
         
         <p className="text-lg text-muted-foreground max-w-xl mx-auto font-sans leading-relaxed">
-          Tool evaluation. Cross-functional rollout. Hands-on enablement. Measurable impact.
+          Operational thinking. Hands-on automation. Cross-functional delivery.
         </p>
         
         <div className="editorial-divider"></div>

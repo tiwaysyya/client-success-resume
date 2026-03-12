@@ -1,17 +1,17 @@
 const HowIThink = () => {
   const lifecycle = [
-    { stage: "01", domain: "Identify", description: "Spot automation opportunities by understanding team workflows and pain points" },
-    { stage: "02", domain: "Evaluate", description: "Trial tools, assess fit, and make pragmatic build-vs-buy recommendations" },
-    { stage: "03", domain: "Enable", description: "Design training, run demos, and create feedback loops for confident adoption" },
-    { stage: "04", domain: "Measure", description: "Track adoption metrics, quantify efficiency gains, and share learnings" }
+    { stage: "01", domain: "Identify", description: "Understand how teams work, find where time is wasted, and define the real problem" },
+    { stage: "02", domain: "Evaluate", description: "Trial solutions, compare trade-offs, and recommend what actually fits" },
+    { stage: "03", domain: "Enable", description: "Roll out with clear training, documentation, and support so adoption sticks" },
+    { stage: "04", domain: "Measure", description: "Track what changed, quantify gains, and share learnings across the org" }
   ];
 
   const defaults = [
-    { principle: "Start with the workflow", description: "Understand how teams actually work before introducing any tool." },
-    { principle: "Reduce friction, don't add it", description: "Strong operational instincts — every change should make things simpler." },
-    { principle: "Safety-first rollout", description: "Partner with IT and InfoSec to ensure responsible, process-driven adoption." },
+    { principle: "Start with the workflow", description: "Understand how people actually work before changing anything." },
+    { principle: "Reduce friction, don't add it", description: "Every intervention should make things simpler, not more complicated." },
+    { principle: "Roll out responsibly", description: "Partner with the right stakeholders to ensure safe, process-driven adoption." },
     { principle: "Make it copyable", description: "Document what worked so other teams can replicate wins independently." },
-    { principle: "Measure what matters", description: "Track real efficiency gains and build case studies that prove value." }
+    { principle: "Measure what matters", description: "Track real efficiency gains and build evidence that proves value." }
   ];
 
   return (
@@ -26,10 +26,9 @@ const HowIThink = () => {
           </h2>
         </div>
 
-        {/* AI Ops Lifecycle */}
         <div className="space-y-10">
           <h3 className="text-2xl font-serif text-center text-foreground">
-            The AI Enablement Lifecycle
+            From Problem to Adoption
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {lifecycle.map((item, index) => (
@@ -44,7 +43,6 @@ const HowIThink = () => {
 
         <div className="editorial-divider"></div>
 
-        {/* Operating Principles */}
         <div className="space-y-10">
           <h3 className="text-2xl font-serif text-center text-foreground">
             My Operating Principles

@@ -2,21 +2,21 @@ import { CheckCircle2 } from "lucide-react";
 
 const HowToUseMe = () => {
   const thrive = [
-    "Ambiguity — roles where the scope evolves and you shape it as you go",
-    "AI-first culture — teams genuinely committed to embedding AI into daily work",
-    "Cross-functional collaboration — working across IT, People, and user teams",
-    "Ownership — responsibility for driving adoption and measuring real impact",
-    "Speed — fast experimentation cycles with room to learn and iterate",
-    "Enablement — helping others become confident, not just building for yourself"
+    "Ambiguity: roles where the scope evolves and you shape it as you go",
+    "Operational rigour: improving how teams work, not just what they ship",
+    "Cross-functional collaboration: working across technical and non-technical teams",
+    "Ownership: responsibility for outcomes from discovery through to delivery",
+    "Speed: fast experimentation with room to learn and iterate",
+    "Enablement: helping others become confident, not just building for yourself"
   ];
 
   const roles = [
     "AI Ops Associate",
-    "AI Enablement Lead",
-    "Operations Associate (AI-focused)",
-    "Product Operations Associate",
+    "Operations Associate",
+    "Product Operations",
     "Internal Tools & Automation",
-    "Strategy & Operations Analyst"
+    "Strategy & Operations Analyst",
+    "Enablement & Adoption"
   ];
 
   return (
