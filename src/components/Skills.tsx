@@ -3,16 +3,16 @@ import { Badge } from "@/components/ui/badge";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "AI & Automation",
-      skills: ["AI Workflow Design", "Tool Evaluation & Pilots", "Prompt Engineering", "AI Automation Tools", "Lovable", "Replit"]
+      category: "Automation & Tools",
+      skills: ["AI Workflow Design", "Tool Evaluation", "Prompt Engineering", "Automation Platforms", "Lovable", "Replit"]
     },
     {
-      category: "Operations & Enablement",
-      skills: ["Workflow Optimisation", "Impact Tracking", "Training Design", "Change Management", "Process Documentation", "Adoption Metrics"]
+      category: "Operations & Process",
+      skills: ["Workflow Optimisation", "Impact Tracking", "Training Design", "Process Documentation", "Change Management", "Adoption Metrics"]
     },
     {
-      category: "Stakeholder & Communication",
-      skills: ["Cross-Functional Coordination", "Stakeholder Management", "Written Communication", "Facilitating Sessions", "Investor & User Comms", "Demo Delivery"]
+      category: "Communication & Coordination",
+      skills: ["Cross-Functional Alignment", "Stakeholder Management", "Written Communication", "Session Facilitation", "Demo Delivery", "User Communication"]
     },
     {
       category: "Research & Analysis",
