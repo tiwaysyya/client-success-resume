@@ -3,20 +3,20 @@ import { Badge } from "@/components/ui/badge";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Automation & Tools",
-      skills: ["AI Workflow Design", "Tool Evaluation", "Prompt Engineering", "Automation Platforms", "Lovable", "Replit"]
+      category: "Strategy & Problem Solving",
+      skills: ["Market Research", "Competitive Analysis", "Business Case Development", "Strategic Prioritisation", "Opportunity Sizing", "First-Principles Thinking"]
     },
     {
-      category: "Operations & Process",
-      skills: ["Workflow Optimisation", "Impact Tracking", "Training Design", "Process Documentation", "Change Management", "Adoption Metrics"]
+      category: "Operations & Execution",
+      skills: ["Process Design", "Project Management", "Workflow Optimisation", "Vendor Evaluation", "Documentation", "KPI Tracking"]
     },
     {
-      category: "Communication & Coordination",
-      skills: ["Cross-Functional Alignment", "Stakeholder Management", "Written Communication", "Session Facilitation", "Demo Delivery", "User Communication"]
+      category: "Communication & Leadership",
+      skills: ["Cross-Functional Alignment", "Stakeholder Management", "Written Communication", "Presentation & Storytelling", "Team Facilitation", "Founder Support"]
     },
     {
-      category: "Research & Analysis",
-      skills: ["Market Research", "Competitive Analysis", "Data Analysis", "Power BI", "Python (Basic)", "Qualitative Synthesis"]
+      category: "Tools & Technical",
+      skills: ["Data Analysis", "Python (Basic)", "Power BI", "Automation Platforms", "AI Tools", "Lovable / No-Code"]
     }
   ];
 

@@ -1,17 +1,17 @@
 const HowIThink = () => {
   const lifecycle = [
-    { stage: "01", domain: "Identify", description: "Understand how teams work, find where time is wasted, and define the real problem" },
-    { stage: "02", domain: "Evaluate", description: "Trial solutions, compare trade-offs, and recommend what actually fits" },
-    { stage: "03", domain: "Enable", description: "Roll out with clear training, documentation, and support so adoption sticks" },
-    { stage: "04", domain: "Measure", description: "Track what changed, quantify gains, and share learnings across the org" }
+    { stage: "01", domain: "Scope", description: "Understand the real problem, talk to the right people, and define what good looks like" },
+    { stage: "02", domain: "Research", description: "Gather evidence through interviews, data, and competitive analysis to inform the approach" },
+    { stage: "03", domain: "Execute", description: "Ship fast, iterate based on feedback, and coordinate across teams to deliver" },
+    { stage: "04", domain: "Learn", description: "Measure outcomes, extract what worked, and feed insights back into the next cycle" }
   ];
 
   const defaults = [
-    { principle: "Start with the workflow", description: "Understand how people actually work before changing anything." },
-    { principle: "Reduce friction, don't add it", description: "Every intervention should make things simpler, not more complicated." },
-    { principle: "Roll out responsibly", description: "Partner with the right stakeholders to ensure safe, process-driven adoption." },
-    { principle: "Make it copyable", description: "Document what worked so other teams can replicate wins independently." },
-    { principle: "Measure what matters", description: "Track real efficiency gains and build evidence that proves value." }
+    { principle: "Start with the problem", description: "Understand what's actually broken before jumping to solutions." },
+    { principle: "Bias toward action", description: "A scrappy first version beats a perfect plan that never ships." },
+    { principle: "Work across boundaries", description: "The best outcomes come from pulling the right people together, regardless of team." },
+    { principle: "Make it repeatable", description: "Build systems and documentation so wins compound over time." },
+    { principle: "Stay evidence-driven", description: "Ground decisions in data and real feedback, not assumptions." }
   ];
 
   return (

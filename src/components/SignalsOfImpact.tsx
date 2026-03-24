@@ -1,11 +1,11 @@
 const SignalsOfImpact = () => {
   const metrics = [
-    { value: "3+", label: "Automation tools built and shipped" },
+    { value: "3+", label: "Products and tools built from scratch" },
     { value: "50+", label: "User interviews led for discovery" },
-    { value: "Hours→Min", label: "Manual workflows automated" },
+    { value: "45%", label: "Growth driven through operations" },
     { value: "6", label: "Sectors covered in market analysis" },
     { value: "30+", label: "Publications delivered on deadline" },
-    { value: "45%", label: "Growth via data-driven operations" },
+    { value: "12+", label: "Expert interviews for strategy" },
     { value: "10", label: "People coordinated cross-functionally" },
     { value: "5+", label: "Stakeholders engaged with evidence" }
   ];
