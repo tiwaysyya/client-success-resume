@@ -14,7 +14,7 @@ const HowToUseMe = () => {
     "Founder's Associate",
     "Operations Associate",
     "Product Associate",
-    "Strategy & Operations",
+    "Commercial Associate",
     "AI Ops Associate",
     "Chief of Staff (early-stage)"
   ];
