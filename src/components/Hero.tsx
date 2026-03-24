@@ -14,9 +14,9 @@ const Hero = () => {
         </p>
 
         <h1 className="text-4xl md:text-6xl font-serif leading-tight text-foreground">
-          I figure things out
+          Give me the vague objective.
           <br />
-          <span className="text-accent italic">and make them happen.</span>
+          <span className="text-accent italic">I'll handle the rest.</span>
         </h1>
         
         <p className="text-lg text-muted-foreground max-w-xl mx-auto font-sans leading-relaxed">
