@@ -11,12 +11,12 @@ const HowToUseMe = () => {
   ];
 
   const roles = [
-    "AI Ops Associate",
+    "Founder's Associate",
     "Operations Associate",
-    "Product Operations",
-    "Internal Tools & Automation",
-    "Strategy & Operations Analyst",
-    "Enablement & Adoption"
+    "Product Associate",
+    "Strategy & Operations",
+    "AI Ops Associate",
+    "Chief of Staff (early-stage)"
   ];
 
   return (
