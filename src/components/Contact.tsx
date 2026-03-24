@@ -12,7 +12,7 @@ const Contact = () => {
           Let's Talk
         </h2>
         <p className="text-muted-foreground font-sans mb-12">
-          Open to AI ops and enablement roles in London.
+          Open to generalist roles at high-growth startups in London.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
