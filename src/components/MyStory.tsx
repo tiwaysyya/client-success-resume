@@ -11,15 +11,15 @@ const MyStory = () => {
         
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-sans">
           <p>
-            Biotechnology graduate from Imperial College London. Started in the lab, but always more drawn to <strong className="text-foreground font-medium">understanding how work actually gets done and making it better</strong>.
+            Biotechnology graduate from Imperial College London. Started in the lab, but always more drawn to <strong className="text-foreground font-medium">understanding how things work and finding ways to make them better</strong>.
           </p>
           
           <p>
-            Built tools that turn hours of manual work into minutes. Led cross-functional teams, ran 50+ user interviews, and shipped workflows that teams actually adopt. Most recently co-led product and operations at a climate-tech startup.
+            Since then, I've worked across biotech, finance, IP, and early-stage startups. I've led user research, built internal tools, run competitive analysis, and co-led operations at a climate-tech company. I move between strategy and execution depending on what's needed.
           </p>
           
           <p>
-            I do my best work when I can <strong className="text-foreground font-medium">spot inefficiencies, find the right tools, and help teams work faster without adding complexity</strong>.
+            I do my best work in <strong className="text-foreground font-medium">fast-moving environments where the problems are ambiguous, the scope is wide, and the right answer isn't obvious yet</strong>.
           </p>
         </div>
       </div>

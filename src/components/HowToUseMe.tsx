@@ -3,11 +3,11 @@ import { CheckCircle2 } from "lucide-react";
 const HowToUseMe = () => {
   const thrive = [
     "Ambiguity: roles where the scope evolves and you shape it as you go",
-    "Operational rigour: improving how teams work, not just what they ship",
-    "Cross-functional collaboration: working across technical and non-technical teams",
-    "Ownership: responsibility for outcomes from discovery through to delivery",
+    "Ownership: full responsibility for outcomes, not just tasks",
+    "Cross-functional work: operating across technical and non-technical teams",
     "Speed: fast experimentation with room to learn and iterate",
-    "Enablement: helping others become confident, not just building for yourself"
+    "Breadth: wearing multiple hats and switching contexts daily",
+    "Impact: doing whatever it takes to move the company forward"
   ];
 
   const roles = [

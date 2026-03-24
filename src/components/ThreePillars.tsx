@@ -1,31 +1,31 @@
-import { Wrench, Users, BarChart3, Shield, Zap } from "lucide-react";
+import { Wrench, Users, BarChart3, Compass, Zap } from "lucide-react";
 
 const ThreePillars = () => {
   const pillars = [
     {
-      icon: Zap,
-      title: "Workflow Automation",
-      description: "Spotting repetitive processes and building practical solutions that save teams real time."
+      icon: Compass,
+      title: "Problem Scoping",
+      description: "Breaking down ambiguous challenges into clear, actionable workstreams that move the needle."
     },
     {
-      icon: Wrench,
-      title: "Tool Evaluation & Rollout",
-      description: "Finding the right tools, running trials, and making pragmatic recommendations based on actual fit."
+      icon: Zap,
+      title: "Execution & Delivery",
+      description: "Getting things done end-to-end, from scrappy first versions to polished outcomes, fast."
     },
     {
       icon: Users,
       title: "Cross-Functional Coordination",
-      description: "Aligning stakeholders across teams, designing training, and creating feedback loops that stick."
+      description: "Working across teams to align priorities, unblock progress, and keep momentum high."
     },
     {
       icon: BarChart3,
-      title: "Impact Measurement",
-      description: "Tracking adoption and efficiency gains, then packaging learnings so others can replicate."
+      title: "Research & Analysis",
+      description: "Running market research, competitive analysis, and user interviews to inform decisions with evidence."
     },
     {
-      icon: Shield,
-      title: "Process & Governance",
-      description: "Ensuring new tools and workflows are rolled out responsibly with clear documentation and oversight."
+      icon: Wrench,
+      title: "Process & Tooling",
+      description: "Designing workflows, picking the right tools, and building lightweight systems that scale."
     }
   ];
 
