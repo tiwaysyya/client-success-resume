@@ -20,7 +20,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-lg text-muted-foreground max-w-xl mx-auto font-sans leading-relaxed">
-          High-agency generalist. Comfortable with ambiguity. Built for early-stage speed.
+          High-agency generalist. Thrive in ambiguity. Built for early-stage speed.
         </p>
         
         <div className="editorial-divider"></div>
