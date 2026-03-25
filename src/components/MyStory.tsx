@@ -11,15 +11,19 @@ const MyStory = () => {
         
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-sans">
           <p>
-            Biotechnology graduate from Imperial College London. Started in the lab, but always more drawn to <strong className="text-foreground font-medium">understanding how things work and finding ways to make them better</strong>.
+            Imperial College London. Biotechnology. Started in the lab — ended up wherever the hardest problems were.
+          </p>
+          
+          <p className="text-foreground font-medium text-xl">
+            Biotech. Finance. IP. Climate-tech. Early-stage ops.
           </p>
           
           <p>
-            Since then, I've worked across biotech, finance, IP, and early-stage startups. I've led user research, built internal tools, run competitive analysis, and co-led operations at a climate-tech company. I move between strategy and execution depending on what's needed.
+            I don't wait for a job description. I find what's broken, figure out what matters, and ship it.
           </p>
           
-          <p>
-            I do my best work in <strong className="text-foreground font-medium">fast-moving environments where the problems are ambiguous, the scope is wide, and the right answer isn't obvious yet</strong>.
+          <p className="text-foreground font-medium italic">
+            Ambiguity is the brief. Execution is the proof.
           </p>
         </div>
       </div>
